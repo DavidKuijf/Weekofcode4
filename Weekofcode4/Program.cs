@@ -4,6 +4,11 @@ namespace Weekofcode4
 {
     class Program
     {
+        public class Entity { }
+        public class Warrior : Entity { }
+        public class Mage : Entity { }
+        public class HugeWarrior : Warrior { }
+
         static void Opdracht1()
         {
             //"Schrijf een programma dat op het scherm de tekst: 'Week of Code rocks!' afdrukt.", "requirements" : "nvt",
@@ -13,7 +18,7 @@ namespace Weekofcode4
         static void Opdracht2()
         {
             //"description" : "Schrijf een programma dat op het scherm de tekst 'Ik ben springerig' afdrukt, waarbij ieder woord op een eigen regel staat.", "requirements" : "nvt"
-            Console.WriteLine(" Ik \n ben \n springerig"); 
+            Console.WriteLine(" Ik \n ben \n springerig");
         }
 
         static void Opdracht3()
@@ -46,7 +51,7 @@ namespace Weekofcode4
         static void Opdracht7()
         {
             //"description" : "Druk op het scherm af: 'Ik verzamel vandaag de meeste achievements'. Elk woord staat op een eigen regel.", "requirements" : "Gebruik om de beurt write en writeline.", 
-            Console.WriteLine( "Ik");
+            Console.WriteLine("Ik");
             Console.Write("verzamel\n");
             Console.WriteLine("vandaag");
             Console.Write("de\n");
@@ -54,6 +59,7 @@ namespace Weekofcode4
             Console.Write("achievements\n");
 
         }
+
         static void Opdracht8()
         {
             //"description" : "Druk op 1 regel de tekst 'tab, tab, tab, die mooie tab van goud.' af, gescheiden door tabs.", "requirements" : "Elke '\\t' staat op een eigen regel."
@@ -62,6 +68,7 @@ namespace Weekofcode4
                 " tab,\t" +
                 " die mooie tab van goud.");
         }
+
         static void Opdracht9()
         {
             //"description" : "Druk onder elkaar de woorden 'één' tot en met 'tien' af.", "requirements" : "Gebruik enkel write."
@@ -76,6 +83,7 @@ namespace Weekofcode4
             Console.Write("Negen\n");
             Console.Write("Tien\n");
         }
+
         static void Opdracht10()
         {
             //"description" : "'Ik hou van witregels' komt op het scherm, waarbij ieder woord op een eigen regel staat, met witregels ertussen.", "requirements" : "Gebruik geen '\\n'"
@@ -97,15 +105,15 @@ namespace Weekofcode4
         static void Opdracht12()
         {
             //"description" : "Op het scherm verschijnt de tekst 'all your base are belong to us'. Ieder woord staat op een eigen regel en springt verder in.", "requirements" : "Gebruik maximaal 1 keer '\\t' en maximaal 1 keer '\\n'.", 
-           
+
             String[] bases = { "all", "your", "base", "are", "belong", "to", "us" };
-            for (int i =0; i < 7; i++)
+            for (int i = 0; i < 7; i++)
             {
                 for (int a = 0; a < i; a++)
                 {
                     Console.Write("\t");
                 }
-                Console.Write(bases[i]+"\n");
+                Console.Write(bases[i] + "\n");
             }
         }
 
@@ -125,16 +133,18 @@ namespace Weekofcode4
             // "description" : "Druk op het scherm de volgende tekst af: 'Een, twee, drie, vier, hoedje van, hoedje van, een twee, drie, vier, hoedje van papier'. Elk woord staat op een eigen regel. Na elke woord spring je verder in. Na 4 woorden verandert de richting (dus van verder, naar minder ver inspringen of andersom).", "requirements" : "Gebruik 1 regel code.", 
             Console.WriteLine("Een,\n\t twee,\n\t\t drie,\n\t\t\t vier,\n\t\t\t\t hoedje\n\t\t\t van,\n\t\t hoedje\n\t van,\n een\n\t twee,\n\t\t drie,\n\t\t\t vier,\n\t\t\t\t hoedje\n\t\t\t van\n\t\t papier\n\t\t");
         }
+
         static void Opdracht15()
         {
             //"description" : "1 Festival muntje kost 2,30. Druk op het scherm een tabel af waarin je aangeeft hoe duur 1 t/m 10 muntjes zijn. Natuurlijk is de eerste regel een kopregel en de tweede een scheidingslijn (meerdere '-').", "requirements" : "nvt",
             Console.WriteLine("Aantal muntjes \t| Prijs");
             Console.WriteLine("----------------------");
-            for(int i = 1; i<11; i++)
+            for (int i = 1; i < 11; i++)
             {
-                Console.WriteLine("        " + i +"\t|" + 2,30*i);
+                Console.WriteLine("        " + i + "\t|" + 2, 30 * i);
             }
         }
+
         // "description" : "Schrijf een programma dat twee multiple choice vragen afdrukt en het antwoord op beide inleest.", "requirements" : "nvt (Gebruikers input kan niet getest worden in Genius@Work)"
         static void Opdracht31()
         {
@@ -266,25 +276,29 @@ namespace Weekofcode4
             int damageint = (int)damage;
             Console.WriteLine(damageint);
         }
+
         static void Opdracht47()
         {
-        int a = 5;
-        int b = 2;
-        float c = (float)a/b; //FIXME: This calculation is incorrect\n\t}\n}",
+            int a = 5;
+            int b = 2;
+            float c = (float)a / b; //FIXME: This calculation is incorrect\n\t}\n}",
             Console.WriteLine(c);
         }
+
         static void Opdracht48()
         {
             //"description" : "Cast \"int answer = 42\" naar een double.", "requirements" : "Pas de regel \"int answer = 42\" niet aan, maar cast hem op de regel eronder naar een nieuwe double", "
             int answer = 42;
             double doubleAnswer = (double)answer;
         }
+
         static void Opdracht49()
         {
             char firstLetter = 'a';
             int intLetter = (int)firstLetter;
             Console.WriteLine(intLetter);
         }
+
         static void Opdracht50()
         {
             int b = 98;
@@ -295,7 +309,7 @@ namespace Weekofcode4
         static void Opdracht51()
         {
             string price = "12.95";
-            double doubleprice =Convert.ToDouble(price);
+            double doubleprice = Convert.ToDouble(price);
             Console.WriteLine(doubleprice);
         }
 
@@ -310,8 +324,8 @@ namespace Weekofcode4
             ulong copper = 87253321654;
             string copperstring = Convert.ToString(copper);
             UInt64 intCopper = UInt64.Parse(copperstring);
-           Console.WriteLine(intCopper);
-            
+            Console.WriteLine(intCopper);
+
 
         }
 
@@ -330,12 +344,11 @@ namespace Weekofcode4
 
         }
 
-        public class Entity { }
-        public class Warrior : Entity { }
+
 
         static void Opdracht56()
         {
-           Warrior Henk = new Warrior();
+            Warrior Henk = new Warrior();
             if (Henk is Entity) {
                 //FIXME: Do smart stuff here
                 System.Console.WriteLine("Henk de Warrior is een entity");
@@ -343,6 +356,38 @@ namespace Weekofcode4
             else System.Console.WriteLine("Henk de Warrior is helemaal geen entity");
 
         }
+
+        static void Opdracht57()
+        {
+            Mage Piet = new Mage(); //Piet the mighty mage!! OMG
+            Entity EntPiet = (Entity)Piet;
+        }
+        static void Opdracht58()
+        {
+            string enemyIsDead = "true";
+            bool enemyIsDeadBool = bool.Parse(enemyIsDead);
+            Console.WriteLine(enemyIsDeadBool);
+        }
+        static void Opdracht59()
+        {
+            int? veryHard = null;
+            long? longVeryHard = (long?)veryHard;
+            Console.WriteLine(longVeryHard);
+        }
+        static void Opdracht60()
+        {
+            Warrior Henk = new Warrior();
+            if (Henk is Entity)
+            { //FIXME: Do smart stuff here 
+                System.Console.WriteLine("Henk de HugeWarrior is nog steeds een entity");
+            }
+            else { System.Console.WriteLine("Henk de HugeWarrior is helemaal geen entity)"); }
+        }
+    
+
+        
+
+        
         static void Main(string[] args)
 
         {
@@ -377,17 +422,17 @@ namespace Weekofcode4
             Opdracht49();
             Opdracht50();*/
 
-            Opdracht51();
+            /*Opdracht51();
             Opdracht52();
             Opdracht53();
             Opdracht54();
-            Opdracht55();
+            Opdracht55();*/
 
             Opdracht56();
-            //Opdracht57();
-            //Opdracht58();
-            //Opdracht59();
-            //Opdracht60();
+            Opdracht57();
+            Opdracht58();
+            Opdracht59();
+            Opdracht60();
 
 
 

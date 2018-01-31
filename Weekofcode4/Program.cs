@@ -75,7 +75,48 @@ namespace Weekofcode4
             Console.WriteLine("van");
             Console.WriteLine("witregels");
         }
-    
+
+        static void Opdracht31()
+        {
+            Console.WriteLine("What is 1+1?");
+            Console.WriteLine("A. 1");
+            Console.WriteLine("B. 2");
+            Console.WriteLine("C. 3");
+            string ans = Console.ReadLine();
+
+            Console.WriteLine("What's the capital of the Nederlands?");
+            Console.WriteLine("A. Rotterdam");
+            Console.WriteLine("B. Amsterdam");
+            Console.WriteLine("C. Den Haag");
+            string ans2 = Console.ReadLine();
+
+        }
+
+        static void Opdracht32()
+        {
+            Console.WriteLine("What's your first name?");
+            string FIRST_NAME = Console.ReadLine();
+            Console.WriteLine("What's your last name?");
+            string LAST_NAME = Console.ReadLine();
+            Console.WriteLine("What's your postal code?");
+            string POSTAL_CODE = Console.ReadLine();
+        }
+
+        static void Opdracht33()
+        {
+            Console.WriteLine("What's your first name?");
+            string FIRST_NAME = Console.ReadLine();
+            Console.WriteLine("What's your last name?");
+            string LAST_NAME = Console.ReadLine();
+            Console.WriteLine("What's your postal code?");
+            string POSTAL_CODE = Console.ReadLine();
+            Console.WriteLine("What's your house number?");
+            string HOUSE_NUMBER = Console.ReadLine();
+            Console.WriteLine("How much do you weigh?");
+            string WEIGHT = Console.ReadLine();
+            Console.WriteLine("How much do you earn (in euros)?");
+            string EARNINGS = Console.ReadLine();
+        }
 
         static void Main(string[] args)
         {
@@ -90,6 +131,10 @@ namespace Weekofcode4
             Opdracht8();
             Opdracht9();
             Opdracht10();
+
+            Opdracht31();
+            Opdracht32();
+            Opdracht33();
 
             Console.ReadKey();
         }

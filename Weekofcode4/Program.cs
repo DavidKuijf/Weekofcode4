@@ -109,6 +109,33 @@ namespace Weekofcode4
             }
         }
 
+        static void Opdracht13()
+        {
+            //"description" : "Schrijf een programma dat op het scherm de tekst 'Programmeren is echt cool' afdrukt. Elk woord staat op een eigen regel en tussen de regels staat een witregel.", "requirements" : "Gebruik maximaal 5 regels en maximaal 2 keer '\\n'.",
+
+            Console.WriteLine("Programmeren\n");
+            Console.WriteLine("is\n");
+            Console.WriteLine("echt");
+            Console.WriteLine();
+            Console.WriteLine("cool");
+        }
+
+        static void Opdracht14()
+        {
+            // "description" : "Druk op het scherm de volgende tekst af: 'Een, twee, drie, vier, hoedje van, hoedje van, een twee, drie, vier, hoedje van papier'. Elk woord staat op een eigen regel. Na elke woord spring je verder in. Na 4 woorden verandert de richting (dus van verder, naar minder ver inspringen of andersom).", "requirements" : "Gebruik 1 regel code.", 
+            Console.WriteLine("Een,\n\t twee,\n\t\t drie,\n\t\t\t vier,\n\t\t\t\t hoedje\n\t\t\t van,\n\t\t hoedje\n\t van,\n een\n\t twee,\n\t\t drie,\n\t\t\t vier,\n\t\t\t\t hoedje\n\t\t\t van\n\t\t papier\n\t\t");
+        }
+        static void Opdracht15()
+        {
+            //"description" : "1 Festival muntje kost 2,30. Druk op het scherm een tabel af waarin je aangeeft hoe duur 1 t/m 10 muntjes zijn. Natuurlijk is de eerste regel een kopregel en de tweede een scheidingslijn (meerdere '-').", "requirements" : "nvt",
+            Console.WriteLine("Aantal muntjes \t| Prijs");
+            Console.WriteLine("----------------------");
+            for(int i = 1; i<11; i++)
+            {
+                Console.WriteLine("        " + i +"\t|" + 2,30*i);
+            }
+        }
+        // "description" : "Schrijf een programma dat twee multiple choice vragen afdrukt en het antwoord op beide inleest.", "requirements" : "nvt (Gebruikers input kan niet getest worden in Genius@Work)"
         static void Opdracht31()
         {
             Console.WriteLine("What is 1+1?");
@@ -232,10 +259,95 @@ namespace Weekofcode4
 
         }
 
+        static void Opdracht46()
+        {
+            //"description" : "Cast float naar int.", "requirements" : "Pas de regel niet aan, maar doe de cast op een nieuwe regel met een nieuwe int variabele",
+            float damage = 231.99f;
+            int damageint = (int)damage;
+            Console.WriteLine(damageint);
+        }
+        static void Opdracht47()
+        {
+        int a = 5;
+        int b = 2;
+        float c = (float)a/b; //FIXME: This calculation is incorrect\n\t}\n}",
+            Console.WriteLine(c);
+        }
+        static void Opdracht48()
+        {
+            //"description" : "Cast \"int answer = 42\" naar een double.", "requirements" : "Pas de regel \"int answer = 42\" niet aan, maar cast hem op de regel eronder naar een nieuwe double", "
+            int answer = 42;
+            double doubleAnswer = (double)answer;
+        }
+        static void Opdracht49()
+        {
+            char firstLetter = 'a';
+            int intLetter = (int)firstLetter;
+            Console.WriteLine(intLetter);
+        }
+        static void Opdracht50()
+        {
+            int b = 98;
+            char castChar = (char)b;
+            Console.WriteLine(castChar);
+        }
+
+        static void Opdracht51()
+        {
+            string price = "12.95";
+            double doubleprice =Convert.ToDouble(price);
+            Console.WriteLine(doubleprice);
+        }
+
+        static void Opdracht52()
+        {
+            bool won = true;
+            string castBool = won.ToString();
+            Console.WriteLine(castBool);
+        }
+        static void Opdracht53()
+        {
+            ulong copper = 87253321654;
+            string copperstring = Convert.ToString(copper);
+            UInt64 intCopper = UInt64.Parse(copperstring);
+           Console.WriteLine(intCopper);
+            
+
+        }
+
+        static void Opdracht54()
+        {
+            int bineary = 0b101010;
+            string integer = bineary.ToString();
+            Console.WriteLine(bineary);
+        }
+
+        static void Opdracht55()
+        {
+            int palindrome = 0b10101;
+            int interger = (int)palindrome;
+            Console.WriteLine(interger);
+
+        }
+
+        public class Entity { }
+        public class Warrior : Entity { }
+
+        static void Opdracht56()
+        {
+           Warrior Henk = new Warrior();
+            if (Henk is Entity) {
+                //FIXME: Do smart stuff here
+                System.Console.WriteLine("Henk de Warrior is een entity");
+            }
+            else System.Console.WriteLine("Henk de Warrior is helemaal geen entity");
+
+        }
         static void Main(string[] args)
+
         {
 
-            Opdracht1();
+           /* Opdracht1();
             Opdracht2();
             Opdracht3();
             Opdracht4();
@@ -249,15 +361,35 @@ namespace Weekofcode4
             Opdracht12();
             Opdracht13();
             Opdracht14();
-            Opdracht15();
+            Opdracht15();*/
 
-            Opdracht31();
+           /* Opdracht31();
             Opdracht32();
             Opdracht33();
             Opdracht34();
             Opdracht35();
             Opdracht36();
-            Opdracht37();
+            Opdracht37();*/
+
+            /*Opdracht46();
+            Opdracht47();
+            Opdracht48();
+            Opdracht49();
+            Opdracht50();*/
+
+            Opdracht51();
+            Opdracht52();
+            Opdracht53();
+            Opdracht54();
+            Opdracht55();
+
+            Opdracht56();
+            //Opdracht57();
+            //Opdracht58();
+            //Opdracht59();
+            //Opdracht60();
+
+
 
             Console.ReadKey();
         }

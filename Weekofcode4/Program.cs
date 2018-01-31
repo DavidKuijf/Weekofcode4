@@ -473,7 +473,43 @@ namespace Weekofcode4
 
             
         }
+        
+        static void Opdracht71()
+        {
+            string input = "The Lich King is the master and lord of the Scourge";
+            string[] cutstring = input.Split(" ");
 
+            string[] swapstring = new string[15];
+            for(int i = 0 ; i < cutstring.Length; i++)
+            {
+                int current = cutstring.Length-1 - i;
+                swapstring[i] = cutstring[current];
+            }
+
+            string output = String.Join(" ", swapstring);
+            System.Console.WriteLine(output);
+        }
+
+        static void Opdracht72()
+        {
+            string input = "The fierce warrior Eldan has slain the might demon Kil'jaeden";
+            string[] cutstring = input.Split(" ");
+            Console.WriteLine(cutstring[4]);
+        }
+
+        static void Opdracht73()
+        {
+            int number = 123;
+            Console.WriteLine( String.Format("123 {0} {1}", number.ToString("X"), Convert.ToString(number, 2)));
+        }
+        static void Opdracht74()
+        {
+
+        }
+        static void Opdracht75()
+        {
+
+        }
 
 
 
@@ -530,13 +566,17 @@ namespace Weekofcode4
             Opdracht64();
             Opdracht65();*/
 
-            Opdracht66();
-            Opdracht67();
-            Opdracht68();
-            Opdracht69();
-            Opdracht70();
+            /* Opdracht66();
+             Opdracht67();
+             Opdracht68();
+             Opdracht69();
+             Opdracht70();*/
 
-
+            Opdracht71();
+            Opdracht72();
+            Opdracht73();
+            Opdracht74();
+            Opdracht75();
 
             Console.ReadKey();
         }

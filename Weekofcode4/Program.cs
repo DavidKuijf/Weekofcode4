@@ -344,8 +344,6 @@ namespace Weekofcode4
 
         }
 
-
-
         static void Opdracht56()
         {
             Warrior Henk = new Warrior();
@@ -362,18 +360,21 @@ namespace Weekofcode4
             Mage Piet = new Mage(); //Piet the mighty mage!! OMG
             Entity EntPiet = (Entity)Piet;
         }
+
         static void Opdracht58()
         {
             string enemyIsDead = "true";
             bool enemyIsDeadBool = bool.Parse(enemyIsDead);
             Console.WriteLine(enemyIsDeadBool);
         }
+
         static void Opdracht59()
         {
             int? veryHard = null;
             long? longVeryHard = (long?)veryHard;
             Console.WriteLine(longVeryHard);
         }
+
         static void Opdracht60()
         {
             Warrior Henk = new Warrior();
@@ -383,38 +384,127 @@ namespace Weekofcode4
             }
             else { System.Console.WriteLine("Henk de HugeWarrior is helemaal geen entity)"); }
         }
-    
 
-        
+        static void Opdracht61()
+        {
+            string hello = "hello";
+            string world = "world";
 
-        
+            string hw = hello + " " + world + "!";
+            Console.WriteLine(hw);
+        }
+        static void Opdracht62()
+        {
+            int hp = 100;
+            Console.WriteLine("the enemy has " + hp+ "hp left" );
+        }
+        static void Opdracht63()
+        {
+            string name = "Eldan";
+            string friend = "eldan";
+            if (name.Equals(friend))
+            {
+                Console.WriteLine("these are equal");
+            }
+        }
+        static void Opdracht64()
+        {
+            string name = "Eldan";
+            string friend = "eldan";
+            if (name.Equals(friend, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("these are equal");
+            }
+        }
+        static void Opdracht65()
+        {
+            string name = "Eldan";
+            string text1 = "Welcome";
+            string text2 = ", lets start saving the world!!";
+            string final1 = text1 + " " + name + text2;
+            Console.WriteLine(final1);
+            string final2 = String.Format("{0} {1} {2}", text1, name, text2);
+            Console.WriteLine(final2);
+
+        }
+        static void Opdracht66()
+        {
+            for (int i=0; i < 10; i++)
+            {
+                Console.WriteLine("File("+i+")");
+            }
+        }
+        static void Opdracht67()
+        {
+            string input = "The enemy wizard has died";
+            string replace = input.Replace("wizard has died","warrior is alive");
+            Console.WriteLine(replace);
+        }
+        static void Opdracht68()
+        {
+
+            string[] array = { "123.45", "9.95", "19.99","12", "99.9" };
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = String.Format("{0,10:C}", array[i]);
+                Console.WriteLine(array[i]);
+            }
+
+        }
+        static void Opdracht69()
+        {
+            string[] array = { "Call of Duty", "World of Warcraft", "Starcraft 2", "Fallout 4", "Grand Theft Auto" };
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = String.Format("{0,18}", array[i]);
+                Console.WriteLine(array[i]);
+            }
+        }
+
+        static void Opdracht70()
+        {
+            string strings = "Llane Wrynn was the ruler of the Kingdom of Azeroth during the First War";
+            string[] cutstring = strings.Split(" ");
+            string one = cutstring[3];
+            string two = cutstring[4];
+            cutstring[3] = two;
+            cutstring[4] = one;
+            Console.WriteLine( String.Join(" ", cutstring));
+
+            
+        }
+
+
+
+
+
         static void Main(string[] args)
 
         {
 
-           /* Opdracht1();
-            Opdracht2();
-            Opdracht3();
-            Opdracht4();
-            Opdracht5();
-            Opdracht6();
-            Opdracht7();
-            Opdracht8();
-            Opdracht9();
-            Opdracht10();
-            Opdracht11();
-            Opdracht12();
-            Opdracht13();
-            Opdracht14();
-            Opdracht15();*/
+            /* Opdracht1();
+             Opdracht2();
+             Opdracht3();
+             Opdracht4();
+             Opdracht5();
+             Opdracht6();
+             Opdracht7();
+             Opdracht8();
+             Opdracht9();
+             Opdracht10();
+             Opdracht11();
+             Opdracht12();
+             Opdracht13();
+             Opdracht14();
+             Opdracht15();*/
 
-           /* Opdracht31();
-            Opdracht32();
-            Opdracht33();
-            Opdracht34();
-            Opdracht35();
-            Opdracht36();
-            Opdracht37();*/
+            /* Opdracht31();
+             Opdracht32();
+             Opdracht33();
+             Opdracht34();
+             Opdracht35();
+             Opdracht36();
+             Opdracht37();*/
 
             /*Opdracht46();
             Opdracht47();
@@ -428,11 +518,23 @@ namespace Weekofcode4
             Opdracht54();
             Opdracht55();*/
 
-            Opdracht56();
+            /*Opdracht56();
             Opdracht57();
             Opdracht58();
             Opdracht59();
-            Opdracht60();
+            Opdracht60();*/
+
+            /*Opdracht61();
+            Opdracht62();
+            Opdracht63();
+            Opdracht64();
+            Opdracht65();*/
+
+            Opdracht66();
+            Opdracht67();
+            Opdracht68();
+            Opdracht69();
+            Opdracht70();
 
 
 

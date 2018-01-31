@@ -255,18 +255,155 @@ namespace Weekofcode4
         {
             Console.WriteLine("Enter a question.");
             string QUESTION = Console.ReadLine();
-            char[] ARRAY = QUESTION.ToCharArray();
-            for (int i = 0; i < ARRAY.Length; i++)
-            {
-                if (ARRAY[i] is double)
-                {
-
-                }
-            }
+            
+           
             Console.WriteLine($"Give the answer to your question: {QUESTION}");
             double ANSWER = Double.Parse(Console.ReadLine());
+            double ANSWER2 = ANSWER * 2;
 
+            Console.WriteLine($"U gave this as answer: {ANSWER}, luckily you didn't answer {ANSWER2}");
+        }
 
+        static void Opdracht39()
+        {
+            Console.WriteLine("Enter a word. (Max 5 characters).");
+            string WORD = Console.ReadLine();
+            char[] WORD_ARRAY = WORD.ToCharArray();
+
+            if (WORD.Length != 5)
+            {
+                Console.WriteLine("Error: the word entered is longer (or shorter) than 5 characters!");
+            }
+
+            foreach (char c in WORD)
+            {
+                Console.WriteLine(c + " ");
+            }
+
+            for (int i = WORD_ARRAY.Length; i > 0; i--)
+            {
+                Console.WriteLine(WORD_ARRAY[i] + " ");
+            }
+        }
+
+        static void Opdracht40()
+        {
+            int RESULT = 0;
+            Console.WriteLine("Enter a number between 100-500");
+            string INPUT = Console.ReadLine();
+            char[] ARRAY = INPUT.ToCharArray();
+
+            foreach (char c in ARRAY)
+            {
+                int TMP = int.Parse(c.ToString());
+                RESULT += TMP;
+            }
+
+            Console.WriteLine($"The sum of your number is: {RESULT}");
+        }
+
+        static void Opdracht41()
+        {
+            double ROUND_NUM;
+
+            Console.WriteLine("Enter a decimal number.");
+            double DEC_NUM = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("How do you want to round this number off? (ceil/floor/not)");
+            string ANS = Console.ReadLine();
+
+            if (ANS.Equals("ceil"))
+            {
+                ROUND_NUM = Math.Ceiling(DEC_NUM);
+            }
+            if (ANS.Equals("floor"))
+            {
+                ROUND_NUM = Math.Floor(DEC_NUM);
+            }
+            else
+            {
+                ROUND_NUM = DEC_NUM;
+            }
+
+            Console.WriteLine($"Your number: {ROUND_NUM}.");
+        }
+
+        static void Opdracht42()
+        {
+            Console.WriteLine("Is this question one?");
+            string ANS1 = Console.ReadLine();
+            if (Console.ReadKey().Key == ConsoleKey.LeftArrow || Console.ReadKey().Key == ConsoleKey.RightArrow || Console.ReadKey().Key == ConsoleKey.UpArrow || Console.ReadKey().Key == ConsoleKey.DownArrow)
+            {
+                Console.WriteLine("Is this question two?");
+                string ANS2 = Console.ReadLine();
+
+                if (Console.ReadKey().Key == ConsoleKey.LeftArrow || Console.ReadKey().Key == ConsoleKey.RightArrow || Console.ReadKey().Key == ConsoleKey.UpArrow || Console.ReadKey().Key == ConsoleKey.DownArrow)
+                {
+                    Console.WriteLine("Is this question three?");
+                }
+            }
+        }
+
+        static void Opdracht43()
+        {
+            string SENTENCE = Console.ReadLine();
+            if (SENTENCE.Equals("Koekje van eigen deeg"))
+            {
+                Console.WriteLine("Koekje\tvan\teigen\tdeeg.");
+            }
+
+        }
+
+        static void Opdracht44()
+        {
+            int ZERO_COUNT = 0;
+            Console.WriteLine("Enter two numbers");
+            string NUM1 = Console.ReadLine();
+            string NUM2 = Console.ReadLine();
+            
+            foreach (char c in NUM1)
+            {
+                if (c.Equals("0"))
+                {
+                    ZERO_COUNT++;
+                }
+            }
+            foreach (char c in NUM2)
+            {
+                if (c.Equals("0"))
+                {
+                    ZERO_COUNT++;
+                }
+            }
+
+            if (ZERO_COUNT > 1)
+            {
+                Console.WriteLine(1);
+            }
+            else
+            {
+                Console.WriteLine(2);
+            }
+        }
+
+        static void Opdracht45()
+        {
+            Console.WriteLine("Enter a word. (Max 5 characters).");
+            string WORD = Console.ReadLine();
+            char[] WORD_ARRAY = WORD.ToCharArray();
+
+            if (WORD.Length != 5)
+            {
+                Console.WriteLine("Error: the word entered is longer (or shorter) than 5 characters!");
+            }
+
+            Console.WriteLine("Enter a seperation mark");
+            string MARK = Console.ReadLine();
+
+            for (int i = WORD_ARRAY.Length; i > 0; i--)
+            {
+                Console.WriteLine(WORD_ARRAY[i] + MARK);
+            }
         }
 
         static void Opdracht46()
@@ -392,7 +529,7 @@ namespace Weekofcode4
 
         {
 
-           /* Opdracht1();
+           /* Opdracht1(); CHECKED
             Opdracht2();
             Opdracht3();
             Opdracht4();
@@ -408,31 +545,34 @@ namespace Weekofcode4
             Opdracht14();
             Opdracht15();*/
 
-           /* Opdracht31();
+           /* Opdracht31(); CHECKED
             Opdracht32();
             Opdracht33();
             Opdracht34();
-            Opdracht35();
-            Opdracht36();
-            Opdracht37();*/
+            Opdracht35();*/
 
-            /*Opdracht46();
+          /*Opdracht36(); NEEDS CHECKING
+            Opdracht37();
+            Opdracht38();
+            Opdracht39();*/
+
+            /*Opdracht46(); NEEDS CHECKING
             Opdracht47();
             Opdracht48();
             Opdracht49();
             Opdracht50();*/
 
-            /*Opdracht51();
+            /*Opdracht51(); NEEDS CHECKING
             Opdracht52();
             Opdracht53();
             Opdracht54();
             Opdracht55();*/
 
-            Opdracht56();
+            /*Opdracht56(); NEEDS CHECKING
             Opdracht57();
             Opdracht58();
             Opdracht59();
-            Opdracht60();
+            Opdracht60();*/
 
 
 

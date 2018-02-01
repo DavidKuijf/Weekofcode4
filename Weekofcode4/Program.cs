@@ -145,6 +145,67 @@ namespace Weekofcode4
             }
         }
 
+        //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n1\ntrue\n3,678"
+        static void Nummer16()
+        {
+            int op16 = 678;
+        }
+
+        //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\nfalse\n6,54\n\"Apenbal\""
+        static void Nummer17()
+        {
+            string op17 = "Apenbal";
+        }
+
+        //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n\"1,43\"
+        static void Nummer18()
+        {
+            double op18 = 1.43;
+        }
+
+        //Sla de wortel van 8 op in een variabele. Je mag de waarde opzoeken.
+        static void Nummer19()
+        {
+            double op19 = 2.82842712475;
+        }
+
+        //Maak een variabele die bijhoudt hoe oud iemand is, of zijn / haar ouders mee zijn en of hij /zij het zwembad in mag."
+        static void Nummer20()
+        {
+            Console.WriteLine("Hoe oud ben je?");
+            int op20 = Console.Read();
+        }
+
+        //Je hebt twee variabelen met een geheel getal (bijvoorbeeld 3 en 10). Wissel waarden van deze variabelen om. wat je programmeert moet werken bij elke inhoud van de variabelen."
+        static void Nummer21()
+        {
+            int varA = 3;
+            int varB = 10;
+            Console.WriteLine("varA is " + varA);
+            Console.WriteLine("varB is " + varB);
+            int temp = varA;
+            varA = varB;
+            varB = temp;
+            Console.WriteLine("varA is " + varA);
+            Console.WriteLine("varB is " + varB);
+        }
+
+        // Maak een variabele waarin je de waarde van drie andere variabelen opgeteld worden. De eerste drie variabelen zijn 1 geheel getal en 2 komma-getallen.
+        static void Nummer22()
+        {
+            int var1 = 10;
+            double var2 = 9.99;
+            double var3 = 0.11;
+            Console.WriteLine("Totale waarde is " + (var1 + var2 + var3));
+        }
+
+        static void Nummer23()
+        {
+            int x = 10;
+            int y = 20;
+            int z = 30;
+        }
+
         // "description" : "Schrijf een programma dat twee multiple choice vragen afdrukt en het antwoord op beide inleest.", "requirements" : "nvt (Gebruikers input kan niet getest worden in Genius@Work)"
         static void Opdracht31()
         {
@@ -723,27 +784,35 @@ namespace Weekofcode4
 
         {
 
-           /* Opdracht1(); CHECKED
-            Opdracht2();
-            Opdracht3();
-            Opdracht4();
-            Opdracht5();
-            Opdracht6();
-            Opdracht7();
-            Opdracht8();
-            Opdracht9();
-            Opdracht10();
-            Opdracht11();
-            Opdracht12();
-            Opdracht13();
-            Opdracht14();
-            Opdracht15();*/
+            /* Opdracht1(); CHECKED
+             Opdracht2();
+             Opdracht3();
+             Opdracht4();
+             Opdracht5();
+             Opdracht6();
+             Opdracht7();
+             Opdracht8();
+             Opdracht9();
+             Opdracht10();
+             Opdracht11();
+             Opdracht12();
+             Opdracht13();
+             Opdracht14();
+             Opdracht15();*/
 
-           /* Opdracht31(); CHECKED
-            Opdracht32();
-            Opdracht33();
-            Opdracht34();
-            Opdracht35();*/
+            /*Nummer16(); NEEDS CHECKING
+            Nummer17();
+            Nummer18();
+            Nummer19();
+            Nummer20();
+            Nummer21();*/
+            Nummer22();
+
+            /* Opdracht31(); CHECKED
+             Opdracht32();
+             Opdracht33();
+             Opdracht34();
+             Opdracht35();*/
 
           /*Opdracht36(); //NEEDS CHECKING
             Opdracht37();

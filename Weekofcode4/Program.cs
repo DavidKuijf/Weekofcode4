@@ -1659,7 +1659,7 @@ namespace Weekofcode4
 
             
         }
-        static void Opdrachten117()
+        static void Opdracht117()
         {
             //"Oma is lekker pannenkoeken aan het bakken. Controleer haar door te checken of de 1e, 2e en 3e pannenkoek uit ieder opvolgend drietal resp. kaal, met kaas, of met appel is. "
             string pannekoek = "";
@@ -1692,7 +1692,7 @@ namespace Weekofcode4
 
         }
 
-        static void Opdrachten118()
+        static void Opdracht118()
         {
 
             //"Gooi twee dobbelstenen en check of het totaal even of oneven is. "
@@ -1746,7 +1746,7 @@ namespace Weekofcode4
             Console.WriteLine(points);
         }
 
-        static void Opdrachten120()
+        static void Opdracht120()
         {
             //Docenten zijn het zat om steeds vragen te beantwoorden over welke taal het beste is: C#, C of Java. Gegeven een int met studentnummer. Stel adhv het laatste cijfer daarvan vast wat het antwoord is. (<4: Java, tussen 3 en 7: C, anders C#)"
             int studentnummer = 0;
@@ -1766,6 +1766,7 @@ namespace Weekofcode4
          
             
         }
+
         static void Opdracht121()
         {
             Random rnd = new Random();
@@ -1819,7 +1820,89 @@ namespace Weekofcode4
 
         }
 
+        static void Opdracht125()
+        {
+            // "Maak een simpel programmaatje dat voor de NS voorspelt of wissels gaan bevriezen. Gebruik als indicator de random dagtemperatuur. Zolang het drie dagen niet vriest gaat het goed. "
+            Random rnd = new Random();
+            int rand1 = rnd.Next(-10, 30);
+            int rand2 = rnd.Next(-10, 30);
+            int rand3 = rnd.Next(-10, 30);
+            bool bevriezen = false;
 
+            if (rand1 <1 | rand2 <1 | rand3 < 1)
+            {
+                bevriezen = true;
+            }
+
+        }
+
+        static void Opdracht126()
+        {
+            // "Voor een voor studenten niet geheel onbekend spelletje moet er bepaald worden hoe vaak er op een knop wordt gedrukt. Ga door met tellen totdat de speler van het spel 2s niet op de knop drukt. Druk het aantal keer drukken af. "
+            System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+            bool timeleft = true;
+            Console.WriteLine("Hit some buttons");
+            Console.ReadKey();
+            int count = 0;
+
+            timer.Start();
+
+            while (timeleft)
+            {
+                Console.ReadKey();
+                if (timer.ElapsedMilliseconds > 2000)
+                {
+                    timeleft = false;
+
+                }
+                else
+                {
+                    timer.Restart();
+                    count++;
+                }
+            }
+            Console.WriteLine(count);
+
+        }
+
+        static void Opdracht127()
+        {
+            //"Hoeveel punaises passen er in een kuub als elke punaise wordt gerepresenteerd door 7±1 kubieke millimeter? Druk het antwoord af voor drie runs. Bepaal de grootte van elke punaise random uit 6, 7 en 8. Neem aan dat de punaises perfect op elkaar aansluiten bij het stapelen."
+            int count = 0;
+            Random rnd = new Random();
+            for (int j = 0; j < 3; j++) {
+
+                for (int i = 0; i < 1000000; i++)
+                {
+                    count = count + rnd.Next(6,8);
+                   
+                }
+                Console.WriteLine(count);
+                count = 0;
+            }
+        }
+
+        static void Opdracht128()
+        {
+            //"Mama is weer lekker pannenkoeken aan het bakken maar de 3 dekselse kinderen halen steeds kant en klare exemplaren van de stapel. 
+            //Laat Mama doorbakken zolang er minder dan vijf op de stapel liggen. Laat het bakken van 1 exemplaar 10s duren en het opeten in het begin 1s. 
+            //Na elke 1/2 minuut worden de kinderen 2x minder gretig. Reken uit hoeveel pannenkoeken Mama zal bakken."
+            while ()
+            {
+
+            }
+
+        }
+
+        static void Opdracht129()
+        {
+
+        }
+
+        static void Opdracht130()
+        {
+
+        }
 
         static void Main(string[] args)
         {
@@ -1935,7 +2018,7 @@ namespace Weekofcode4
 
             //Opdracht101(); // NEEDS CHECKING
             //Opdracht102();
-            Opdracht103();
+            //Opdracht103();
             /*Opdracht104();
             Opdracht105();*/
 
@@ -1943,6 +2026,9 @@ namespace Weekofcode4
             Opdracht122();
             Opdracht123();
             Opdracht124();*/
+
+            //Opdracht126();
+            Opdracht127();
 
             Console.ReadKey();
         }

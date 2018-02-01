@@ -1460,91 +1460,7 @@ namespace Weekofcode4
             Console.WriteLine(isAllowed);
         }
 
-        static void Opdracht119()
-        {
-            string word = Console.ReadLine();
-            char[] wordArray = word.ToCharArray();
-            int vowelCount = 0;
-            int points = 0;
-
-            for (int i = 0; i < 4; i++)
-            {
-                if (wordArray[i].Equals('a') || wordArray[i].Equals('e') || wordArray[i].Equals('i') || wordArray[i].Equals('o') || wordArray[i].Equals('u'))
-                {
-                    vowelCount++;
-                }
-                else
-                {
-                    points = 0;
-                }
-            }
-
-            if (vowelCount > 4) 
-            {
-                points = 10;
-            }
-            if (vowelCount == 2 || vowelCount == 3)
-            {
-                points = 5;
-            }
-
-            Console.WriteLine(points);
-        }
-
-        static void Opdracht121()
-        {
-            Random rnd = new Random();
-
-            int i = 0;
-            while (i < 3)
-            {
-                double randomLength = rnd.NextDouble() * (2.7 - 2.5) + 2.5;
-                double amount = (int)(100 / randomLength);
-                Console.WriteLine(amount);
-                i++;
-            }
-        }
-
-        static void Opdracht122()
-        {
-            double money = 10000;
-            int half = 0;
-            
-            while (money > 100)
-            {
-                money /= 2;
-                half++;
-            }
-
-            Console.WriteLine(half);
-        }
-
-        static void Opdracht123()
-        {
-            double money = 19.97;
-            int increase = 0;
-
-            while (money < 1000000000)
-            {
-                money *= 2;
-                increase++;
-            }
-        }
-
-        static void Opdracht124()
-        {
-            int startTime = DateTime.Now.Millisecond;
-            int counter = 0;
-
-            while (startTime < (startTime + 1))
-            {
-                Console.WriteLine();
-                counter++;
-            }
-
-        }
-
-        static void Opdrachten106()
+        static void Opdracht106()
         {
             // Maak alle getallen van -1000 tot 1000 nul behalve de band van - 10 tot 10, die wordt 1
             int x = 0;
@@ -1797,14 +1713,39 @@ namespace Weekofcode4
                 isEven = false;
             }
         }
-        static void Opdrachten119()
+
+
+        static void Opdracht119()
         {
-
-            // "Ken tien punten toe aan een ingetypt woord als het met meer dan 4 klinkers begint, 5 punten aan woorden met 2 of 3 klinkers en 0 punten aan woorden met een medeklinker. Druk het aantal punten af."
             string word = Console.ReadLine();
+            char[] wordArray = word.ToCharArray();
+            int vowelCount = 0;
+            int points = 0;
 
-       
+            for (int i = 0; i < 4; i++)
+            {
+                if (wordArray[i].Equals('a') || wordArray[i].Equals('e') || wordArray[i].Equals('i') || wordArray[i].Equals('o') || wordArray[i].Equals('u'))
+                {
+                    vowelCount++;
+                }
+                else
+                {
+                    points = 0;
+                }
+            }
+
+            if (vowelCount > 4)
+            {
+                points = 10;
+            }
+            if (vowelCount == 2 || vowelCount == 3)
+            {
+                points = 5;
+            }
+
+            Console.WriteLine(points);
         }
+
         static void Opdrachten120()
         {
             //Docenten zijn het zat om steeds vragen te beantwoorden over welke taal het beste is: C#, C of Java. Gegeven een int met studentnummer. Stel adhv het laatste cijfer daarvan vast wat het antwoord is. (<4: Java, tussen 3 en 7: C, anders C#)"
@@ -1825,6 +1766,59 @@ namespace Weekofcode4
          
             
         }
+        static void Opdracht121()
+        {
+            Random rnd = new Random();
+
+            int i = 0;
+            while (i < 3)
+            {
+                double randomLength = rnd.NextDouble() * (2.7 - 2.5) + 2.5;
+                double amount = (int)(100 / randomLength);
+                Console.WriteLine(amount);
+                i++;
+            }
+        }
+
+        static void Opdracht122()
+        {
+            double money = 10000;
+            int half = 0;
+
+            while (money > 100)
+            {
+                money /= 2;
+                half++;
+            }
+
+            Console.WriteLine(half);
+        }
+
+        static void Opdracht123()
+        {
+            double money = 19.97;
+            int increase = 0;
+
+            while (money < 1000000000)
+            {
+                money *= 2;
+                increase++;
+            }
+        }
+
+        static void Opdracht124()
+        {
+            int startTime = DateTime.Now.Millisecond;
+            int counter = 0;
+
+            while (startTime < (startTime + 1))
+            {
+                Console.WriteLine();
+                counter++;
+            }
+
+        }
+
 
 
         static void Main(string[] args)

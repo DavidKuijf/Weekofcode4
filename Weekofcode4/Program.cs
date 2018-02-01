@@ -321,13 +321,13 @@ namespace Weekofcode4
             Console.WriteLine("Which do you choose first?");
             string result = Console.ReadLine();
 
-            if(result.Equals(goat))
+            if (result.Equals(goat))
             {
                 Console.WriteLine("Aight, ya good.");
-            } else if(result.Equals(cabbage))
+            } else if (result.Equals(cabbage))
             {
                 Console.WriteLine("RIP Goat");
-            } else if(result.Equals(wolf))
+            } else if (result.Equals(wolf))
             {
                 Console.WriteLine("MY CABBAGES");
             } else
@@ -336,7 +336,7 @@ namespace Weekofcode4
             }
 
         }
-        
+
         // "description" : "Schrijf een programma dat twee multiple choice vragen afdrukt en het antwoord op beide inleest.", "requirements" : "nvt (Gebruikers input kan niet getest worden in Genius@Work)"
         static void Opdracht31()
         {
@@ -591,7 +591,7 @@ namespace Weekofcode4
             Console.WriteLine("Enter a seperation mark");
             string MARK = Console.ReadLine();
 
-            for (int i = WORD_ARRAY.Length-1; i > 0; i--)
+            for (int i = WORD_ARRAY.Length - 1; i > 0; i--)
             {
                 Console.Write(WORD_ARRAY[i] + MARK);
             }
@@ -865,7 +865,7 @@ namespace Weekofcode4
             }
             Console.WriteLine(utf8String);
         }
-        
+
         static void Opdracht76()
         {
             int x = 10;
@@ -874,22 +874,22 @@ namespace Weekofcode4
             Console.WriteLine(z);
         }
 
-       static void Opdracht77()
+        static void Opdracht77()
         {
             int x = 10;
             double y = 2.3;
             double z = (x * y) / 3;
             Console.WriteLine(z);
         }
-       static void Opdracht78()
+        static void Opdracht78()
         {
             //Tel bij x 1 op, deel dat door y en sla dat op in x, waarbij je afrond naar beneden
             int x = 10;
             double y = 2.3;
-            x = (int)((x+1) / y);
+            x = (int)((x + 1) / y);
 
             Console.WriteLine(x);
-           
+
         }
         static void Opdracht79()
         {
@@ -898,7 +898,7 @@ namespace Weekofcode4
             int y = 12;
             int z = -30;
 
-            z = (int)(-1)*((y + z)+x)/(y + 1);
+            z = (int)(-1) * ((y + z) + x) / (y + 1);
             Console.WriteLine(z);
         }
         static void Opdracht80()
@@ -911,10 +911,10 @@ namespace Weekofcode4
         {
             //"Rond y en z af in a en b, volgens de normale afrondingsregels."
             double y = 14.6; //15 
-            double z =14.4; //14 
+            double z = 14.4; //14 
             y = Math.Round(y);
             z = Math.Round(z);
-            Console.WriteLine(y+ " " +z);
+            Console.WriteLine(y + " " + z);
 
         }
         static void Opdracht82()
@@ -925,7 +925,7 @@ namespace Weekofcode4
             int z = 3;
             int mod = ((x + y) % z);
             Console.WriteLine("opdracht 82 = " + mod);
-            
+
         }
         static void Opdracht83()
         {
@@ -933,7 +933,7 @@ namespace Weekofcode4
             int x = 7;
             int y = 5;
             int z = 3;
-            int a = (y%z)*x;
+            int a = (y % z) * x;
             Console.WriteLine(a);
         }
 
@@ -957,7 +957,7 @@ namespace Weekofcode4
             int y = 3;
             string soort = "apenballen";
             string plant = "kersenbomen";
-            Console.WriteLine(String.Format("{0} {1} eten {2} {3}",y,soort,x,plant));
+            Console.WriteLine(String.Format("{0} {1} eten {2} {3}", y, soort, x, plant));
         }
 
         static void Opdracht86()
@@ -996,7 +996,7 @@ namespace Weekofcode4
             int x = 10; //code x=11; //code
             int y = 0;
 
-            if ((x%2)==0)
+            if ((x % 2) == 0)
             {
                 y = 1;
             }
@@ -1014,7 +1014,7 @@ namespace Weekofcode4
 
             Console.WriteLine(String.Format("{0} {1}", tekst, (int)'ს'));
         }
-        
+
         static void Opdracht91()
         {
             Random rnd = new Random();
@@ -1077,7 +1077,7 @@ namespace Weekofcode4
             char[] wordArray = word.ToCharArray();
             bool startAD = false;
 
-            if (wordArray[0].Equals("a") || wordArray[0].Equals("d") && !wordArray[wordArray.Length-1].Equals("c"))
+            if (wordArray[0].Equals("a") || wordArray[0].Equals("d") && !wordArray[wordArray.Length - 1].Equals("c"))
             {
                 startAD = true;
             }
@@ -1093,7 +1093,7 @@ namespace Weekofcode4
 
             for (int i = 0; i < wordArray.Length; i++)
             {
-                if (wordArray[i] != wordArray[3-i])
+                if (wordArray[i] != wordArray[3 - i])
                 {
                     isPalindrome = false;
                 }
@@ -1101,7 +1101,7 @@ namespace Weekofcode4
 
             Console.WriteLine(isPalindrome);
         }
-        
+
         static void Opdracht97()
         {
             string word = "taartstraat";
@@ -1198,7 +1198,7 @@ namespace Weekofcode4
             int colLength = chessboard.GetLength(1);
             int x = 6;
             int y = 2;
-            
+
             bool isBlack = false;
             bool isOne = false;
 
@@ -1234,10 +1234,10 @@ namespace Weekofcode4
                         }
                     }
 
-                    Console.Write(chessboard[i,j] + " ");
+                    Console.Write(chessboard[i, j] + " ");
                 }
             }
-            if (chessboard[x,y] == 1 && chessboard[x,y] != null)
+            if (chessboard[x, y] == 1 && chessboard[x, y] != null)
             {
                 isBlack = true;
             }
@@ -1452,7 +1452,7 @@ namespace Weekofcode4
                 }
             }
 
-            if (chessboard[x,y] == 1)
+            if (chessboard[x, y] == 1)
             {
                 isAllowed = true;
             }
@@ -1605,12 +1605,12 @@ namespace Weekofcode4
             int uur = 0;
             string[] kleur = { "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", };
             string currentKluer = kleur[uur];
-        }   
+        }
         static void Opdracht114()
         {
             //"Help een programmeur zijn taal kiezen adhv. of het ochtend (C#), middag (C) of avond (C++) is. "
             string dagdeel = "REEEEEEEEEE";
-           string taal = "";
+            string taal = "";
             switch (dagdeel)
             {
                 case "Ochtend":
@@ -1622,7 +1622,7 @@ namespace Weekofcode4
                 case "Avond":
                     taal = "C++"; ;
                     break;
-        
+
             }
         }
 
@@ -1655,9 +1655,9 @@ namespace Weekofcode4
             double rdtfyghui = x / 16.0;
             int score = (int)Math.Ceiling(rdtfyghui);
             Console.WriteLine(score);
-           
 
-            
+
+
         }
         static void Opdracht117()
         {
@@ -1753,7 +1753,7 @@ namespace Weekofcode4
             int nummer = studentnummer % 10;
             string best = "";
 
-            if(nummer<4){
+            if (nummer < 4) {
                 best = "java";
             }
             if (nummer > 4 && nummer < 7)
@@ -1763,8 +1763,8 @@ namespace Weekofcode4
             else {
                 best = "C#";
             }
-         
-            
+
+
         }
 
         static void Opdracht121()
@@ -1829,7 +1829,7 @@ namespace Weekofcode4
             int rand3 = rnd.Next(-10, 30);
             bool bevriezen = false;
 
-            if (rand1 <1 | rand2 <1 | rand3 < 1)
+            if (rand1 < 1 | rand2 < 1 | rand3 < 1)
             {
                 bevriezen = true;
             }
@@ -1874,8 +1874,8 @@ namespace Weekofcode4
 
                 for (int i = 0; i < 1000000; i++)
                 {
-                    count = count + rnd.Next(6,8);
-                   
+                    count = count + rnd.Next(6, 8);
+
                 }
                 Console.WriteLine(count);
                 count = 0;
@@ -1884,26 +1884,214 @@ namespace Weekofcode4
 
         static void Opdracht128()
         {
+            System.Diagnostics.Stopwatch timerbakken = new System.Diagnostics.Stopwatch();
+            System.Diagnostics.Stopwatch timerchild1 = new System.Diagnostics.Stopwatch();
+            System.Diagnostics.Stopwatch timerchild2 = new System.Diagnostics.Stopwatch();
+            System.Diagnostics.Stopwatch timerchild3 = new System.Diagnostics.Stopwatch();
+            System.Diagnostics.Stopwatch timerglobal = new System.Diagnostics.Stopwatch();
+
+            timerbakken.Start();
+            timerchild1.Start();
+            timerchild2.Start();
+            timerchild3.Start();
+            timerglobal.Start();
+
+            int pannenkoeken = 0;
+            int total = 0;
+
+
             //"Mama is weer lekker pannenkoeken aan het bakken maar de 3 dekselse kinderen halen steeds kant en klare exemplaren van de stapel. 
             //Laat Mama doorbakken zolang er minder dan vijf op de stapel liggen. Laat het bakken van 1 exemplaar 10s duren en het opeten in het begin 1s. 
             //Na elke 1/2 minuut worden de kinderen 2x minder gretig. Reken uit hoeveel pannenkoeken Mama zal bakken."
-            while ()
+            while (pannenkoeken < 5)
             {
 
+                double modifier = Math.Floor((double)((timerglobal.ElapsedMilliseconds / 30000)));
+
+                double mod = Math.Pow(2.0, modifier);
+
+                if (timerbakken.ElapsedMilliseconds > 10000)
+                {
+                    Console.WriteLine("pannekoek");
+                    pannenkoeken++;
+                    total++;
+                    timerbakken.Restart();
+                }
+
+                if (timerbakken.ElapsedMilliseconds > 1000 * mod && pannenkoeken > 0)
+                {
+                    pannenkoeken--;
+                    Console.WriteLine("Kind1");
+                    timerchild1.Restart();
+                }
+
+                if (timerbakken.ElapsedMilliseconds > 1000 * mod && pannenkoeken > 0)
+                {
+                    pannenkoeken--;
+                    Console.WriteLine("Kind2");
+                    timerchild2.Restart();
+                }
+
+                if (timerbakken.ElapsedMilliseconds > 1000 * mod && pannenkoeken > 0)
+                {
+                    pannenkoeken--;
+                    Console.WriteLine("Kind3");
+                    timerchild3.Restart();
+                }
+
+
             }
+            Console.WriteLine(timerglobal.ElapsedMilliseconds);
+            Console.WriteLine(total);
+            //16
+
 
         }
 
         static void Opdracht129()
         {
+            //"Bepaal hoeveel mensen kunnen pinnen voordat de bankatomaat op het Leidseplein in Amsterdam leeg is. 
+            //Neem aan dat er in eerste instantie 100,000 euro in de automaat zit en dat het pinbedrag random is maar maximaal 500 euro is, "
+            Random rnd = new Random();
+            int pinners = 0;
+
+            int reserve = 100000;
+            while (reserve > 0)
+            {
+                int random = rnd.Next(1, 500);
+
+                if (random < reserve)
+                {
+                    Console.WriteLine(random);
+                    reserve = reserve - random;
+                    pinners++;
+                }
+                else
+                {
+                    reserve = reserve - reserve;
+                    //edgecase
+                    pinners++;
+                }
+
+            }
+            Console.WriteLine(pinners + " pinners");
 
         }
 
         static void Opdracht130()
         {
+            //"Dagobert Duck wil van zijn geld af. Hoeveel dagen heeft hij hier voor nodig als hij elke dag 100 mensen blij maakt met een willekeurig briefje? Totaal in pakhuis is 17,4 triljoen euro."
+            Random rnd = new Random();
+            ulong[] biljetten = { 5, 10, 20, 50, 100, 200, 500 };
+            ulong money = 17400000000000000000;
+            uint dagen = 0;
+
+            while (money > 0)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    if (money > 0)
+                    {
+                        int random = rnd.Next(0, 6);
+                        money = (money - biljetten[random]);
+                    }
+
+                }
+                Console.WriteLine(money);
+                dagen++;
+            }
+            Console.WriteLine(dagen);
 
         }
 
+        static void Opdracht131()
+        {
+            //"Test of een ingetypt woord een palindroom is"
+            Console.WriteLine("wordpls");
+            char[] input = Console.ReadLine().ToCharArray();
+            char[] swaparray = new char[input.Length];
+            bool palindrome = true;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                int current = input.Length - 1 - i;
+                swaparray[i] = input[current];
+            }
+
+            for (int i = 0; i < input.Length; i++)
+            {
+
+                if (swaparray[i] != input[i])
+                {
+                    palindrome = false;
+                }
+            }
+        
+
+            if(palindrome)
+            {
+                System.Console.WriteLine("This is a palindrome");
+            }
+            else
+            {
+                Console.WriteLine("this is not a palindrome");
+            }
+        }
+        
+        static void Opdracht132()
+        {
+            //"Via elk mens dat je kent sta je in 2egraads verbinding met andere mensen die je nog nooit hebt gezien. 
+            //In hoeveel stappen sta je in verbinding met de hele wereldbevolking? Neem aan dat elk mens in verbinding staat met 50 nieuwe unieke personen en zoek 
+            //de grootte van de actuele wereldpopulatie op." 7,599,044,103
+            ulong circlejerk = 50;
+            double layers = 1;
+
+            while(circlejerk < 7599044103)
+            {
+                circlejerk = (ulong)Math.Pow(50, layers);
+                layers++;
+            }
+            Console.WriteLine(layers);
+
+            //7,599,044,103
+            Console.WriteLine("formula says " + Math.Log(7599044103) / Math.Log(50));
+        }
+        static void Opdracht133()
+        {
+            //"Via elk mens dat je kent sta je in 2egraads verbinding met andere mensen die je nog nooit hebt gezien. In hoeveel stappen sta je in verbinding met iedereen in NL? Neem aan dat elk mens in verbinding staat met 50 nieuwe unieke personen en zoek de actuele grootte van de bevolkingspopulatie in NL op."
+            ulong circlejerk = 50;
+            double layers = 1;
+
+            while (circlejerk < 17020000)
+            {
+                circlejerk = (ulong)Math.Pow(50, layers);
+                layers++;
+            }
+            Console.WriteLine(layers);
+
+            //7,599,044,103
+            Console.WriteLine("formula says " + Math.Log(17020000) / Math.Log(50));
+        }
+
+        static void Opdracht134()
+        {
+            //"De Eifeltoren in Parijs is 300m hoog. Hoeveel treden moet je op als de 1e trede 15 cm is en elke volgende trede 2x zo hoog? "
+            int current = 15;
+            int currentloop = 1;
+
+            while (current<30000)
+            {
+                current = current + current * (int)Math.Pow(2.0 ,currentloop);
+                currentloop++;
+            }
+            Console.WriteLine(currentloop);
+        }
+
+        static void Opdracht135()
+        {
+            //"Halveer 10,000 euro 63x en druk het overgebleven bedrag af. "
+
+        }
         static void Main(string[] args)
         {
 
@@ -2028,7 +2216,14 @@ namespace Weekofcode4
             Opdracht124();*/
 
             //Opdracht126();
-            Opdracht127();
+            //Opdracht127();
+            //Opdracht128();
+            //Opdracht129();
+            //Opdracht130();
+            //Opdracht131();
+            //Opdracht132();
+            //Opdracht133();
+            Opdracht134();
 
             Console.ReadKey();
         }

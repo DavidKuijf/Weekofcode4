@@ -2076,21 +2076,42 @@ namespace Weekofcode4
         static void Opdracht134()
         {
             //"De Eifeltoren in Parijs is 300m hoog. Hoeveel treden moet je op als de 1e trede 15 cm is en elke volgende trede 2x zo hoog? "
-            int current = 15;
-            int currentloop = 1;
+            double current = 0;
+            int currentloop = 0;
 
-            while (current<30000)
-            {
-                current = current + current * (int)Math.Pow(2.0 ,currentloop);
+            while (current<300)
+            {            
+                current = current + 0.15 * (int)Math.Pow(2.0 ,currentloop);
                 currentloop++;
+                Console.WriteLine(current);
             }
             Console.WriteLine(currentloop);
         }
 
         static void Opdracht135()
         {
-            //"Halveer 10,000 euro 63x en druk het overgebleven bedrag af. "
+            //"De Domtoren in Utrecht is 112m hoog. Hoeveel treden moet je op als de 1e trede 15 cm is en elke volgende trede 2x zo hoog? "
+            double current = 0;
+            int currentloop = 0;
 
+            while (current < 112)
+            {
+                current = current + 0.15 * (int)Math.Pow(2.0, currentloop);
+                currentloop++;
+                Console.WriteLine(current);
+            }
+            Console.WriteLine(currentloop);
+        }
+
+        static void Opdracht136()
+        {
+            //"Halveer 10,000 euro 63x en druk het overgebleven bedrag af. "
+            double money = 10000;
+            for (int i = 0; i < 63; i++)
+            {
+                money = money / 2;
+            }
+            Console.WriteLine(money);
         }
         static void Main(string[] args)
         {
@@ -2224,6 +2245,7 @@ namespace Weekofcode4
             //Opdracht132();
             //Opdracht133();
             Opdracht134();
+            Opdracht135();
 
             Console.ReadKey();
         }

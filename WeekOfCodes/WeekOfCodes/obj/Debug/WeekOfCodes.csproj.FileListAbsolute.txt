@@ -1,0 +1,7 @@
+C:\Users\shiva\source\repos\WeekOfCodes\WeekOfCodes\bin\Debug\WeekOfCodes.exe.config
+C:\Users\shiva\source\repos\WeekOfCodes\WeekOfCodes\bin\Debug\WeekOfCodes.exe
+C:\Users\shiva\source\repos\WeekOfCodes\WeekOfCodes\bin\Debug\WeekOfCodes.pdb
+C:\Users\shiva\source\repos\WeekOfCodes\WeekOfCodes\obj\Debug\WeekOfCodes.csprojResolveAssemblyReference.cache
+C:\Users\shiva\source\repos\WeekOfCodes\WeekOfCodes\obj\Debug\WeekOfCodes.csproj.CoreCompileInputs.cache
+C:\Users\shiva\source\repos\WeekOfCodes\WeekOfCodes\obj\Debug\WeekOfCodes.exe
+C:\Users\shiva\source\repos\WeekOfCodes\WeekOfCodes\obj\Debug\WeekOfCodes.pdb

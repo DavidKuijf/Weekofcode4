@@ -712,16 +712,66 @@ namespace Weekofcode4
             }
         }
         
-        /*static void Opdracht75()
+        static void Opdracht75()
         {
             string input = "This is still readable";
-            UTF8Encoding utf8 = new UTF8Encoding();
-            string unicodeString = "Quick brown fox";
-            byte[] encodedBytes = utf8.GetBytes(unicodeString);
+            string utf8String = String.Empty;
+            byte[] utf16byte = System.Text.Encoding.Unicode.GetBytes(input);
+            byte[] utf8byte = System.Text.Encoding.Convert(System.Text.Encoding.Unicode, System.Text.Encoding.UTF8, utf16byte);
+            for (int i = 0; i < utf8byte.Length; i++)
+            {
+                byte[] utf8storage = new byte[2] { utf8byte[i], 0 };
+                utf8String += BitConverter.ToChar(utf8storage, 0);
+            }
+            Console.WriteLine(utf8String);
+        }
+        
+        static void Opdracht91()
+        {
+            Random rnd = new Random();
+            int rndNumber = rnd.Next(999999999);
+            bool divBy8 = false;
 
-            //source:https://stackoverflow.com/questions/8707759/how-to-convert-a-string-to-utf8
+            if (rndNumber % 8 == 0)
+            {
+                divBy8 = true;
+            }
 
-        }*/
+            Console.WriteLine(divBy8);
+        }
+
+        static void Opdracht92()
+        {
+            Random rnd = new Random();
+            int rndNumber = rnd.Next(999999999);
+            bool isEven = false; // LET THE MEMES BEGIN r/ProgrammerHumor
+
+            if (rndNumber % 2 == 0 && rndNumber % 17 == 0)
+            {
+                isEven = true;
+            }
+
+            Console.WriteLine(isEven);
+        }
+
+        static void Opdracht93()
+        {
+            Random rnd = new Random();
+            int rndNumber = rnd.Next(999999999);
+            bool isDividable = false;
+
+            if (rndNumber % 7 == 0 && rndNumber % 4 == 0)
+            {
+                isDividable = true;
+            }
+
+            Console.WriteLine(isDividable);
+        }
+
+        static void Opdracht94()
+        {
+            string word = "banana";
+            char[] wordArray = word.ToCharArray();
 
         static void Opdracht76()
         {
@@ -751,6 +801,7 @@ namespace Weekofcode4
         static void Opdracht79()
         {
 
+        }
 
         }
         static void Opdracht80()
@@ -795,22 +846,29 @@ namespace Weekofcode4
              Opdracht34();
              Opdracht35();*/
 
-            /*Opdracht36(); //NEEDS CHECKING
-              Opdracht37();
-              Opdracht38();
-              Opdracht39();*/
+          /*Opdracht36(); //NEEDS CHECKING
+            Opdracht37();
+            Opdracht38();
+            Opdracht39();
+            Opdracht40();*/
 
-            /*Opdracht46(); //NEEDS CHECKING
+            /*Opdracht41(); //NEEDS CHECKING
+            Opdracht42();
+            Opdracht43();
+            Opdracht44();
+            Opdracht45();*/
+
+            /*Opdracht46(); //CHECKED
             Opdracht47();
             Opdracht48();
             Opdracht49();
             Opdracht50();*/
 
-            /*Opdracht51(); //NEEDS CHECKING
+            /*Opdracht51(); //CHECKED
             Opdracht52();
             Opdracht53();
-            Opdracht54();*/
-            Opdracht55();
+            Opdracht54();
+            Opdracht55();*/
 
             /*Opdracht56(); //NEEDS CHECKING
             Opdracht57();
@@ -818,19 +876,19 @@ namespace Weekofcode4
             Opdracht59();
             Opdracht60();*/
 
-            /*Opdracht61();
+            /*Opdracht61(); // NEEDS CHECKING
             Opdracht62();
             Opdracht63();
             Opdracht64();
             Opdracht65();*/
 
-            /* Opdracht66();
+            /* Opdracht66(); // NEEDS CHECKING
              Opdracht67();
              Opdracht68();
              Opdracht69();
              Opdracht70();*/
 
-            /*Opdracht71();
+            /*Opdracht71(); // NEEDS CHECKING
             Opdracht72();
             Opdracht73();
             Opdracht74();

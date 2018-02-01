@@ -743,6 +743,7 @@ namespace Weekofcode4
             int z = x + (int)y;
             Console.WriteLine(z);
         }
+
        static void Opdracht77()
         {
             int x = 10;
@@ -802,7 +803,7 @@ namespace Weekofcode4
             int x = 7;
             int y = 5;
             int z = 3;
-            int a = x * 2;
+            int a = (y%z)*x;
             Console.WriteLine(a);
         }
 
@@ -849,7 +850,7 @@ namespace Weekofcode4
             int a = 5;
             int b = 3;
 
-            x = y + (z - z) + (a - a) + (b - b) + 0;
+            x = y + (z - z) + (a - a) + (b - b) + x;
             Console.WriteLine(x);
         }
 
@@ -864,6 +865,7 @@ namespace Weekofcode4
             //"Maak y 1 als x even is en 2 als x oneven is"
             int x = 10; //code x=11; //code
             int y = 0;
+
             if ((x%2)==0)
             {
                 y = 1;
@@ -878,9 +880,9 @@ namespace Weekofcode4
         {
             //Druk 'tekst' op het scherm af, gevolgd door het getal 4321."
             int x = 123;
-            string tekst = "Ik ben die operatoren meer dan zat";
-            Console.WriteLine(String.Format("{0} {1}",tekst, x = x<<3));
-            
+            string tekst = "Ik ben die operatoren meer dan zat ";
+
+            Console.WriteLine(String.Format("{0} {1}", tekst, (int)'ს'));
         }
         
         static void Opdracht91()
@@ -1217,6 +1219,21 @@ namespace Weekofcode4
             Console.WriteLine(isAllowed);
         }
 
+        static void Opdrachten106()
+        {
+            // Maak alle getallen van -1000 tot 1000 nul behalve de band van - 10 tot 10, die wordt 1
+            int x = 0;
+
+            if (x < 11 | x > -11)
+            {
+                x = 1;
+            }
+            else
+            {
+                x = 0;
+            }
+        }
+
         static void Main(string[] args)
         {
 
@@ -1250,13 +1267,13 @@ namespace Weekofcode4
             Opdracht34();
             Opdracht35();*/
 
-            /*Opdracht36(); //NEEDS CHECKING
+            /*Opdracht36(); // CHECKED
             Opdracht37();
             Opdracht38();
             Opdracht39();
             Opdracht40();*/
 
-            /*Opdracht41(); //NEEDS CHECKING
+            /*Opdracht41();// CHECKED
             Opdracht42();
             Opdracht43();
             Opdracht44();
@@ -1275,50 +1292,47 @@ namespace Weekofcode4
             Opdracht54();
             Opdracht55();*/
 
-            /*Opdracht56(); // NEEDS CHECKING
+            /*Opdracht56(); // CHECKED
             Opdracht57();
             Opdracht58();
             Opdracht59();
             Opdracht60();*/
 
-            /*Opdracht61(); // NEEDS CHECKING
+            /*Opdracht61();// CHECKED
             Opdracht62();
             Opdracht63();
             Opdracht64();
             Opdracht65();*/
 
-            /*Opdracht66(); // NEEDS CHECKING
+            /*Opdracht66(); // CHECKED
             Opdracht67();
             Opdracht68();
             Opdracht69();
             Opdracht70();*/
 
-            /*Opdracht71(); // NEEDS CHECKING
+            /*Opdracht71(); // CHECKED
             Opdracht72();
             Opdracht73();
             Opdracht74();
             Opdracht75();*/
 
-                /*Opdracht76();
-                Opdracht77();
-                Opdracht78();
-                Opdracht79();
-                Opdracht80();*/
+            /*Opdracht76(); // CHECKED
+            Opdracht77();
+            Opdracht78();
+            Opdracht79();
+            Opdracht80();*/
 
-                /*Opdracht81();
-                Opdracht82();
-                Opdracht83();
-                Opdracht84();
-                Opdracht85();*/
+            /*Opdracht81(); // CHECKED
+            Opdracht82();
+            Opdracht83();
+            Opdracht84();
+            Opdracht85();*/
 
-                /*Opdracht86();
-                Opdracht87();
-                Opdracht88();
-                Opdracht89();
-                Opdracht90();//kom ik niet uit*/
-
-                
-
+            /*Opdracht86(); // CHECKED
+            Opdracht87();
+            Opdracht88();
+            Opdracht89();
+            Opdracht90();*/
 
             /*Opdracht91(); // NEEDS CHECKING
             Opdracht92();

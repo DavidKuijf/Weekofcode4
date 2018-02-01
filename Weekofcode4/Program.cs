@@ -628,7 +628,7 @@ namespace Weekofcode4
         {
             for (int i=0; i < 10; i++)
             {
-                Console.WriteLine("File("+i+")");
+                Console.WriteLine("File("+i+").exe");
             }
         }
         static void Opdracht67()
@@ -723,6 +723,41 @@ namespace Weekofcode4
 
         }*/
 
+        static void Opdracht76()
+        {
+            int x = 10;
+            double y = 2.3;
+            int z = x + (int)y;
+            Console.WriteLine(z);
+        }
+        static void Opdracht77()
+        {
+            int x = 10;
+            double y = 2.3;
+            double z = (x * y) / 3;
+            Console.WriteLine(z);
+        }
+        static void Opdracht78()
+        {
+            //Tel bij x 1 op, deel dat door y en sla dat op in x, waarbij je afrond naar beneden
+            int x = 10;
+            double y = 2.3;
+            x = (x + 1);
+            x = x / y;
+
+            Console.WriteLine(x);
+           
+        }
+        static void Opdracht79()
+        {
+
+
+        }
+        static void Opdracht80()
+        {
+
+        }
+
 
 
 
@@ -800,6 +835,12 @@ namespace Weekofcode4
             Opdracht73();
             Opdracht74();
             Opdracht75();*/
+
+            Opdracht76();
+            Opdracht77();
+            Opdracht78();
+            Opdracht79();
+            Opdracht80();
 
             Console.ReadKey();
         }

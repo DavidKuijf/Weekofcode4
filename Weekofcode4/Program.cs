@@ -775,7 +775,7 @@ namespace Weekofcode4
             double z =14.4; //14 
             y = Math.Round(y);
             z = Math.Round(z);
-            Console.WriteLine(y+ " " z);
+            Console.WriteLine(y+ " " +z);
 
         }
         static void Opdracht82()
@@ -784,8 +784,8 @@ namespace Weekofcode4
             int x = 4;
             int y = 6;
             int z = 3;
-            int mod = (x + y) % z;
-            Console.WriteLine(z);
+            int mod = ((x + y) % z);
+            Console.WriteLine("opdracht 82 = " + mod);
             
         }
         static void Opdracht83()
@@ -795,6 +795,7 @@ namespace Weekofcode4
             int y = 5;
             int z = 3;
             int a = x * 2;
+            Console.WriteLine(a);
         }
 
         static void Opdracht84()
@@ -812,7 +813,66 @@ namespace Weekofcode4
 
         static void Opdracht85()
         {
+            //Laat op het scherm komen: '3 apenballen eten 4 kersenbomen
+            int x = 4;
+            int y = 3;
+            string soort = "apenballen";
+            string plant = "kersenbomen";
+            Console.WriteLine(String.Format("{0} {1} eten {2} {3}",y,soort,x,plant));
+        }
 
+        static void Opdracht86()
+        {
+            //Laat op het scherm komen: '3 apenballen eten 4 kersenbomen
+            int x = 4;
+            int y = 3;
+            string soort = "apenballen";
+            string plant = "kersenbomen";
+            Console.WriteLine(String.Format("{0} {1} eten {2} {3}", y, soort, x, plant));
+        }
+
+        static void Opdracht87()
+        {
+
+            //"Zorg ervoor dat in x 12 komt te zitten.
+            int x = 0;
+            int y = 12;
+            int z = 2;
+            int a = 5;
+            int b = 3;
+
+            x = y + (z - z) + (a - a) + (b - b) + 0;
+            Console.WriteLine(x);
+        }
+
+        static void Opdracht88()
+        {
+            //Zorg ervoor dat in x 37 komt te zitten
+            int x = 12;
+            x = (x * 3) + 1;
+        }
+        static void Opdracht89()
+        {
+            //"Maak y 1 als x even is en 2 als x oneven is"
+            int x = 10; //code x=11; //code
+            int y = 0;
+            if ((x%2)==0)
+            {
+                y = 1;
+            }
+            else
+            {
+                y = 2;
+            }
+        }
+
+        static void Opdracht90()
+        {
+            //Druk 'tekst' op het scherm af, gevolgd door het getal 4321."
+            int x = 123;
+            string tekst = "Ik ben die operatoren meer dan zat";
+            Console.WriteLine(String.Format("{0} {1}",tekst, x = x^x));
+            
         }
 
         static void Opdracht91()
@@ -955,6 +1015,20 @@ namespace Weekofcode4
                 Opdracht78();
                 Opdracht79();
                 Opdracht80();
+
+                Opdracht81();
+                Opdracht82();
+                Opdracht83();
+                Opdracht84();
+                Opdracht85();
+
+                Opdracht86();
+                Opdracht87();
+                Opdracht88();
+                Opdracht89();
+                Opdracht90();//kom ik niet uit
+
+
 
                 Console.ReadKey();
             }

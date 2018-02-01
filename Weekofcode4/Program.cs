@@ -817,14 +817,7 @@ namespace Weekofcode4
           /*Opdracht36(); //NEEDS CHECKING
             Opdracht37();
             Opdracht38();
-            Opdracht39();
-            Opdracht40();*/
-
-            /*Opdracht41(); //NEEDS CHECKING
-            Opdracht42();
-            Opdracht43();
-            Opdracht44();
-            Opdracht45();*/
+            Opdracht39();*/
 
             /*Opdracht46(); //CHECKED
             Opdracht47();

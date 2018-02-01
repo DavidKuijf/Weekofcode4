@@ -408,10 +408,9 @@ namespace Weekofcode4
         static void Opdracht43()
         {
             string SENTENCE = Console.ReadLine();
-            if (SENTENCE.Equals("Koekje van eigen deeg"))
-            {
-                Console.WriteLine("Koekje\tvan\teigen\tdeeg.");
-            }
+            SENTENCE.Replace(" ", "\t");
+
+            Console.WriteLine(SENTENCE);
 
         }
 
@@ -461,9 +460,9 @@ namespace Weekofcode4
             Console.WriteLine("Enter a seperation mark");
             string MARK = Console.ReadLine();
 
-            for (int i = WORD_ARRAY.Length; i > 0; i--)
+            for (int i = WORD_ARRAY.Length-1; i > 0; i--)
             {
-                Console.WriteLine(WORD_ARRAY[i] + MARK);
+                Console.Write(WORD_ARRAY[i] + MARK);
             }
         }
 
@@ -783,7 +782,7 @@ namespace Weekofcode4
             double z =14.4; //14 
             y = Math.Round(y);
             z = Math.Round(z);
-            Console.WriteLine(y+ " " z);
+            Console.WriteLine(y+ " " +z);
 
         }
         static void Opdracht82()
@@ -843,7 +842,7 @@ namespace Weekofcode4
             int rndNumber = rnd.Next(999999999);
             bool isEven = false; // LET THE MEMES BEGIN r/ProgrammerHumor
 
-            if (rndNumber % 2 == 0 && rndNumber % 17 == 0)
+            if (rndNumber % 2 != 0 && rndNumber % 17 == 0)
             {
                 isEven = true;
             }
@@ -885,7 +884,7 @@ namespace Weekofcode4
             char[] wordArray = word.ToCharArray();
             bool startAD = false;
 
-            if (wordArray[0].Equals("a") || wordArray[0].Equals("d") && !wordArray[wordArray.Length].Equals("c"))
+            if (wordArray[0].Equals("a") || wordArray[0].Equals("d") && !wordArray[wordArray.Length-1].Equals("c"))
             {
                 startAD = true;
             }
@@ -897,15 +896,11 @@ namespace Weekofcode4
         {
             string word = "otto";
             char[] wordArray = word.ToCharArray();
-            bool isPalindrome = false;
+            bool isPalindrome = true;
 
             for (int i = 0; i < wordArray.Length; i++)
             {
-                if (wordArray[i] == wordArray[3-i])
-                {
-                    isPalindrome = true;
-                }
-                else
+                if (wordArray[i] != wordArray[3-i])
                 {
                     isPalindrome = false;
                 }
@@ -916,17 +911,13 @@ namespace Weekofcode4
         
         static void Opdracht97()
         {
-            string word = "otto";
+            string word = "taartstraat";
             char[] wordArray = word.ToCharArray();
-            bool isPalindrome = false;
+            bool isPalindrome = true;
 
             for (int i = 0; i < wordArray.Length; i++)
             {
-                if (wordArray[i] == wordArray[11 - i])
-                {
-                    isPalindrome = true;
-                }
-                else
+                if (wordArray[i] != wordArray[11 - i])
                 {
                     isPalindrome = false;
                 }
@@ -938,32 +929,39 @@ namespace Weekofcode4
         static void Opdracht98()
         {
             int[,] screen = new int[256, 256]; // x, y
+            int rowLength = screen.GetLength(0);
+            int colLength = screen.GetLength(1);
 
-            for (int i = 0; i < screen.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < screen.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (i == (screen.Length / 2))
+                    if (i == rowLength / 2)
                     {
-                        screen[i, j] = 0; 
+                        screen[i, j] = 0;
                     }
                     else
                     {
                         screen[i, j] = 1;
                     }
+                    Console.Write(screen[i, j] + " ");
                 }
             }
         }
 
         static void Opdracht99()
         {
-            int[,] screen = new int[256, 256];
+            int[,] screen = new int[256, 256]; // x, y
+            int rowLength = screen.GetLength(0);
+            int colLength = screen.GetLength(1);
 
-            for (int i = 0; i < screen.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < screen.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (i == (int)(screen.Length / 3))
+                    if (i == rowLength / 3 || i == rowLength / 3 * 2)
                     {
                         screen[i, j] = 0;
                     }
@@ -971,19 +969,23 @@ namespace Weekofcode4
                     {
                         screen[i, j] = 1;
                     }
+                    Console.Write(screen[i, j] + " ");
                 }
             }
         }
 
         static void Opdracht100()
         {
-            int[,] screen = new int[256, 256];
+            int[,] screen = new int[256, 256]; // x, y
+            int rowLength = screen.GetLength(0);
+            int colLength = screen.GetLength(1);
 
-            for (int i = 0; i < screen.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < screen.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (i == (int)(screen.Length / 4))
+                    if (i == rowLength / 4 || i == rowLength / 4 * 2 || i == rowLength / 4 * 3)
                     {
                         screen[i, j] = 0;
                     }
@@ -991,6 +993,7 @@ namespace Weekofcode4
                     {
                         screen[i, j] = 1;
                     }
+                    Console.Write(screen[i, j] + " ");
                 }
             }
         }
@@ -998,26 +1001,47 @@ namespace Weekofcode4
         static void Opdracht101()
         {
             int?[,] chessboard = new int?[8, 8];
+            int rowLength = chessboard.GetLength(0);
+            int colLength = chessboard.GetLength(1);
             int x = 6;
             int y = 2;
             
             bool isBlack = false;
             bool isOne = false;
 
-            for (int i = 0; i < chessboard.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < chessboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (isOne)
+                    if (i % 2 == 0)
                     {
-                        chessboard[i, j] = 0;
-                        isOne = false;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        chessboard[i, j] = 1;
-                        isOne = true;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+
+                    Console.Write(chessboard[i,j] + " ");
                 }
             }
             if (chessboard[x,y] == 1 && chessboard[x,y] != null)
@@ -1031,29 +1055,50 @@ namespace Weekofcode4
         static void Opdracht102()
         {
             int?[,] chessboard = new int?[8, 8];
+            int rowLength = chessboard.GetLength(0);
+            int colLength = chessboard.GetLength(1);
             int x = 6;
             int y = 2;
-            
+
             bool isWhite = false;
             bool isOne = false;
 
-            for (int i = 0; i < chessboard.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < chessboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (isOne)
+                    if (i % 2 == 0)
                     {
-                        chessboard[i, j] = 0;
-                        isOne = false;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        chessboard[i, j] = 1;
-                        isOne = true;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+
+                    Console.Write(chessboard[i, j] + " ");
                 }
             }
-            if (chessboard[x,y] == 0 && chessboard[x,y] != null)
+            if (chessboard[x, y] == 0 && chessboard[x, y] != null)
             {
                 isWhite = true;
             }
@@ -1064,26 +1109,46 @@ namespace Weekofcode4
         static void Opdracht103()
         {
             int?[,] checkersboard = new int?[10, 10];
+            int rowLength = checkersboard.GetLength(0);
+            int colLength = checkersboard.GetLength(1);
             int x = 6;
             int y = 2;
 
             bool isBlack = false;
             bool isOne = false;
 
-            for (int i = 0; i < checkersboard.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < checkersboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (isOne)
+                    if (i % 2 == 0)
                     {
-                        checkersboard[i, j] = 0;
-                        isOne = false;
+                        if (isOne)
+                        {
+                            checkersboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            checkersboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        checkersboard[i, j] = 1;
-                        isOne = true;
+                        if (isOne)
+                        {
+                            checkersboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            checkersboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+                    Console.Write(checkersboard[i, j] + " ");
                 }
             }
             if (checkersboard[x, y] == 1 && checkersboard[x, y] != null)
@@ -1091,61 +1156,106 @@ namespace Weekofcode4
                 isBlack = true;
             }
 
-            Console.WriteLine(isBlack);
+            Console.WriteLine(Environment.NewLine + isBlack);
         }
 
         static void Opdracht104()
         {
             int?[,] checkersboard = new int?[10, 10];
+            int rowLength = checkersboard.GetLength(0);
+            int colLength = checkersboard.GetLength(1);
             int x = 6;
             int y = 2;
 
             bool isWhite = false;
             bool isOne = false;
 
-            for (int i = 0; i < checkersboard.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < checkersboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (isOne)
+                    if (i % 2 == 0)
                     {
-                        checkersboard[i, j] = 0;
-                        isOne = false;
+                        if (isOne)
+                        {
+                            checkersboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            checkersboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        checkersboard[i, j] = 1;
-                        isOne = true;
+                        if (isOne)
+                        {
+                            checkersboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            checkersboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+                    Console.Write(checkersboard[i, j] + " ");
                 }
             }
-            if (checkersboard[x, y] == 0 && checkersboard[x, y] != null)
+            if (checkersboard[x, y] == 1 && checkersboard[x, y] != null)
             {
                 isWhite = true;
             }
 
-            Console.WriteLine(isWhite);
+            Console.WriteLine(Environment.NewLine + isWhite);
         }
 
         static void Opdracht105()
         {
             int[,] chessboard = new int[8, 8];
+            int rowLength = chessboard.GetLength(0);
+            int colLength = chessboard.GetLength(1);
             int x = 2;
             int y = 1;
-            bool isAllowed = false;
 
-            for (int i = 0; i < chessboard.Length; i++)
+            bool isAllowed = false;
+            bool isOne = false;
+
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < chessboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if ((i == 1 && j == 2) || (i == 2 && j == 1))
+                    if (i % 2 == 0)
                     {
-                        chessboard[i, j] = 1;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        chessboard[i, j] = 0;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+
+                    Console.Write(chessboard[i, j] + " ");
                 }
             }
 
@@ -1155,6 +1265,90 @@ namespace Weekofcode4
             }
 
             Console.WriteLine(isAllowed);
+        }
+
+        static void Opdracht119()
+        {
+            string word = Console.ReadLine();
+            char[] wordArray = word.ToCharArray();
+            int vowelCount = 0;
+            int points = 0;
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (wordArray[i].Equals('a') || wordArray[i].Equals('e') || wordArray[i].Equals('i') || wordArray[i].Equals('o') || wordArray[i].Equals('u'))
+                {
+                    vowelCount++;
+                }
+                else
+                {
+                    points = 0;
+                }
+            }
+
+            if (vowelCount > 4) 
+            {
+                points = 10;
+            }
+            if (vowelCount == 2 || vowelCount == 3)
+            {
+                points = 5;
+            }
+
+            Console.WriteLine(points);
+        }
+
+        static void Opdracht121()
+        {
+            Random rnd = new Random();
+
+            int i = 0;
+            while (i < 3)
+            {
+                double randomLength = rnd.NextDouble() * (2.7 - 2.5) + 2.5;
+                double amount = (int)(100 / randomLength);
+                Console.WriteLine(amount);
+                i++;
+            }
+        }
+
+        static void Opdracht122()
+        {
+            double money = 10000;
+            int half = 0;
+            
+            while (money > 100)
+            {
+                money /= 2;
+                half++;
+            }
+
+            Console.WriteLine(half);
+        }
+
+        static void Opdracht123()
+        {
+            double money = 19.97;
+            int increase = 0;
+
+            while (money < 1000000000)
+            {
+                money *= 2;
+                increase++;
+            }
+        }
+
+        static void Opdracht124()
+        {
+            int startTime = DateTime.Now.Millisecond;
+            int counter = 0;
+
+            while (startTime < (startTime + 1))
+            {
+                Console.WriteLine();
+                counter++;
+            }
+
         }
 
         static void Main(string[] args)
@@ -1190,13 +1384,13 @@ namespace Weekofcode4
             Opdracht34();
             Opdracht35();*/
 
-            /*Opdracht36(); //NEEDS CHECKING
+            /*Opdracht36(); // CHECKED
             Opdracht37();
             Opdracht38();
             Opdracht39();
             Opdracht40();*/
 
-            /*Opdracht41(); //NEEDS CHECKING
+            /*Opdracht41(); //CHECKED
             Opdracht42();
             Opdracht43();
             Opdracht44();
@@ -1239,23 +1433,28 @@ namespace Weekofcode4
             Opdracht74();
             Opdracht75();*/
 
-            /*Opdracht91(); // NEEDS CHECKING
+            /*Opdracht91(); // CHECKED
             Opdracht92();
             Opdracht93();
             Opdracht94();
             Opdracht95();*/
 
             /*Opdracht96(); // NEEDS CHECKING
-            Opdracht97();
-            Opdracht98();
-            Opdracht99();
-            Opdracht100();*/
+            Opdracht97();*/
+            //Opdracht98();
+            //Opdracht99();
+            //Opdracht100();
 
-            /*Opdracht101(); // NEEDS CHECKING
-            Opdracht102();
+            //Opdracht101(); // NEEDS CHECKING
+            //Opdracht102();
             Opdracht103();
-            Opdracht104();
+            /*Opdracht104();
             Opdracht105();*/
+
+            /*Opdracht121();
+            Opdracht122();
+            Opdracht123();
+            Opdracht124();*/
 
             Console.ReadKey();
         }

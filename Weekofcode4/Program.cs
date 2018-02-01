@@ -1219,7 +1219,7 @@ namespace Weekofcode4
             Console.WriteLine(isAllowed);
         }
 
-        static void Opdrachten106()
+        static void Opdracht106()
         {
             // Maak alle getallen van -1000 tot 1000 nul behalve de band van - 10 tot 10, die wordt 1
             int x = 0;
@@ -1233,6 +1233,274 @@ namespace Weekofcode4
                 x = 0;
             }
         }
+        static void Opdracht107()
+        {
+
+            //"Controleer bij de zelfscan in de AH ahv. leeftijd of iemand alcohol mee mag nemen uit de supermarkt. "
+            int age = 0;
+            bool allowed_to_drink = false;
+            if (age > 17)
+            {
+                allowed_to_drink = true;
+            }
+        }
+
+        static void Opdracht108()
+        {
+            //Controleer bij de algemene verkiezingen ahv. leeftijd of iemand mag stemmen. "
+            int age = 0;
+            bool allowed_to_vote = false;
+            if (age > 17)
+            {
+                allowed_to_vote = true;
+            }
+        }
+        static void Opdracht109()
+        {
+            //"Controleer of er wel genoeg benzine in de auto zit. Zo niet dan moet het rode lampje gaan branden. "
+            double gas = 0.0;
+            bool light = false;
+            if (gas < 100)
+            {
+                light = true;
+            }
+        }
+        static void Opdracht110()
+        {
+            int x = 0;
+            bool isEven;
+
+            //"Controleer of een ingetypt getal even of oneven is. "
+            if ((x % 2) == 0)
+            {
+                isEven = true;
+            }
+            else
+            {
+                isEven = false;
+            }
+        }
+        static void Opdracht111()
+        {
+            //"Geef elke dag van de week (een string) een ander nummer. "
+
+            string day = "monday";
+            int number = 0;
+            switch (day)
+            {
+                case "monday":
+                    number = 0;
+                    break;
+                case "tuesday":
+                    number = 1;
+                    break;
+                case "wednessday":
+                    number = 2;
+                    break;
+                case "thursday":
+                    number = 3;
+                    break;
+                case "friday":
+                    number = 4;
+                    break;
+                case "saturdayy":
+                    number = 5;
+                    break;
+                case "sunday":
+                    number = 6;
+                    break;
+
+
+            }
+        }
+        static void Opdracht112()
+        {
+            string month = "jan";
+            int number = 0;
+            // " Definieer het aantal dagen per maand (een string). "
+            switch (month)
+            {
+                case "jan":
+                    number = 0;
+                    break;
+                case "feb":
+                    number = 1;
+                    break;
+                case "mrt":
+                    number = 2;
+                    break;
+                case "aprili":
+                    number = 3;
+                    break;
+                case "mei":
+                    number = 4;
+                    break;
+                case "juni":
+                    number = 5;
+                    break;
+                case "juli":
+                    number = 6;
+                    break;
+                case "august":
+                    number = 7;
+                    break;
+                case "september":
+                    number = 8;
+                    break;
+                case "okt":
+                    number = 9;
+                    break;
+                case "nov":
+                    number = 10;
+                    break;
+                case "dec":
+                    number = 11;
+                    break;
+            }
+        }
+        static void Opdracht113()
+        {
+            //Karel Appel is weer eens lekker aan het verfen. Selecteer de kleur die hij gebruikt ahv. het uur in een etmaal. "
+            int uur = 0;
+            string[] kleur = { "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", };
+            string currentKluer = kleur[uur];
+        }   
+        static void Opdracht114()
+        {
+            //"Help een programmeur zijn taal kiezen adhv. of het ochtend (C#), middag (C) of avond (C++) is. "
+            string dagdeel = "REEEEEEEEEE";
+           string taal = "";
+            switch (dagdeel)
+            {
+                case "Ochtend":
+                    taal = "C#";
+                    break;
+                case "Middag":
+                    taal = "C";
+                    break;
+                case "Avond":
+                    taal = "C++"; ;
+                    break;
+        
+            }
+        }
+
+        static void Opdracht115()
+        {
+            //"Help kinderen langer slapen in de winter (10 uur) dan in de zomer (6 uur). Herfst en voorjaar zit er tussenin. "
+            string periode = "REEEEEEEEEE";
+            int slaapduur = 0;
+
+            switch (periode)
+            {
+                case "winter":
+                    slaapduur = 10;
+                    break;
+                case "zomer":
+                    slaapduur = 6;
+                    break;
+                default:
+                    slaapduur = 8;
+                    break;
+
+            }
+        }
+
+        static void Opdracht116()
+        {
+            //"Een computerscherm van 256x256 pixels is verdeeld in 16 stukken van gelijke grootte. elke pixel daarin heeft als waarde het vaknummer waar hij inzit. Bepaal aan de hand van (x,y) welke waarde die pixel heeft."
+
+            int x = 255;
+            double rdtfyghui = x / 16.0;
+            int score = (int)Math.Ceiling(rdtfyghui);
+            Console.WriteLine(score);
+           
+
+            
+        }
+        static void Opdrachten117()
+        {
+            //"Oma is lekker pannenkoeken aan het bakken. Controleer haar door te checken of de 1e, 2e en 3e pannenkoek uit ieder opvolgend drietal resp. kaal, met kaas, of met appel is. "
+            string pannekoek = "";
+            int amount = 0;
+            int mod = amount % 3;
+
+            if (mod == 1)
+            {
+                if (pannekoek.Equals("kaal"))
+                {
+                    //dostuff
+                }
+            }
+            if (mod == 2)
+            {
+                if (pannekoek.Equals("kaas"))
+                {
+                    //dostuff
+                }
+            }
+            if (mod == 3)
+            {
+                if (pannekoek.Equals("appel"))
+                {
+                    //dostuff
+                }
+            }
+
+
+
+        }
+
+        static void Opdrachten118()
+        {
+
+            //"Gooi twee dobbelstenen en check of het totaal even of oneven is. "
+            Random rnd = new Random();
+            int rand1 = rnd.Next(1, 6);
+            int rand2 = rnd.Next(1, 6);
+
+            int x = rand1 + rand2;
+            bool isEven;
+
+            //"Controleer of een ingetypt getal even of oneven is. "
+            if ((x % 2) == 0)
+            {
+                isEven = true;
+            }
+            else
+            {
+                isEven = false;
+            }
+        }
+        static void Opdrachten119()
+        {
+
+            // "Ken tien punten toe aan een ingetypt woord als het met meer dan 4 klinkers begint, 5 punten aan woorden met 2 of 3 klinkers en 0 punten aan woorden met een medeklinker. Druk het aantal punten af."
+            string word = Console.ReadLine();
+
+       
+        }
+        static void Opdrachten120()
+        {
+            //Docenten zijn het zat om steeds vragen te beantwoorden over welke taal het beste is: C#, C of Java. Gegeven een int met studentnummer. Stel adhv het laatste cijfer daarvan vast wat het antwoord is. (<4: Java, tussen 3 en 7: C, anders C#)"
+            int studentnummer = 0;
+            int nummer = studentnummer % 10;
+            string best = "";
+
+            if(nummer<4){
+                best = "java";
+            }
+            if (nummer > 4 && nummer < 7)
+            {
+                best = "C";
+            }
+            else {
+                best = "C#";
+            }
+         
+            
+        }
+
 
         static void Main(string[] args)
         {
@@ -1352,6 +1620,7 @@ namespace Weekofcode4
             Opdracht104();
             Opdracht105();*/
 
+            Opdracht116();
             Console.ReadKey();
         }
     }

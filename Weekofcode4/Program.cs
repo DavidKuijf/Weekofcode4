@@ -641,12 +641,26 @@ namespace Weekofcode4
         }
         static void Opdracht74()
         {
-
+            string input = "Onyxia is the current broodmother of the Black Dragonflight";
+            try
+            {
+                Console.WriteLine(input[333]);
+            }
+            catch
+            {
+                Console.WriteLine("index oveflow");
+            }
         }
-        static void Opdracht75()
+        /*static void Opdracht75()
         {
+            string input = "This is still readable";
+            UTF8Encoding utf8 = new UTF8Encoding();
+            string unicodeString = "Quick brown fox";
+            byte[] encodedBytes = utf8.GetBytes(unicodeString);
 
-        }
+            //source:https://stackoverflow.com/questions/8707759/how-to-convert-a-string-to-utf8
+
+        }*/
 
 
 

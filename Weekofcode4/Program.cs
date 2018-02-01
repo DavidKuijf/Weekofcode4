@@ -735,9 +735,7 @@ namespace Weekofcode4
             }
             Console.WriteLine(utf8String);
         }
-
-       
-
+        
         static void Opdracht76()
         {
             int x = 10;
@@ -824,7 +822,7 @@ namespace Weekofcode4
         {
 
         }
-
+        
         static void Opdracht91()
         {
             Random rnd = new Random();
@@ -915,7 +913,7 @@ namespace Weekofcode4
 
             Console.WriteLine(isPalindrome);
         }
-
+        
         static void Opdracht97()
         {
             string word = "otto";
@@ -1155,26 +1153,28 @@ namespace Weekofcode4
             {
                 isAllowed = true;
             }
+
+            Console.WriteLine(isAllowed);
         }
 
         static void Main(string[] args)
         {
 
-                /* Opdracht1(); CHECKED
-                 Opdracht2();
-                 Opdracht3();
-                 Opdracht4();
-                 Opdracht5();
-                 Opdracht6();
-                 Opdracht7();
-                 Opdracht8();
-                 Opdracht9();
-                 Opdracht10();
-                 Opdracht11();
-                 Opdracht12();
-                 Opdracht13();
-                 Opdracht14();
-                 Opdracht15();*/
+            /* Opdracht1(); CHECKED
+            Opdracht2();
+            Opdracht3();
+            Opdracht4();
+            Opdracht5();
+            Opdracht6();
+            Opdracht7();
+            Opdracht8();
+            Opdracht9();
+            Opdracht10();
+            Opdracht11();
+            Opdracht12();
+            Opdracht13();
+            Opdracht14();
+            Opdracht15();*/
 
             /*Nummer16(); NEEDS CHECKING
             Nummer17();
@@ -1184,23 +1184,23 @@ namespace Weekofcode4
             Nummer21();
             Nummer22();*/
 
-                /* Opdracht31(); CHECKED
-                 Opdracht32();
-                 Opdracht33();
-                 Opdracht34();
-                 Opdracht35();*/
+            /*Opdracht31(); CHECKED
+            Opdracht32();
+            Opdracht33();
+            Opdracht34();
+            Opdracht35();*/
 
             /*Opdracht36(); //NEEDS CHECKING
-              Opdracht37();
-              Opdracht38();
-              Opdracht39();
-              Opdracht40();*/
+            Opdracht37();
+            Opdracht38();
+            Opdracht39();
+            Opdracht40();*/
 
-                /*Opdracht41(); //CHECKED
-                Opdracht42();
-                Opdracht43();
-                Opdracht44();
-                Opdracht45();*/
+            /*Opdracht41(); //NEEDS CHECKING
+            Opdracht42();
+            Opdracht43();
+            Opdracht44();
+            Opdracht45();*/
 
 
             /*Opdracht46(); //CHECKED
@@ -1209,49 +1209,55 @@ namespace Weekofcode4
             Opdracht49();
             Opdracht50();*/
 
-                /*Opdracht51(); //CHECKED
-                Opdracht52();
-                Opdracht53();
-                Opdracht54();
-                Opdracht55();*/
+            /*Opdracht51(); //CHECKED
+            Opdracht52();
+            Opdracht53();
+            Opdracht54();
+            Opdracht55();*/
 
-                /*Opdracht56(); //CHECKED
-                Opdracht57();
-                Opdracht58();
-                Opdracht59();
-                Opdracht60();*/
+            /*Opdracht56(); // NEEDS CHECKING
+            Opdracht57();
+            Opdracht58();
+            Opdracht59();
+            Opdracht60();*/
 
-                /*Opdracht61(); //CHECKED
-                Opdracht62();
-                Opdracht63();
-                Opdracht64();
-                Opdracht65();*/
+            /*Opdracht61(); // NEEDS CHECKING
+            Opdracht62();
+            Opdracht63();
+            Opdracht64();
+            Opdracht65();*/
 
-                /* Opdracht66(); //CHECKED
-                 Opdracht67();
-                 Opdracht68();
-                 Opdracht69();
-                 Opdracht70();*/
+            /*Opdracht66(); // NEEDS CHECKING
+            Opdracht67();
+            Opdracht68();
+            Opdracht69();
+            Opdracht70();*/
 
-                /*Opdracht71(); //CHECKED
-                Opdracht72();
-                Opdracht73();
-                Opdracht74();
-                Opdracht75();*/
+            /*Opdracht71(); // NEEDS CHECKING
+            Opdracht72();
+            Opdracht73();
+            Opdracht74();
+            Opdracht75();*/
 
-                Opdracht76();
-                Opdracht77();
-                Opdracht78();
-                Opdracht79();
-                Opdracht80();
             /*Opdracht91(); // NEEDS CHECKING
             Opdracht92();
             Opdracht93();
             Opdracht94();
             Opdracht95();*/
-            Opdracht96();
 
-                Console.ReadKey();
-            }
+            /*Opdracht96(); // NEEDS CHECKING
+            Opdracht97();
+            Opdracht98();
+            Opdracht99();
+            Opdracht100();*/
+
+            /*Opdracht101(); // NEEDS CHECKING
+            Opdracht102();
+            Opdracht103();
+            Opdracht104();
+            Opdracht105();*/
+
+            Console.ReadKey();
         }
-    } 
+    }
+}

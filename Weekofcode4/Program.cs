@@ -199,13 +199,144 @@ namespace Weekofcode4
             Console.WriteLine("Totale waarde is " + (var1 + var2 + var3));
         }
 
+        //Maak 3 variabelen (x,y,z) voor gehele getallen. Sla op in a:\nx-(y+z)", "requirements" : "Gebruik geen haakjes"
         static void Nummer23()
         {
             int x = 10;
             int y = 20;
             int z = 30;
+
+            int a = y + z - x;
+            Console.WriteLine("value of A = " + a);
         }
 
+        //Gebruik een variabele om bij te houden of iemand oud genoeg is. Druk deze af op het scherm. Sla de waarde ook op in een int.
+        static void Nummer24()
+        {
+            Console.WriteLine("Wat is uw leeftijd?");
+            int leeftijd = int.Parse(Console.ReadLine());
+            Console.WriteLine("Uw leeftijd is " + leeftijd);
+        }
+
+
+        /*Zorg ervoor dat het juiste getal in de juist variabele komt.", 
+         * "requirements" : "Gebruik geen getallen. Gebruik maximaal 1 hulpvariabele. Gebruik maximaal vijf statements.",   
+        */
+        static void Nummer25()
+        {
+            int een = 4;
+            int twee = 1;
+            int drie = 2;
+            int vier = 3;
+
+            int temp = een;
+            een = twee;
+            twee = drie;
+            drie = vier;
+            vier = temp;
+            Console.WriteLine("Een is " + een + " twee is " + twee + " Drie is " + drie + " vier is " + vier);
+        }
+
+        //Je hebt twee variabelen met een geheel getal (bijvoorbeeld 3 en 10). Wissel waarden van deze variabelen om. wat je programmeert moet werken bij elke inhoud van de variabelen.", "requirements" : "Je mag geen gebruik maken van extra variabelen.", 
+        static void Nummer26()
+        {
+            Console.WriteLine("Tik de eerste nummer in");
+            int varA = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Tike de tweede nummer in");
+            int varB = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("varA is " + varA);
+            Console.WriteLine("varB is " + varB);
+            int temp = varA;
+            varA = varB;
+            varB = temp;
+            Console.WriteLine("varA is " + varA);
+            Console.WriteLine("varB is " + varB);
+        }
+
+        //Zorg ervoor dat het juiste getal in de juist variabele komt.", "requirements" : "Gebruik geen getallen.Gebruik geen hulpvariabelen.",
+        static void Nummer27()
+        {
+            int acht = 8;
+            int negen = 10;
+            int elf = 9;
+            int tien = 12;
+            int twaalf = 10;
+
+            twaalf = tien;
+            tien = negen;
+            elf = elf - acht + tien;
+            negen = negen - elf + tien;
+            Console.WriteLine("twaalf is " + twaalf + " elf is " + elf + " tien is " + tien + " negen is " + negen + " acht is " + acht);
+        }
+
+        //Ga nog eens terug naar opdracht 24. Er zijn twee variabelen die aangeven of je ouder dan 12 bent en of je langer dan 1,20m bent.Sla in een derde variabele of of je voorin de auto mag zitten. (dat mag als beide voorgaande stellingen waar zijn).
+        static void Nummer28()
+        {
+            Console.WriteLine("Wat is uw leeftijd?");
+            int leeftijd = int.Parse(Console.ReadLine());
+            Console.WriteLine("Wat is uw lengte?");
+            double lengte = double.Parse(Console.ReadLine());
+            if (leeftijd < 12 || lengte < 1.20)
+            {
+                bool toegang = false;
+                Console.WriteLine("Sorry, mate.");
+            } else
+            {
+                bool toegang = true;
+                Console.WriteLine("go ahead, mate");
+            }
+        }
+
+        //Druk een variabele af op het scherm. In die variabele zit:\n\n\n\n\n\n"
+        static void Nummer29()
+        {
+            string var1 = "        ik";
+            string var2 = "    ben";
+            string var3 = "        helemaal";
+            string var4 = "gek";
+            string var5 = "        geworden";
+
+            Console.WriteLine(var1);
+            Console.WriteLine(var2);
+            Console.WriteLine(var3);
+            Console.WriteLine(var4);
+            Console.WriteLine(var5);
+        }
+
+        /*Bekijk de volgende bekende puzzel:
+         * \nEen man heeft een wolf, een geit en een kool. Hij moet een rivier oversteken met de twee dieren en de kool. 
+         * Er is een kleine roeiboot waarin hij slechts één ding tegelijk kan meenemen. 
+         * Echter, als de wolf en de geit alleen gelaten worden, eet de wolf de geit op. 
+         * Als de geit en de kool alleen gelaten worden, eet de geit de kool op.
+         * \nMaak in de code een set variabelen waarmee je deze puzzel kan representeren."
+        */
+        static void Nummer30()
+        {
+            string wolf = "wolf";
+            string goat = "goat";
+            string cabbage = "cabbage";
+
+            Console.WriteLine("Which do you choose first?");
+            string result = Console.ReadLine();
+
+            if(result.Equals(goat))
+            {
+                Console.WriteLine("Aight, ya good.");
+            } else if(result.Equals(cabbage))
+            {
+                Console.WriteLine("RIP Goat");
+            } else if(result.Equals(wolf))
+            {
+                Console.WriteLine("MY CABBAGES");
+            } else
+            {
+                Console.WriteLine("You just alroundly messed up, boi");
+            }
+
+        }
+        
         // "description" : "Schrijf een programma dat twee multiple choice vragen afdrukt en het antwoord op beide inleest.", "requirements" : "nvt (Gebruikers input kan niet getest worden in Genius@Work)"
         static void Opdracht31()
         {
@@ -408,10 +539,9 @@ namespace Weekofcode4
         static void Opdracht43()
         {
             string SENTENCE = Console.ReadLine();
-            if (SENTENCE.Equals("Koekje van eigen deeg"))
-            {
-                Console.WriteLine("Koekje\tvan\teigen\tdeeg.");
-            }
+            SENTENCE.Replace(" ", "\t");
+
+            Console.WriteLine(SENTENCE);
 
         }
 
@@ -461,9 +591,9 @@ namespace Weekofcode4
             Console.WriteLine("Enter a seperation mark");
             string MARK = Console.ReadLine();
 
-            for (int i = WORD_ARRAY.Length; i > 0; i--)
+            for (int i = WORD_ARRAY.Length-1; i > 0; i--)
             {
-                Console.WriteLine(WORD_ARRAY[i] + MARK);
+                Console.Write(WORD_ARRAY[i] + MARK);
             }
         }
 
@@ -905,7 +1035,7 @@ namespace Weekofcode4
             int rndNumber = rnd.Next(999999999);
             bool isEven = false; // LET THE MEMES BEGIN r/ProgrammerHumor
 
-            if (rndNumber % 2 == 0 && rndNumber % 17 == 0)
+            if (rndNumber % 2 != 0 && rndNumber % 17 == 0)
             {
                 isEven = true;
             }
@@ -947,7 +1077,7 @@ namespace Weekofcode4
             char[] wordArray = word.ToCharArray();
             bool startAD = false;
 
-            if (wordArray[0].Equals("a") || wordArray[0].Equals("d") && !wordArray[wordArray.Length].Equals("c"))
+            if (wordArray[0].Equals("a") || wordArray[0].Equals("d") && !wordArray[wordArray.Length-1].Equals("c"))
             {
                 startAD = true;
             }
@@ -959,15 +1089,11 @@ namespace Weekofcode4
         {
             string word = "otto";
             char[] wordArray = word.ToCharArray();
-            bool isPalindrome = false;
+            bool isPalindrome = true;
 
             for (int i = 0; i < wordArray.Length; i++)
             {
-                if (wordArray[i] == wordArray[3-i])
-                {
-                    isPalindrome = true;
-                }
-                else
+                if (wordArray[i] != wordArray[3-i])
                 {
                     isPalindrome = false;
                 }
@@ -978,17 +1104,13 @@ namespace Weekofcode4
         
         static void Opdracht97()
         {
-            string word = "otto";
+            string word = "taartstraat";
             char[] wordArray = word.ToCharArray();
-            bool isPalindrome = false;
+            bool isPalindrome = true;
 
             for (int i = 0; i < wordArray.Length; i++)
             {
-                if (wordArray[i] == wordArray[11 - i])
-                {
-                    isPalindrome = true;
-                }
-                else
+                if (wordArray[i] != wordArray[11 - i])
                 {
                     isPalindrome = false;
                 }
@@ -1000,32 +1122,39 @@ namespace Weekofcode4
         static void Opdracht98()
         {
             int[,] screen = new int[256, 256]; // x, y
+            int rowLength = screen.GetLength(0);
+            int colLength = screen.GetLength(1);
 
-            for (int i = 0; i < screen.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < screen.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (i == (screen.Length / 2))
+                    if (i == rowLength / 2)
                     {
-                        screen[i, j] = 0; 
+                        screen[i, j] = 0;
                     }
                     else
                     {
                         screen[i, j] = 1;
                     }
+                    Console.Write(screen[i, j] + " ");
                 }
             }
         }
 
         static void Opdracht99()
         {
-            int[,] screen = new int[256, 256];
+            int[,] screen = new int[256, 256]; // x, y
+            int rowLength = screen.GetLength(0);
+            int colLength = screen.GetLength(1);
 
-            for (int i = 0; i < screen.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < screen.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (i == (int)(screen.Length / 3))
+                    if (i == rowLength / 3 || i == rowLength / 3 * 2)
                     {
                         screen[i, j] = 0;
                     }
@@ -1033,19 +1162,23 @@ namespace Weekofcode4
                     {
                         screen[i, j] = 1;
                     }
+                    Console.Write(screen[i, j] + " ");
                 }
             }
         }
 
         static void Opdracht100()
         {
-            int[,] screen = new int[256, 256];
+            int[,] screen = new int[256, 256]; // x, y
+            int rowLength = screen.GetLength(0);
+            int colLength = screen.GetLength(1);
 
-            for (int i = 0; i < screen.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < screen.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (i == (int)(screen.Length / 4))
+                    if (i == rowLength / 4 || i == rowLength / 4 * 2 || i == rowLength / 4 * 3)
                     {
                         screen[i, j] = 0;
                     }
@@ -1053,6 +1186,7 @@ namespace Weekofcode4
                     {
                         screen[i, j] = 1;
                     }
+                    Console.Write(screen[i, j] + " ");
                 }
             }
         }
@@ -1060,26 +1194,47 @@ namespace Weekofcode4
         static void Opdracht101()
         {
             int?[,] chessboard = new int?[8, 8];
+            int rowLength = chessboard.GetLength(0);
+            int colLength = chessboard.GetLength(1);
             int x = 6;
             int y = 2;
             
             bool isBlack = false;
             bool isOne = false;
 
-            for (int i = 0; i < chessboard.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < chessboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (isOne)
+                    if (i % 2 == 0)
                     {
-                        chessboard[i, j] = 0;
-                        isOne = false;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        chessboard[i, j] = 1;
-                        isOne = true;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+
+                    Console.Write(chessboard[i,j] + " ");
                 }
             }
             if (chessboard[x,y] == 1 && chessboard[x,y] != null)
@@ -1093,29 +1248,50 @@ namespace Weekofcode4
         static void Opdracht102()
         {
             int?[,] chessboard = new int?[8, 8];
+            int rowLength = chessboard.GetLength(0);
+            int colLength = chessboard.GetLength(1);
             int x = 6;
             int y = 2;
-            
+
             bool isWhite = false;
             bool isOne = false;
 
-            for (int i = 0; i < chessboard.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < chessboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (isOne)
+                    if (i % 2 == 0)
                     {
-                        chessboard[i, j] = 0;
-                        isOne = false;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        chessboard[i, j] = 1;
-                        isOne = true;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+
+                    Console.Write(chessboard[i, j] + " ");
                 }
             }
-            if (chessboard[x,y] == 0 && chessboard[x,y] != null)
+            if (chessboard[x, y] == 0 && chessboard[x, y] != null)
             {
                 isWhite = true;
             }
@@ -1126,26 +1302,46 @@ namespace Weekofcode4
         static void Opdracht103()
         {
             int?[,] checkersboard = new int?[10, 10];
+            int rowLength = checkersboard.GetLength(0);
+            int colLength = checkersboard.GetLength(1);
             int x = 6;
             int y = 2;
 
             bool isBlack = false;
             bool isOne = false;
 
-            for (int i = 0; i < checkersboard.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < checkersboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (isOne)
+                    if (i % 2 == 0)
                     {
-                        checkersboard[i, j] = 0;
-                        isOne = false;
+                        if (isOne)
+                        {
+                            checkersboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            checkersboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        checkersboard[i, j] = 1;
-                        isOne = true;
+                        if (isOne)
+                        {
+                            checkersboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            checkersboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+                    Console.Write(checkersboard[i, j] + " ");
                 }
             }
             if (checkersboard[x, y] == 1 && checkersboard[x, y] != null)
@@ -1153,61 +1349,106 @@ namespace Weekofcode4
                 isBlack = true;
             }
 
-            Console.WriteLine(isBlack);
+            Console.WriteLine(Environment.NewLine + isBlack);
         }
 
         static void Opdracht104()
         {
             int?[,] checkersboard = new int?[10, 10];
+            int rowLength = checkersboard.GetLength(0);
+            int colLength = checkersboard.GetLength(1);
             int x = 6;
             int y = 2;
 
             bool isWhite = false;
             bool isOne = false;
 
-            for (int i = 0; i < checkersboard.Length; i++)
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < checkersboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if (isOne)
+                    if (i % 2 == 0)
                     {
-                        checkersboard[i, j] = 0;
-                        isOne = false;
+                        if (isOne)
+                        {
+                            checkersboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            checkersboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        checkersboard[i, j] = 1;
-                        isOne = true;
+                        if (isOne)
+                        {
+                            checkersboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            checkersboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+                    Console.Write(checkersboard[i, j] + " ");
                 }
             }
-            if (checkersboard[x, y] == 0 && checkersboard[x, y] != null)
+            if (checkersboard[x, y] == 1 && checkersboard[x, y] != null)
             {
                 isWhite = true;
             }
 
-            Console.WriteLine(isWhite);
+            Console.WriteLine(Environment.NewLine + isWhite);
         }
 
         static void Opdracht105()
         {
             int[,] chessboard = new int[8, 8];
+            int rowLength = chessboard.GetLength(0);
+            int colLength = chessboard.GetLength(1);
             int x = 2;
             int y = 1;
-            bool isAllowed = false;
 
-            for (int i = 0; i < chessboard.Length; i++)
+            bool isAllowed = false;
+            bool isOne = false;
+
+            for (int i = 0; i < rowLength; i++)
             {
-                for (int j = 0; j < chessboard.Length; j++)
+                Console.WriteLine();
+                for (int j = 0; j < colLength; j++)
                 {
-                    if ((i == 1 && j == 2) || (i == 2 && j == 1))
+                    if (i % 2 == 0)
                     {
-                        chessboard[i, j] = 1;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = true;
+                        }
                     }
                     else
                     {
-                        chessboard[i, j] = 0;
+                        if (isOne)
+                        {
+                            chessboard[i, j] = 1;
+                            isOne = false;
+                        }
+                        else
+                        {
+                            chessboard[i, j] = 0;
+                            isOne = true;
+                        }
                     }
+
+                    Console.Write(chessboard[i, j] + " ");
                 }
             }
 
@@ -1219,7 +1460,91 @@ namespace Weekofcode4
             Console.WriteLine(isAllowed);
         }
 
-        static void Opdracht106()
+        static void Opdracht119()
+        {
+            string word = Console.ReadLine();
+            char[] wordArray = word.ToCharArray();
+            int vowelCount = 0;
+            int points = 0;
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (wordArray[i].Equals('a') || wordArray[i].Equals('e') || wordArray[i].Equals('i') || wordArray[i].Equals('o') || wordArray[i].Equals('u'))
+                {
+                    vowelCount++;
+                }
+                else
+                {
+                    points = 0;
+                }
+            }
+
+            if (vowelCount > 4) 
+            {
+                points = 10;
+            }
+            if (vowelCount == 2 || vowelCount == 3)
+            {
+                points = 5;
+            }
+
+            Console.WriteLine(points);
+        }
+
+        static void Opdracht121()
+        {
+            Random rnd = new Random();
+
+            int i = 0;
+            while (i < 3)
+            {
+                double randomLength = rnd.NextDouble() * (2.7 - 2.5) + 2.5;
+                double amount = (int)(100 / randomLength);
+                Console.WriteLine(amount);
+                i++;
+            }
+        }
+
+        static void Opdracht122()
+        {
+            double money = 10000;
+            int half = 0;
+            
+            while (money > 100)
+            {
+                money /= 2;
+                half++;
+            }
+
+            Console.WriteLine(half);
+        }
+
+        static void Opdracht123()
+        {
+            double money = 19.97;
+            int increase = 0;
+
+            while (money < 1000000000)
+            {
+                money *= 2;
+                increase++;
+            }
+        }
+
+        static void Opdracht124()
+        {
+            int startTime = DateTime.Now.Millisecond;
+            int counter = 0;
+
+            while (startTime < (startTime + 1))
+            {
+                Console.WriteLine();
+                counter++;
+            }
+
+        }
+
+        static void Opdrachten106()
         {
             // Maak alle getallen van -1000 tot 1000 nul behalve de band van - 10 tot 10, die wordt 1
             int x = 0;
@@ -1609,18 +1934,22 @@ namespace Weekofcode4
             Opdracht95();*/
 
             /*Opdracht96(); // NEEDS CHECKING
-            Opdracht97();
-            Opdracht98();
-            Opdracht99();
-            Opdracht100();*/
+            Opdracht97();*/
+            //Opdracht98();
+            //Opdracht99();
+            //Opdracht100();
 
-            /*Opdracht101(); // NEEDS CHECKING
-            Opdracht102();
+            //Opdracht101(); // NEEDS CHECKING
+            //Opdracht102();
             Opdracht103();
-            Opdracht104();
+            /*Opdracht104();
             Opdracht105();*/
 
-            Opdracht116();
+            /*Opdracht121();
+            Opdracht122();
+            Opdracht123();
+            Opdracht124();*/
+
             Console.ReadKey();
         }
     }

@@ -426,7 +426,7 @@ namespace Weekofcode4
         {
             //"description" : "Cast \"int answer = 42\" naar een double.", "requirements" : "Pas de regel \"int answer = 42\" niet aan, maar cast hem op de regel eronder naar een nieuwe double", "
             int answer = 42;
-            double doubleAnswer = (double)answer;
+            double doubleAnswer = answer;
         }
 
         static void Opdracht49()
@@ -459,9 +459,9 @@ namespace Weekofcode4
         static void Opdracht53()
         {
             ulong copper = 87253321654;
-            string copperstring = Convert.ToString(copper);
-            UInt64 intCopper = UInt64.Parse(copperstring);
-            Console.WriteLine(intCopper);
+            Int64 copperstring = Convert.ToInt64(copper);
+          
+            //Console.WriteLine(intCopper);
 
 
         }
@@ -475,9 +475,8 @@ namespace Weekofcode4
 
         static void Opdracht55()
         {
-            int palindrome = 0b10101;
-            int interger = (int)palindrome;
-            Console.WriteLine(interger);
+            int palindrome = 10101;
+            int palindrome2 = (int)palindrome;
 
         }
 
@@ -651,6 +650,7 @@ namespace Weekofcode4
                 Console.WriteLine("index oveflow");
             }
         }
+        
         /*static void Opdracht75()
         {
             string input = "This is still readable";
@@ -691,24 +691,24 @@ namespace Weekofcode4
             Opdracht34();
             Opdracht35();*/
 
-          /*Opdracht36(); NEEDS CHECKING
+          /*Opdracht36(); //NEEDS CHECKING
             Opdracht37();
             Opdracht38();
             Opdracht39();*/
 
-            /*Opdracht46(); NEEDS CHECKING
+            /*Opdracht46(); //NEEDS CHECKING
             Opdracht47();
             Opdracht48();
             Opdracht49();
             Opdracht50();*/
 
-            /*Opdracht51(); NEEDS CHECKING
+            /*Opdracht51(); //NEEDS CHECKING
             Opdracht52();
             Opdracht53();
-            Opdracht54();
-            Opdracht55();*/
+            Opdracht54();*/
+            Opdracht55();
 
-            /*Opdracht56(); NEEDS CHECKING
+            /*Opdracht56(); //NEEDS CHECKING
             Opdracht57();
             Opdracht58();
             Opdracht59();
@@ -726,11 +726,11 @@ namespace Weekofcode4
              Opdracht69();
              Opdracht70();*/
 
-            Opdracht71();
+            /*Opdracht71();
             Opdracht72();
             Opdracht73();
             Opdracht74();
-            Opdracht75();
+            Opdracht75();*/
 
             Console.ReadKey();
         }

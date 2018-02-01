@@ -173,7 +173,7 @@ namespace Weekofcode4
         static void Nummer20()
         {
             Console.WriteLine("Hoe oud ben je?");
-            int op20 = int.Parse(Console.ReadLine());
+            int op20 = Console.Read();
         }
 
         //Je hebt twee variabelen met een geheel getal (bijvoorbeeld 3 en 10). Wissel waarden van deze variabelen om. wat je programmeert moet werken bij elke inhoud van de variabelen."
@@ -199,137 +199,11 @@ namespace Weekofcode4
             Console.WriteLine("Totale waarde is " + (var1 + var2 + var3));
         }
 
-        //Maak 3 variabelen (x,y,z) voor gehele getallen. Sla op in a:\nx-(y+z)", "requirements" : "Gebruik geen haakjes"
         static void Nummer23()
         {
             int x = 10;
             int y = 20;
             int z = 30;
-
-            int a = y + z - x;
-            Console.WriteLine(a);
-        }
-
-        //Gebruik een variabele om bij te houden of iemand oud genoeg is. Druk deze af op het scherm. Sla de waarde ook op in een int."
-        static void Nummer24()
-        {
-            Console.WriteLine("Hoe oud ben je?");
-            int leeftijd = int.Parse(Console.ReadLine());
-            Console.WriteLine("U bent " + leeftijd + " jaar oud");
-        }
-
-        //Zorg ervoor dat het juiste getal in de juist variabele komt.", "requirements" : "Gebruik geen getallen. Gebruik maximaal 1 hulpvariabele. Gebruik maximaal vijf statements.
-        static void Nummer25()
-        {
-            int een = 4;
-            int twee = 1;
-            int drie = 2;
-            int vier = 3;
-
-            int temp = een;
-            een = twee;
-            twee = drie;
-            drie = vier;
-            vier = temp;
-            Console.Write("Een = " + een + ", Twee = " + twee + ", Drie is " + drie + ", Vier is " + vier);
-        }
-
-        //Je hebt twee variabelen met een geheel getal (bijvoorbeeld 3 en 10). Wissel waarden van deze variabelen om. wat je programmeert moet werken bij elke inhoud van de variabelen.", "requirements" : "Je mag geen gebruik maken van extra variabelen.
-        static void Nummer26()
-        {
-            Console.WriteLine("Tik een nummer in.");
-            int varA = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Tik nog een nummer in");
-            int varB = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("varA is " + varA);
-            Console.WriteLine("varB is " + varB);
-            int temp = varA;
-            varA = varB;
-            varB = temp;
-            Console.WriteLine("varA is " + varA);
-            Console.WriteLine("varB is " + varB);
-        }
-
-        //Zorg ervoor dat het juiste getal in de juist variabele komt.", "requirements" : "Gebruik geen getallen. Gebruik geen hulpvariabelen."
-        static void Nummer27()
-        {
-            int acht = 8;
-            int negen = 10;
-            int elf = 9;
-            int tien = 12;
-            int twaalf = 10;
-
-            twaalf = tien;
-            tien = negen;
-            elf = elf - acht + negen;
-            negen = negen - elf + tien;
-            Console.WriteLine("Acht is " + acht + " Negen is " + negen + " Tien is " + tien + " Elf is " + elf + " Twaalf is " + twaalf);
-        }
-
-        //Ga nog eens terug naar opdracht 24. Er zijn twee variabelen die aangeven of je ouder dan 12 bent en of je langer dan 1,20m bent. Sla in een derde variabele of of je voorin de auto mag zitten. (dat mag als beide voorgaande stellingen waar zijn).
-        static void Nummer28()
-        {
-            Console.WriteLine("Wat is uw leeftijd?");
-            int leeftijd = int.Parse(Console.ReadLine());
-            Console.WriteLine("Wat is uw lengte?");
-            double lengte = double.Parse(Console.ReadLine());
-            if (leeftijd >= 12 && lengte >= 1.20)
-            {
-                bool voorinZitten = true;
-                Console.WriteLine("U mag voor in de auto zitten!");
-            } else
-            {
-                bool voorinZitten = false;
-                Console.WriteLine("U mag niet voor in zitten");
-            }
-        }
-
-        //Druk een variabele af op het scherm. In die variabele zit:\n        ik\n    ben\n        helemaal\ngek\n\n        geworden"
-        static void Nummer29()
-        {
-            string var1 = "        ik";
-            string var2 = "    ben";
-            string var3 = "        helemaal";
-            string var4 = "gek";
-            string var5 = "        geworden";
-
-            Console.WriteLine(var1);
-            Console.WriteLine(var2);
-            Console.WriteLine(var3);
-            Console.WriteLine(var4);
-            Console.WriteLine(var5);
-        }
-
-        /*Bekijk de volgende bekende puzzel:\n
-        Een man heeft een wolf, een geit en een kool. Hij moet een rivier oversteken met de twee dieren en de kool. 
-        Er is een kleine roeiboot waarin hij slechts één ding tegelijk kan meenemen. 
-        Echter, als de wolf en de geit alleen gelaten worden, eet de wolf de geit op. 
-        Als de geit en de kool alleen gelaten worden, eet de geit de kool op.\n
-        Maak in de code een set variabelen waarmee je deze puzzel kan representeren.*/
-        static void Nummer30()
-        {
-            string wolf = "wolf";
-            string goat = "goat";
-            string cabbage = "cabbage";
-
-            Console.WriteLine("Who will you take with you? The wolf, goat or cabbage? Remember that the wolf eats the goat and the goat eats the cabbage...");
-            string result = Console.ReadLine();
-
-            if (result.Equals(goat))
-            {
-                Console.WriteLine("That was the right choice. Everyone lives!");
-            } else if (result.Equals(cabbage))
-            {
-                Console.WriteLine("RIP Goat.");
-            } else if (result.Equals(wolf))
-            {
-                Console.WriteLine("RIP Cabbage.");
-            } else
-            {
-                Console.WriteLine("Boi, now everything dead. Good job.");
-            }
         }
 
         // "description" : "Schrijf een programma dat twee multiple choice vragen afdrukt en het antwoord op beide inleest.", "requirements" : "nvt (Gebruikers input kan niet getest worden in Genius@Work)"
@@ -909,7 +783,7 @@ namespace Weekofcode4
             double z =14.4; //14 
             y = Math.Round(y);
             z = Math.Round(z);
-            Console.WriteLine(y+ " " + z);
+            Console.WriteLine(y+ " " +z);
 
         }
         static void Opdracht82()
@@ -918,8 +792,8 @@ namespace Weekofcode4
             int x = 4;
             int y = 6;
             int z = 3;
-            int mod = (x + y) % z;
-            Console.WriteLine(z);
+            int mod = ((x + y) % z);
+            Console.WriteLine("opdracht 82 = " + mod);
             
         }
         static void Opdracht83()
@@ -929,6 +803,7 @@ namespace Weekofcode4
             int y = 5;
             int z = 3;
             int a = x * 2;
+            Console.WriteLine(a);
         }
 
         static void Opdracht84()
@@ -946,7 +821,66 @@ namespace Weekofcode4
 
         static void Opdracht85()
         {
+            //Laat op het scherm komen: '3 apenballen eten 4 kersenbomen
+            int x = 4;
+            int y = 3;
+            string soort = "apenballen";
+            string plant = "kersenbomen";
+            Console.WriteLine(String.Format("{0} {1} eten {2} {3}",y,soort,x,plant));
+        }
 
+        static void Opdracht86()
+        {
+            //Laat op het scherm komen: '3 apenballen eten 4 kersenbomen
+            int x = 4;
+            int y = 3;
+            string soort = "apenballen";
+            string plant = "kersenbomen";
+            Console.WriteLine(String.Format("{0} {1} eten {2} {3}", y, soort, x, plant));
+        }
+
+        static void Opdracht87()
+        {
+
+            //"Zorg ervoor dat in x 12 komt te zitten.
+            int x = 0;
+            int y = 12;
+            int z = 2;
+            int a = 5;
+            int b = 3;
+
+            x = y + (z - z) + (a - a) + (b - b) + 0;
+            Console.WriteLine(x);
+        }
+
+        static void Opdracht88()
+        {
+            //Zorg ervoor dat in x 37 komt te zitten
+            int x = 12;
+            x = (x * 3) + 1;
+        }
+        static void Opdracht89()
+        {
+            //"Maak y 1 als x even is en 2 als x oneven is"
+            int x = 10; //code x=11; //code
+            int y = 0;
+            if ((x%2)==0)
+            {
+                y = 1;
+            }
+            else
+            {
+                y = 2;
+            }
+        }
+
+        static void Opdracht90()
+        {
+            //Druk 'tekst' op het scherm af, gevolgd door het getal 4321."
+            int x = 123;
+            string tekst = "Ik ben die operatoren meer dan zat";
+            Console.WriteLine(String.Format("{0} {1}",tekst, x = x<<3));
+            
         }
         
         static void Opdracht91()
@@ -1308,28 +1242,13 @@ namespace Weekofcode4
             Nummer19();
             Nummer20();
             Nummer21();
-            Nummer22();
-            Nummer23();
-            Nummer24();
-            Nummer25();
-            Nummer26();
-            Nummer27();
-            Nummer28();
-            Nummer29();
-            Nummer30();*/
+            Nummer22();*/
 
             /*Opdracht31(); CHECKED
             Opdracht32();
             Opdracht33();
             Opdracht34();
             Opdracht35();*/
-
-
-            /* Opdracht31(); CHECKED
-             Opdracht32();
-             Opdracht33();
-             Opdracht34();
-             Opdracht35();*/
 
             /*Opdracht36(); //NEEDS CHECKING
             Opdracht37();
@@ -1353,8 +1272,6 @@ namespace Weekofcode4
             /*Opdracht51(); //CHECKED
             Opdracht52();
             Opdracht53();
-            Opdracht54();
-            Opdracht55();
             Opdracht54();
             Opdracht55();*/
 
@@ -1381,6 +1298,27 @@ namespace Weekofcode4
             Opdracht73();
             Opdracht74();
             Opdracht75();*/
+
+                /*Opdracht76();
+                Opdracht77();
+                Opdracht78();
+                Opdracht79();
+                Opdracht80();*/
+
+                /*Opdracht81();
+                Opdracht82();
+                Opdracht83();
+                Opdracht84();
+                Opdracht85();*/
+
+                /*Opdracht86();
+                Opdracht87();
+                Opdracht88();
+                Opdracht89();
+                Opdracht90();//kom ik niet uit*/
+
+                
+
 
             /*Opdracht91(); // NEEDS CHECKING
             Opdracht92();

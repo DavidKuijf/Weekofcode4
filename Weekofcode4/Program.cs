@@ -235,7 +235,7 @@ namespace Weekofcode4
         }
 
         // "description" : "Breidt het vorige programma uit zodat ook een huisnummer, gewicht en inkomen (in euro's) wordt opgevraagd.", "requirements" : "nvt (Gebruikers input kan niet getest worden in Genius@Work)"
-        static void Opdracht33()
+        void Opdracht33()
         {
             Console.WriteLine("What's your first name?");
             string FIRST_NAME = Console.ReadLine();
@@ -316,8 +316,8 @@ namespace Weekofcode4
         {
             Console.WriteLine("Enter a question.");
             string QUESTION = Console.ReadLine();
-            
-           
+
+
             Console.WriteLine($"Give the answer to your question: {QUESTION}");
             double ANSWER = Double.Parse(Console.ReadLine());
             double ANSWER2 = ANSWER * 2;
@@ -421,7 +421,7 @@ namespace Weekofcode4
             Console.WriteLine("Enter two numbers");
             string NUM1 = Console.ReadLine();
             string NUM2 = Console.ReadLine();
-            
+
             foreach (char c in NUM1)
             {
                 if (c.Equals("0"))
@@ -521,7 +521,7 @@ namespace Weekofcode4
         {
             ulong copper = 87253321654;
             Int64 copperstring = Convert.ToInt64(copper);
-          
+
             //Console.WriteLine(intCopper);
 
 
@@ -593,7 +593,7 @@ namespace Weekofcode4
         static void Opdracht62()
         {
             int hp = 100;
-            Console.WriteLine("the enemy has " + hp+ "hp left" );
+            Console.WriteLine("the enemy has " + hp + "hp left");
         }
         static void Opdracht63()
         {
@@ -626,21 +626,21 @@ namespace Weekofcode4
         }
         static void Opdracht66()
         {
-            for (int i=0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("File("+i+").exe");
+                Console.WriteLine("File(" + i + ").exe");
             }
         }
         static void Opdracht67()
         {
             string input = "The enemy wizard has died";
-            string replace = input.Replace("wizard has died","warrior is alive");
+            string replace = input.Replace("wizard has died", "warrior is alive");
             Console.WriteLine(replace);
         }
         static void Opdracht68()
         {
 
-            string[] array = { "123.45", "9.95", "19.99","12", "99.9" };
+            string[] array = { "123.45", "9.95", "19.99", "12", "99.9" };
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = String.Format("{0,10:C}", array[i]);
@@ -666,20 +666,20 @@ namespace Weekofcode4
             string two = cutstring[4];
             cutstring[3] = two;
             cutstring[4] = one;
-            Console.WriteLine( String.Join(" ", cutstring));
+            Console.WriteLine(String.Join(" ", cutstring));
 
-            
+
         }
-        
+
         static void Opdracht71()
         {
             string input = "The Lich King is the master and lord of the Scourge";
             string[] cutstring = input.Split(" ");
 
             string[] swapstring = new string[15];
-            for(int i = 0 ; i < cutstring.Length; i++)
+            for (int i = 0; i < cutstring.Length; i++)
             {
-                int current = cutstring.Length-1 - i;
+                int current = cutstring.Length - 1 - i;
                 swapstring[i] = cutstring[current];
             }
 
@@ -697,7 +697,7 @@ namespace Weekofcode4
         static void Opdracht73()
         {
             int number = 123;
-            Console.WriteLine( String.Format("123 {0} {1}", number.ToString("X"), Convert.ToString(number, 2)));
+            Console.WriteLine(String.Format("123 {0} {1}", number.ToString("X"), Convert.ToString(number, 2)));
         }
         static void Opdracht74()
         {
@@ -711,7 +711,7 @@ namespace Weekofcode4
                 Console.WriteLine("index oveflow");
             }
         }
-        
+
         static void Opdracht75()
         {
             string input = "This is still readable";
@@ -725,7 +725,96 @@ namespace Weekofcode4
             }
             Console.WriteLine(utf8String);
         }
-        
+
+       
+
+        static void Opdracht76()
+        {
+            int x = 10;
+            double y = 2.3;
+            int z = x + (int)y;
+            Console.WriteLine(z);
+        }
+       static void Opdracht77()
+        {
+            int x = 10;
+            double y = 2.3;
+            double z = (x * y) / 3;
+            Console.WriteLine(z);
+        }
+       static void Opdracht78()
+        {
+            //Tel bij x 1 op, deel dat door y en sla dat op in x, waarbij je afrond naar beneden
+            int x = 10;
+            double y = 2.3;
+            x = (int)((x+1) / y);
+
+            Console.WriteLine(x);
+           
+        }
+        static void Opdracht79()
+        {
+            //Verlaag y met z, tel er x bij op, deel dat door 1 meer dan y, maak dat negatief en sla dat op in z(rond af naar beneden).
+            int x = 10;
+            int y = 12;
+            int z = -30;
+
+            z = (int)(-1)*((y + z)+x)/(y + 1);
+            Console.WriteLine(z);
+        }
+        static void Opdracht80()
+        {
+            int x = 5;
+            x--;
+            Console.WriteLine(x);
+        }
+        static void Opdracht81()
+        {
+            //"Rond y en z af in a en b, volgens de normale afrondingsregels."
+            double y = 14.6; //15 
+            double z =14.4; //14 
+            y = Math.Round(y);
+            z = Math.Round(z);
+            Console.WriteLine(y+ " " z);
+
+        }
+        static void Opdracht82()
+        {
+            //Tel twee getallen bij elkaar op en neem dan de rest bij deling door een derde getal.Sla dit getal op."
+            int x = 4;
+            int y = 6;
+            int z = 3;
+            int mod = (x + y) % z;
+            Console.WriteLine(z);
+            
+        }
+        static void Opdracht83()
+        {
+            //"Zorg ervoor dat met gebruik van operatoren en haakjes 14 in a komt te zitten."
+            int x = 7;
+            int y = 5;
+            int z = 3;
+            int a = x * 2;
+        }
+
+        static void Opdracht84()
+        {
+
+
+            //"Verhoog x met y keer z en verlaag z met x."
+
+            int x = 10;
+            int y = 4;
+            int z = 80;
+            x = x + (y * z);
+            z = z - x;
+        }
+
+        static void Opdracht85()
+        {
+
+        }
+
         static void Opdracht91()
         {
             Random rnd = new Random();
@@ -772,135 +861,102 @@ namespace Weekofcode4
         {
             string word = "banana";
             char[] wordArray = word.ToCharArray();
-
-        static void Opdracht76()
-        {
-            int x = 10;
-            double y = 2.3;
-            int z = x + (int)y;
-            Console.WriteLine(z);
-        }
-        static void Opdracht77()
-        {
-            int x = 10;
-            double y = 2.3;
-            double z = (x * y) / 3;
-            Console.WriteLine(z);
-        }
-        static void Opdracht78()
-        {
-            //Tel bij x 1 op, deel dat door y en sla dat op in x, waarbij je afrond naar beneden
-            int x = 10;
-            double y = 2.3;
-            x = (x + 1);
-            x = x / y;
-
-            Console.WriteLine(x);
-           
-        }
-        static void Opdracht79()
-        {
-
         }
 
-        }
-        static void Opdracht80()
-        {
 
-        }
 
 
 
 
         static void Main(string[] args)
 
-        {
+            {
 
-            /* Opdracht1(); CHECKED
-             Opdracht2();
-             Opdracht3();
-             Opdracht4();
-             Opdracht5();
-             Opdracht6();
-             Opdracht7();
-             Opdracht8();
-             Opdracht9();
-             Opdracht10();
-             Opdracht11();
-             Opdracht12();
-             Opdracht13();
-             Opdracht14();
-             Opdracht15();*/
+                /* Opdracht1(); CHECKED
+                 Opdracht2();
+                 Opdracht3();
+                 Opdracht4();
+                 Opdracht5();
+                 Opdracht6();
+                 Opdracht7();
+                 Opdracht8();
+                 Opdracht9();
+                 Opdracht10();
+                 Opdracht11();
+                 Opdracht12();
+                 Opdracht13();
+                 Opdracht14();
+                 Opdracht15();*/
 
-            /*Nummer16(); NEEDS CHECKING
-            Nummer17();
-            Nummer18();
-            Nummer19();
-            Nummer20();
-            Nummer21();*/
-            Nummer22();
+                /*Nummer16(); NEEDS CHECKING
+                Nummer17();
+                Nummer18();
+                Nummer19();
+                Nummer20();
+                Nummer21();*/
+                //Nummer22();
 
-            /* Opdracht31(); CHECKED
-             Opdracht32();
-             Opdracht33();
-             Opdracht34();
-             Opdracht35();*/
+                /* Opdracht31(); CHECKED
+                 Opdracht32();
+                 Opdracht33();
+                 Opdracht34();
+                 Opdracht35();*/
 
-          /*Opdracht36(); //NEEDS CHECKING
-            Opdracht37();
-            Opdracht38();
-            Opdracht39();
-            Opdracht40();*/
+                /*Opdracht36(); //CHECKED
+                  Opdracht37();
+                  Opdracht38();
+                  Opdracht39();
+                  Opdracht40();*/
 
-            /*Opdracht41(); //NEEDS CHECKING
-            Opdracht42();
-            Opdracht43();
-            Opdracht44();
-            Opdracht45();*/
+                /*Opdracht41(); //CHECKED
+                Opdracht42();
+                Opdracht43();
+                Opdracht44();
+                Opdracht45();*/
 
-            /*Opdracht46(); //CHECKED
-            Opdracht47();
-            Opdracht48();
-            Opdracht49();
-            Opdracht50();*/
+                /*Opdracht46(); //CHECKED
+                Opdracht47();
+                Opdracht48();
+                Opdracht49();
+                Opdracht50();*/
 
-            /*Opdracht51(); //CHECKED
-            Opdracht52();
-            Opdracht53();
-            Opdracht54();
-            Opdracht55();*/
+                /*Opdracht51(); //CHECKED
+                Opdracht52();
+                Opdracht53();
+                Opdracht54();
+                Opdracht55();*/
 
-            /*Opdracht56(); //NEEDS CHECKING
-            Opdracht57();
-            Opdracht58();
-            Opdracht59();
-            Opdracht60();*/
+                /*Opdracht56(); //CHECKED
+                Opdracht57();
+                Opdracht58();
+                Opdracht59();
+                Opdracht60();*/
 
-            /*Opdracht61(); // NEEDS CHECKING
-            Opdracht62();
-            Opdracht63();
-            Opdracht64();
-            Opdracht65();*/
+                /*Opdracht61(); //CHECKED
+                Opdracht62();
+                Opdracht63();
+                Opdracht64();
+                Opdracht65();*/
 
-            /* Opdracht66(); // NEEDS CHECKING
-             Opdracht67();
-             Opdracht68();
-             Opdracht69();
-             Opdracht70();*/
+                /* Opdracht66(); //CHECKED
+                 Opdracht67();
+                 Opdracht68();
+                 Opdracht69();
+                 Opdracht70();*/
 
-            /*Opdracht71(); // NEEDS CHECKING
-            Opdracht72();
-            Opdracht73();
-            Opdracht74();
-            Opdracht75();*/
+                /*Opdracht71(); //CHECKED
+                Opdracht72();
+                Opdracht73();
+                Opdracht74();
+                Opdracht75();*/
 
-            Opdracht76();
-            Opdracht77();
-            Opdracht78();
-            Opdracht79();
-            Opdracht80();
+                Opdracht76();
+                Opdracht77();
+                Opdracht78();
+                Opdracht79();
+                Opdracht80();
 
-            Console.ReadKey();
+                Console.ReadKey();
+            }
         }
-    }
-}
+    } 

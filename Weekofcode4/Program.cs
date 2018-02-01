@@ -871,7 +871,7 @@ namespace Weekofcode4
             //Druk 'tekst' op het scherm af, gevolgd door het getal 4321."
             int x = 123;
             string tekst = "Ik ben die operatoren meer dan zat";
-            Console.WriteLine(String.Format("{0} {1}",tekst, x = x^x));
+            Console.WriteLine(String.Format("{0} {1}",tekst, x = x<<3));
             
         }
 
@@ -923,6 +923,20 @@ namespace Weekofcode4
             char[] wordArray = word.ToCharArray();
         }
 
+        static void Opdrachten106()
+        {
+            // Maak alle getallen van -1000 tot 1000 nul behalve de band van - 10 tot 10, die wordt 1
+            int x = 0;
+
+            if (x < 11 | x > -11)
+            {
+                x = 1;
+            }
+            else
+            {
+                x = 0;
+            }
+        }
 
 
 
@@ -1010,23 +1024,25 @@ namespace Weekofcode4
                 Opdracht74();
                 Opdracht75();*/
 
-                Opdracht76();
+                /*Opdracht76();
                 Opdracht77();
                 Opdracht78();
                 Opdracht79();
-                Opdracht80();
+                Opdracht80();*/
 
-                Opdracht81();
+                /*Opdracht81();
                 Opdracht82();
                 Opdracht83();
                 Opdracht84();
-                Opdracht85();
+                Opdracht85();*/
 
-                Opdracht86();
+                /*Opdracht86();
                 Opdracht87();
                 Opdracht88();
                 Opdracht89();
-                Opdracht90();//kom ik niet uit
+                Opdracht90();//kom ik niet uit*/
+
+                
 
 
 

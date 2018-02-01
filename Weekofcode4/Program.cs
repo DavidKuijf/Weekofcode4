@@ -909,7 +909,7 @@ namespace Weekofcode4
             double z =14.4; //14 
             y = Math.Round(y);
             z = Math.Round(z);
-            Console.WriteLine(y+ " " z);
+            Console.WriteLine(y+ " " + z);
 
         }
         static void Opdracht82()
@@ -1308,14 +1308,6 @@ namespace Weekofcode4
             Nummer19();
             Nummer20();
             Nummer21();
-            Nummer22();*/
-
-            /*Opdracht31(); CHECKED
-            Opdracht32();
-            Opdracht33();
-            Opdracht34();
-            Opdracht35();*/
-            Nummer21();
             Nummer22();
             Nummer23();
             Nummer24();
@@ -1325,7 +1317,14 @@ namespace Weekofcode4
             Nummer28();
             Nummer29();
             Nummer30();*/
-            
+
+            /*Opdracht31(); CHECKED
+            Opdracht32();
+            Opdracht33();
+            Opdracht34();
+            Opdracht35();*/
+
+
             /* Opdracht31(); CHECKED
              Opdracht32();
              Opdracht33();
@@ -1354,8 +1353,8 @@ namespace Weekofcode4
             /*Opdracht51(); //CHECKED
             Opdracht52();
             Opdracht53();
-            Opdracht54();*/
-            //Opdracht55();
+            Opdracht54();
+            Opdracht55();
             Opdracht54();
             Opdracht55();*/
 

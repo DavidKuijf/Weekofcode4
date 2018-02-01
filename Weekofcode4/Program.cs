@@ -2113,6 +2113,95 @@ namespace Weekofcode4
             }
             Console.WriteLine(money);
         }
+
+        static void Opdracht137()
+        {
+            //"Verdubbel 19.97 euro 88x en druk de totaalsom af. "
+            double money = 19.97;
+
+            for (int i = 0; i < 88; i++)
+            {
+                money = money*2;
+            }
+            Console.WriteLine(money);
+        }
+
+        static void Opdracht138()
+        {
+            //"Druk de cijfers 0 t/m 9 17x af. "
+
+            for (int i = 0; i < 17; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.WriteLine(j);
+                }
+            }
+
+        }
+
+        static void Opdracht139()
+        {
+            //"Een docent krijgt in the week of code elke dag ongeveer 80 vragen op zich afgevuurd. 
+            //Om uitweiden te voorkomen moet er uitgerekend worden hoe lang een antwoord mag duren. 
+            //Reken eerst de tijdsduur voor alle antwoorden van de hele week uit in minuten. 
+            //Neem aan dat in het 1e uur van een dag elk antwoord 20s duurt, 
+            //dat in elk volgend uur een antwoord 2x zo lang duurt en dat er 8 uur per dag zijn. "
+            int time = 0;
+            
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 8;)
+                {
+
+                    time = time + 20 * (int)Math.Pow(2.0, j);
+                }
+            }
+            Console.WriteLine(time/60);
+        }
+
+        static void Opdracht140()
+        {
+            //"Druk de dagen van de week af voor iedere week van het jaar 2016. "
+            for (int i = 0; i < 52; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    
+                    switch (j)
+                    {
+                        case 0 :
+                            Console.WriteLine("Monday");
+                            break;
+                        case 1:
+                            Console.WriteLine("Tuesday");
+                            break;
+                        case 2:
+                            Console.WriteLine("Wednesda");
+                            break;
+                        case 3:
+                            Console.WriteLine("Thursday");
+                            break;
+                        case 4:
+                            Console.WriteLine("Friday");
+                            break;
+                        case 5:
+                            Console.WriteLine("Saturday");
+                            break;
+                        case 6:
+                            Console.WriteLine("Sunday");
+                            break;
+                    
+
+
+                    }
+                }
+            }
+        }
+
+
+
         static void Main(string[] args)
         {
 
@@ -2241,11 +2330,18 @@ namespace Weekofcode4
             //Opdracht128();
             //Opdracht129();
             //Opdracht130();
+
             //Opdracht131();
             //Opdracht132();
             //Opdracht133();
-            Opdracht134();
-            Opdracht135();
+            //Opdracht134();
+            //Opdracht135();
+
+            //Opdracht136();
+            //Opdracht137();
+            //Opdracht138();
+            //Opdracht139();
+            //Opdracht140();
 
             Console.ReadKey();
         }

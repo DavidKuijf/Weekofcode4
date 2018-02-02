@@ -148,32 +148,48 @@ namespace Weekofcode4
         //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n1\ntrue\n3,678"
         static void Nummer16()
         {
-            int op16 = 678;
+            int a = 1;
+            bool b = true;
+            double c = 3.678;
         }
 
         //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\nfalse\n6,54\n\"Apenbal\""
         static void Nummer17()
         {
+            bool a = false;
+            float b = 6.54f;
             string op17 = "Apenbal";
         }
 
         //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n\"1,43\"
         static void Nummer18()
         {
-            double op18 = 1.43;
+            string op18 = "1.43";
         }
 
         //Sla de wortel van 8 op in een variabele. Je mag de waarde opzoeken.
         static void Nummer19()
         {
-            double op19 = 2.82842712475;
+            double op19 = Math.Sqrt(8); // 2.82842712475
         }
 
         //Maak een variabele die bijhoudt hoe oud iemand is, of zijn / haar ouders mee zijn en of hij /zij het zwembad in mag."
-        static void Nummer20()
+   !     static void Nummer20()
         {
             Console.WriteLine("Hoe oud ben je?");
-            int op20 = Console.Read();
+            int leeftijd = int.Parse(Console.ReadLine());
+            Console.WriteLine("Zijn jouw ouders mee?");
+            string ouders = Console.ReadLine();
+
+            if(leeftijd >= 12 && ouders.Equals("ja"))
+            {
+                Console.WriteLine("Je mag naar binnen!");
+                bool toegangZwembad = true;
+            } else
+            {
+                Console.WriteLine("Sorry, je mag niet naar binnen");
+                bool toegangZwembad = false;
+            }
         }
 
         //Je hebt twee variabelen met een geheel getal (bijvoorbeeld 3 en 10). Wissel waarden van deze variabelen om. wat je programmeert moet werken bij elke inhoud van de variabelen."
@@ -191,12 +207,13 @@ namespace Weekofcode4
         }
 
         // Maak een variabele waarin je de waarde van drie andere variabelen opgeteld worden. De eerste drie variabelen zijn 1 geheel getal en 2 komma-getallen.
-        static void Nummer22()
+   !     static void Nummer22()
         {
             int var1 = 10;
             double var2 = 9.99;
             double var3 = 0.11;
-            Console.WriteLine("Totale waarde is " + (var1 + var2 + var3));
+            double totaal = var1 + var2 + var3;
+            Console.WriteLine("Totale waarde is " + totaal);
         }
 
         //Maak 3 variabelen (x,y,z) voor gehele getallen. Sla op in a:\nx-(y+z)", "requirements" : "Gebruik geen haakjes"
@@ -216,6 +233,13 @@ namespace Weekofcode4
             Console.WriteLine("Wat is uw leeftijd?");
             int leeftijd = int.Parse(Console.ReadLine());
             Console.WriteLine("Uw leeftijd is " + leeftijd);
+            if(leeftijd <= 18)
+            {
+                Console.WriteLine("Je mag niet drinken.");
+            } else
+            {
+                Console.WriteLine("Je mag drinken!");
+            }
         }
 
 
@@ -238,7 +262,7 @@ namespace Weekofcode4
         }
 
         //Je hebt twee variabelen met een geheel getal (bijvoorbeeld 3 en 10). Wissel waarden van deze variabelen om. wat je programmeert moet werken bij elke inhoud van de variabelen.", "requirements" : "Je mag geen gebruik maken van extra variabelen.", 
-        static void Nummer26()
+    !    static void Nummer26()
         {
             Console.WriteLine("Tik de eerste nummer in");
             int varA = int.Parse(Console.ReadLine());
@@ -248,9 +272,9 @@ namespace Weekofcode4
 
             Console.WriteLine("varA is " + varA);
             Console.WriteLine("varB is " + varB);
-            int temp = varA;
-            varA = varB;
-            varB = temp;
+            varA = varA + varB;
+            varB = varA - varB;
+            varA = varA - varB;
             Console.WriteLine("varA is " + varA);
             Console.WriteLine("varB is " + varB);
         }
@@ -290,19 +314,11 @@ namespace Weekofcode4
         }
 
         //Druk een variabele af op het scherm. In die variabele zit:\n\n\n\n\n\n"
-        static void Nummer29()
+    !    static void Nummer29()
         {
-            string var1 = "        ik";
-            string var2 = "    ben";
-            string var3 = "        helemaal";
-            string var4 = "gek";
-            string var5 = "        geworden";
+            string var1 = "        ik\n    ben\n        helemaal\ngek\n        geworden";
 
             Console.WriteLine(var1);
-            Console.WriteLine(var2);
-            Console.WriteLine(var3);
-            Console.WriteLine(var4);
-            Console.WriteLine(var5);
         }
 
         /*Bekijk de volgende bekende puzzel:
@@ -1391,6 +1407,8 @@ namespace Weekofcode4
             Nummer20();
             Nummer21();
             Nummer22();*/
+            Nummer26();
+            //Nummer29();
 
             /*Opdracht31(); CHECKED
             Opdracht32();

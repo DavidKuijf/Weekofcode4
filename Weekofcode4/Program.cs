@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Weekofcode4
 {
@@ -158,14 +159,16 @@ namespace Weekofcode4
         static void Nummer17()
         {
             bool a = false;
-            float b = 6.54f;
+            double b = 6.54;
             string op17 = "Apenbal";
         }
 
-        //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n\"1,43\"
+        //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n\"1,43\"10010100 38981928"
         static void Nummer18()
         {
             string op18 = "1.43";
+            int fghj = 10010100;
+            
         }
 
         //Sla de wortel van 8 op in een variabele. Je mag de waarde opzoeken.
@@ -182,11 +185,12 @@ namespace Weekofcode4
             Console.WriteLine("Zijn jouw ouders mee?");
             string ouders = Console.ReadLine();
 
-            if(leeftijd >= 12 && ouders.Equals("ja"))
+            if (leeftijd >= 12 && ouders.Equals("ja"))
             {
                 Console.WriteLine("Je mag naar binnen!");
                 bool toegangZwembad = true;
-            } else
+            }
+            else
             {
                 Console.WriteLine("Sorry, je mag niet naar binnen");
                 bool toegangZwembad = false;
@@ -224,7 +228,9 @@ namespace Weekofcode4
             int y = 20;
             int z = 30;
 
-            int a = y + z - x;
+            int a = y + z;
+            a = x - a;
+            
             Console.WriteLine("value of A = " + a);
         }
 
@@ -234,10 +240,11 @@ namespace Weekofcode4
             Console.WriteLine("Wat is uw leeftijd?");
             int leeftijd = int.Parse(Console.ReadLine());
             Console.WriteLine("Uw leeftijd is " + leeftijd);
-            if(leeftijd <= 18)
+            if (leeftijd <= 18)
             {
                 Console.WriteLine("Je mag niet drinken.");
-            } else
+            }
+            else
             {
                 Console.WriteLine("Je mag drinken!");
             }
@@ -259,6 +266,7 @@ namespace Weekofcode4
             twee = drie;
             drie = vier;
             vier = temp;
+
             Console.WriteLine("Een is " + een + " twee is " + twee + " Drie is " + drie + " vier is " + vier);
         }
 
@@ -307,7 +315,8 @@ namespace Weekofcode4
             {
                 bool toegang = false;
                 Console.WriteLine("Sorry, mate.");
-            } else
+            }
+            else
             {
                 bool toegang = true;
                 Console.WriteLine("go ahead, mate");
@@ -341,13 +350,16 @@ namespace Weekofcode4
             if (result.Equals(goat))
             {
                 Console.WriteLine("Aight, ya good.");
-            } else if (result.Equals(cabbage))
+            }
+            else if (result.Equals(cabbage))
             {
                 Console.WriteLine("RIP Goat");
-            } else if (result.Equals(wolf))
+            }
+            else if (result.Equals(wolf))
             {
                 Console.WriteLine("MY CABBAGES");
-            } else
+            }
+            else
             {
                 Console.WriteLine("You just alroundly messed up, boi");
             }
@@ -692,7 +704,8 @@ namespace Weekofcode4
         static void Opdracht56()
         {
             Warrior Henk = new Warrior();
-            if (Henk is Entity) {
+            if (Henk is Entity)
+            {
                 //FIXME: Do smart stuff here
                 System.Console.WriteLine("Henk de Warrior is een entity");
             }
@@ -742,7 +755,7 @@ namespace Weekofcode4
         static void Opdracht62()
         {
             int hp = 100;
-            Console.WriteLine("the enemy has " + hp + "hp left");
+            Console.WriteLine(String.Format("the enemy has {0} hp left",hp));
         }
 
         static void Opdracht63()
@@ -1753,7 +1766,8 @@ namespace Weekofcode4
             {
                 best = "C#";
             }
-            else {
+            else
+            {
                 best = "C#";
             }
 
@@ -2043,9 +2057,9 @@ namespace Weekofcode4
                     palindrome = false;
                 }
             }
-        
 
-            if(palindrome)
+
+            if (palindrome)
             {
                 System.Console.WriteLine("This is a palindrome");
             }
@@ -2054,7 +2068,7 @@ namespace Weekofcode4
                 Console.WriteLine("this is not a palindrome");
             }
         }
-        
+
         static void Opdracht132()
         {
             //"Via elk mens dat je kent sta je in 2egraads verbinding met andere mensen die je nog nooit hebt gezien. 
@@ -2063,7 +2077,7 @@ namespace Weekofcode4
             ulong circlejerk = 50;
             double layers = 1;
 
-            while(circlejerk < 7599044103)
+            while (circlejerk < 7599044103)
             {
                 circlejerk = (ulong)Math.Pow(50, layers);
                 layers++;
@@ -2096,9 +2110,9 @@ namespace Weekofcode4
             double current = 0;
             int currentloop = 0;
 
-            while (current<300)
-            {            
-                current = current + 0.15 * (int)Math.Pow(2.0 ,currentloop);
+            while (current < 300)
+            {
+                current = current + 0.15 * (int)Math.Pow(2.0, currentloop);
                 currentloop++;
                 Console.WriteLine(current);
             }
@@ -2138,7 +2152,7 @@ namespace Weekofcode4
 
             for (int i = 0; i < 88; i++)
             {
-                money = money*2;
+                money = money * 2;
             }
             Console.WriteLine(money);
         }
@@ -2165,30 +2179,31 @@ namespace Weekofcode4
             //Neem aan dat in het 1e uur van een dag elk antwoord 20s duurt, 
             //dat in elk volgend uur een antwoord 2x zo lang duurt en dat er 8 uur per dag zijn. "
             int time = 0;
-            
+
 
             for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < 8;)
+                for (int j = 0; j < 8; j++)
                 {
+                    for (int k = 0; k<10;k++)
 
                     time = time + 20 * (int)Math.Pow(2.0, j);
                 }
             }
-            Console.WriteLine(time/60);
+            Console.WriteLine(time / 60);
         }
 
         static void Opdracht140()
         {
-            //"Druk de dagen van de week af voor iedere week van het jaar 2016. "
+            //"Druk de dagen van de week af voor iedere week van het jaar 2017. "
             for (int i = 0; i < 52; i++)
             {
                 for (int j = 0; j < 7; j++)
                 {
-                    
+
                     switch (j)
                     {
-                        case 0 :
+                        case 0:
                             Console.WriteLine("Monday");
                             break;
                         case 1:
@@ -2217,6 +2232,189 @@ namespace Weekofcode4
             }
         }
 
+        static void Opdracht141()
+        {
+            //"Tel 100x een random getal van 1 t/m 10 bij elkaar op en druk het resultaat af. "
+            Random rnd = new Random();
+            int number = 0;
+
+            for (int i = 0; i < 100; i++)
+            {
+                number += rnd.Next();
+            }
+            Console.WriteLine(number);
+        }
+
+        static void Opdracht142()
+        {
+            //"Reken de rente uit voor 25 jaar 10,000 euro op de bank zetten. Rentetarief: 3,25%."
+
+            double money = 10000;
+            int years = 25;
+
+            for(int i = 0; i<years; i++)
+            {
+                money += money * 0.0325;
+            }
+
+        }
+
+        static void Opdracht143()
+        {
+            // "De toetsen van klas Z1A zijn nagekeken maar de HHS gaat over naar het Amerikaanse systeem. 
+            //Zet alle cijfers om, om de docent een handje te helpen. Amerikaanse toetscijfers zijn A, B, C, D, E, F voor resp. 9, 10; 8; 7; 6; 5; en 1, 2, 3, 4. Gebruik 20 random cijfers."
+            Random rnd = new Random();
+            int cijfer;
+            char[] letters = { 'F', 'F', 'E', 'E', 'D', 'D', 'C', 'C', 'B', 'B', 'A', 'A' };
+
+            for(int i = 0; i < 20; i++)
+            {
+                cijfer = rnd.Next(1,10);
+                Console.WriteLine(letters[cijfer]);
+
+            }
+
+        }
+
+        static void Opdracht144()
+        {
+            //"Reken uit hoe lang je computer erover doet om de cijfers van 1 t/m 1 miljoen bij elkaar op te tellen. "
+            System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+            timer.Start();
+            int number = 0;
+            for(int i = 1; i <= 1000000; i++)
+            {
+                number += i;
+            }
+            Console.WriteLine(timer.ElapsedMilliseconds);
+
+        }
+
+        static void Opdracht145()
+        {
+            //"Reken uit hoe lang je computer erover doet om de cijfers van 1 t/m 1 miljoen met elkaar te vermenigvuldigen. "
+            System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+            timer.Start();
+            int number = 0;
+            for (int i = 1; i <= 1000000; i++)
+            {
+                number *= i;
+            }
+            Console.WriteLine(timer.ElapsedMilliseconds);
+        }
+
+        static void Opdracht146()
+        {
+            //"Een Godheid is de wereld weer eens aan het scheppen. Bereken een random landschap door 80,000 
+            //steentjes naar beneden te laten vallen op een grid van 40x40. Geef aan hoeveel steentjes er gevallen zijn op vakje (25,25)."
+            Random rnd = new Random();
+            int[,] world = new int[40, 40];
+
+            for (int i = 0; i < 80000; i++)
+            {
+                world[rnd.Next(1, 41), rnd.Next(1, 41)] += 1;
+            }
+
+            Console.WriteLine(world[25,25]);
+
+        }
+        static void Opdracht147()
+        {
+            // "Dafne Schippers rent best vaak wereldrecords 100m op de training. Neem aan dat ze per stap 7±1.5m 
+            //aflegt en dat ze in aanloop van de OS 2016 in Rio 1000x de 100m traint. Hoeveel wereldrecords rent ze volgens jou berekening? Neem aan dat 
+            //Dafne een wereldrecord loopt als het aantal benodigde stappen kleiner dan of gelijk aan 14 is. Veronderstel voor iedere stap randomness. "
+
+            Random rnd = new Random();
+            double distance = 0;
+            int steps = 0;
+            int records = 0;
+
+            for (int i = 0; i < 1000; i++)
+            {
+                while (distance < 100)
+                {
+                    distance += ((rnd.NextDouble()/2) + rnd.Next(6, 8));
+                    steps++;
+                }
+
+                if (steps <= 14)
+                {
+                    records++;
+                }
+                Console.WriteLine(steps);
+                steps = 0;
+                distance = 0;
+            }
+            Console.WriteLine( "Aantal records = "+ records);
+           
+
+
+        }
+
+        static void Opdracht148()
+        {
+            //"Werk opgave 143 uit voor alle vijf klassen HBO-ICT.Neem weer aan dat een klas 20 studenten heeft."
+            Random rnd = new Random();
+            int cijfer;
+            char[] letters = { 'F', 'F', 'E', 'E', 'D', 'D', 'C', 'C', 'B', 'B', 'A', 'A' };
+
+            for (int j = 0; j < 5; j++)
+            {
+                Console.WriteLine("voor klas " j);
+                for (int i = 0; i < 20; i++)
+                {
+                    cijfer = rnd.Next(1, 10);
+                    Console.WriteLine(letters[cijfer]);
+
+                }
+            }
+            
+
+
+        }
+
+        static void Opdracht149()
+        {
+            //"Hetzelfde als opgave 146 maar neem voor de 1e helft lavablokken. Een lavablok valt behalve op het geselecteerde vakje, ook op alle vakjes er horizontaal of verticaal naast."
+            Random rnd = new Random();
+            int[,] world = new int[40, 40];
+
+            for (int j = 0; j < 40000; j++)
+            {
+                int x = rnd.Next(1, 40);
+                int y = rnd.Next(1, 40);
+
+                world[x ,y] += 1;
+                world[x+1, y] += 1;
+                world[x, y+1] += 1;
+                world[x-1, y] += 1;
+                world[x, y-1] += 1;
+
+                for (int i = 0; i < 40000; i++)
+                {
+                    world[rnd.Next(1, 41), rnd.Next(1, 41)] += 1;
+                }
+
+               
+            }
+            Console.WriteLine(world[25, 25]);
+
+        }
+
+        static void Opdracht150()
+        {
+            //"Hoelang wordt een rij van 100,000 punaises als elke punaise wordt gerepresenteerd door 7±1 millimeter? Bepaal de grootte van de punaises random uit 6, 7 en 8."
+            int afstand = 0;
+            Random rnd = new Random();
+            for (int i = 0; i < 100000; i++)
+            {
+                afstand += rnd.Next(6, 9);
+            }
+
+            Console.WriteLine(afstand);
+        }
+
+        static void Opdracht166()
         static void Opdracht166(int[,] numbers, char seperator)
         {
             int rowLength = numbers.GetLength(0);
@@ -2266,7 +2464,71 @@ namespace Weekofcode4
                 Console.WriteLine();
             }
 
-            
+
+
+                    }
+                }
+            }
+        }
+
+        //"Maak een lijst met 10 dinosaurussen", "requirements" : "Sorteer alfabetisch op naam
+        static void Opdracht181()
+        {
+            List<string> Dinosaur = new List<string>();
+            Dinosaur.Add("T-rex");
+            Dinosaur.Add("Aardonyx");
+            Dinosaur.Add("Brontomerus");
+            Dinosaur.Add("Caihong");
+            Dinosaur.Add("Daanosaurus");
+            Dinosaur.Add("Microceratus");
+            Dinosaur.Add("Oviraptor");
+            Dinosaur.Add("Padillasaurus");
+            Dinosaur.Add("Zalmoxes");
+            Dinosaur.Add("Yutuyarusaur");
+
+            Dinosaur.Sort();
+            Console.WriteLine("List sorted in alphabetic order.");
+            foreach (var name in Dinosaur)
+                Console.Write("   {0}\n", name);
+        }
+
+        //"Maak een lijst met 10 dinosaurussen", "requirements" : "Sorteer op gewicht. De naamlengte van een dinosaurus geeft daarbij het gewicht weer.
+        static void Opdracht182()
+        {
+            List<string> Dinosaur = new List<string>();
+            Dinosaur.Add("T-rex");
+            Dinosaur.Add("Aardonyx");
+            Dinosaur.Add("Brontomerus");
+            Dinosaur.Add("Caihong");
+            Dinosaur.Add("Daanosaurus");
+            Dinosaur.Add("Microceratus");
+            Dinosaur.Add("Oviraptor");
+            Dinosaur.Add("Padillasaurus");
+            Dinosaur.Add("Zalmoxes");
+            Dinosaur.Add("Yutuyarusaur");
+
+            Console.WriteLine("List sorted in name.Length order.");
+            foreach (string s in SortByLength(Dinosaur))
+            {
+                Console.WriteLine(s);
+            }
+
+            IEnumerable<string> SortByLength(IEnumerable<string> e)
+            {
+                // Use LINQ to sort the array received and return a copy.
+                var sorted = from s in e
+                             orderby s.Length ascending
+                             select s;
+                return sorted;
+            }
+        }
+
+        //Maak een lijst met 100 random getallen", "requirements" : "Sorteer op grootte
+        static void Opdracht183()
+        {
+            List<int> numbers = new List<int>()
+            {
+
         }
 
         static void Opdracht196()
@@ -2285,6 +2547,7 @@ namespace Weekofcode4
             Console.WriteLine($"Found name, {checkName}, {nameCounter} times.");
 
         }
+
 
 
 
@@ -2307,13 +2570,14 @@ namespace Weekofcode4
             Opdracht14();
             Opdracht15();*/
 
-            /*Nummer16(); NEEDS CHECKING
+            /*Nummer16(); CHECKED
             Nummer17();
             Nummer18();
             Nummer19();
             Nummer20();
             Nummer21();
             Nummer22();*/
+            //Nummer25();
             //Nummer26();
             //Nummer29();
 
@@ -2431,11 +2695,20 @@ namespace Weekofcode4
             //Opdracht139();
             //Opdracht140();
 
-            int[,] numbers = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
-            Opdracht166(numbers, ';');
-            //Opdracht167();
+            //Opdracht141();
+            //Opdracht142();
+            //Opdracht143();
+            //Opdracht144();
+            //Opdracht145();
+
+            //Opdracht146();
+            //Opdracht147();
+
+
+            //Opdracht166();
 
             Console.ReadKey();
         }
     }
 }
+

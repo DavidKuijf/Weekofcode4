@@ -174,7 +174,7 @@ namespace Weekofcode4
         }
 
         //Maak een variabele die bijhoudt hoe oud iemand is, of zijn / haar ouders mee zijn en of hij /zij het zwembad in mag."
-   !     static void Nummer20()
+        static void Nummer20()
         {
             Console.WriteLine("Hoe oud ben je?");
             int leeftijd = int.Parse(Console.ReadLine());
@@ -207,7 +207,7 @@ namespace Weekofcode4
         }
 
         // Maak een variabele waarin je de waarde van drie andere variabelen opgeteld worden. De eerste drie variabelen zijn 1 geheel getal en 2 komma-getallen.
-   !     static void Nummer22()
+        static void Nummer22()
         {
             int var1 = 10;
             double var2 = 9.99;
@@ -262,7 +262,7 @@ namespace Weekofcode4
         }
 
         //Je hebt twee variabelen met een geheel getal (bijvoorbeeld 3 en 10). Wissel waarden van deze variabelen om. wat je programmeert moet werken bij elke inhoud van de variabelen.", "requirements" : "Je mag geen gebruik maken van extra variabelen.", 
-    !    static void Nummer26()
+        static void Nummer26()
         {
             Console.WriteLine("Tik de eerste nummer in");
             int varA = int.Parse(Console.ReadLine());
@@ -314,7 +314,7 @@ namespace Weekofcode4
         }
 
         //Druk een variabele af op het scherm. In die variabele zit:\n\n\n\n\n\n"
-    !    static void Nummer29()
+        static void Nummer29()
         {
             string var1 = "        ik\n    ben\n        helemaal\ngek\n        geworden";
 
@@ -1426,49 +1426,20 @@ namespace Weekofcode4
             int[,] chessboard = new int[8, 8];
             int rowLength = chessboard.GetLength(0);
             int colLength = chessboard.GetLength(1);
-            int x = 2;
-            int y = 1;
+
+            int knightX = 3;
+            int knightY = 3;
+            int x2 = 4;
+            int y2 = 5;
+            int row;
+            int col;
 
             bool isAllowed = false;
-            bool isOne = false;
 
-            for (int i = 0; i < rowLength; i++)
-            {
-                Console.WriteLine();
-                for (int j = 0; j < colLength; j++)
-                {
-                    if (i % 2 == 0)
-                    {
-                        if (isOne)
-                        {
-                            chessboard[i, j] = 0;
-                            isOne = false;
-                        }
-                        else
-                        {
-                            chessboard[i, j] = 1;
-                            isOne = true;
-                        }
-                    }
-                    else
-                    {
-                        if (isOne)
-                        {
-                            chessboard[i, j] = 1;
-                            isOne = false;
-                        }
-                        else
-                        {
-                            chessboard[i, j] = 0;
-                            isOne = true;
-                        }
-                    }
+            row = Math.Abs(x2 - knightX);
+            col = Math.Abs(y2 - knightY);
 
-                    Console.Write(chessboard[i, j] + " ");
-                }
-            }
-
-            if (chessboard[x, y] == 1)
+            if ((row == 2 && col == 1) || (row == 1 && col == 2))
             {
                 isAllowed = true;
             }
@@ -2216,7 +2187,48 @@ namespace Weekofcode4
             }
         }
 
+        static void Opdracht166()
+        {
+            int[,] numbers = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+            int rowLength = numbers.GetLength(0);
+            int colLength = numbers.GetLength(1);
 
+            for (int i = 0; i < rowLength; i++) {
+                for (int j = 0; j < colLength; j++)
+                {
+                    Console.Write(numbers[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+
+
+        static void Opdracht167()
+        {
+            /*
+             * In de puzzel 'Flats' stelt de inhoud van elke array vakje een flat voor. 
+             * Het getal geeft aan hoeveel verdiepingen de flat heeft. Hogere flats 
+             * zorgen ervoor dat lagere flats die erachter staan niet zichtbaar zijn. 
+             * Schrijf een methode die voor kolom x vaststelt hoeveel flats je kan zien 
+             * als je vanaf boven kijkt. Schrijf ook een methode die voor rijen hetzelfde 
+             * doet vanaf links."
+             */
+
+            int[,] numbers = { {1, 2, 3, 4}, {4, 3, 2, 1}, {2, 4, 1, 3}, {3, 1, 4, 2} };
+            int rowLength = numbers.GetLength(0);
+            int colLength = numbers.GetLength(1);
+            int column = 0; //0-3
+
+            for (int i = 0; i < rowLength; i++)
+            {
+                for (int j = 0; j < colLength; j++)
+                {
+
+                }
+            }
+
+        }
 
         static void Main(string[] args)
         {
@@ -2244,7 +2256,7 @@ namespace Weekofcode4
             Nummer20();
             Nummer21();
             Nummer22();*/
-            Nummer26();
+            //Nummer26();
             //Nummer29();
 
             /*Opdracht31(); CHECKED
@@ -2335,8 +2347,8 @@ namespace Weekofcode4
             //Opdracht101(); // NEEDS CHECKING
             //Opdracht102();
             //Opdracht103();
-            /*Opdracht104();
-            Opdracht105();*/
+            //Opdracht104();
+            Opdracht105();
 
             /*Opdracht121();
             Opdracht122();
@@ -2360,6 +2372,8 @@ namespace Weekofcode4
             //Opdracht138();
             //Opdracht139();
             //Opdracht140();
+
+            //Opdracht166();
 
             Console.ReadKey();
         }

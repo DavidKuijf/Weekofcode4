@@ -1544,21 +1544,6 @@ namespace Weekofcode4
 
         }
 
-        static void Opdrachten106()
-        {
-            // Maak alle getallen van -1000 tot 1000 nul behalve de band van - 10 tot 10, die wordt 1
-            int x = 0;
-
-            if (x < 11 | x > -11)
-            {
-                x = 1;
-            }
-            else
-            {
-                x = 0;
-            }
-        }
-
         static void Main(string[] args)
         {
 
@@ -1598,7 +1583,7 @@ namespace Weekofcode4
             Opdracht39();
             Opdracht40();*/
 
-            /*Opdracht41();// CHECKED
+            /*Opdracht41(); //NEEDS CHECKING
             Opdracht42();
             Opdracht43();
             Opdracht44();
@@ -1640,24 +1625,6 @@ namespace Weekofcode4
             Opdracht73();
             Opdracht74();
             Opdracht75();*/
-
-            /*Opdracht76(); // CHECKED
-            Opdracht77();
-            Opdracht78();
-            Opdracht79();
-            Opdracht80();*/
-
-            /*Opdracht81(); // CHECKED
-            Opdracht82();
-            Opdracht83();
-            Opdracht84();
-            Opdracht85();*/
-
-            /*Opdracht86(); // CHECKED
-            Opdracht87();
-            Opdracht88();
-            Opdracht89();
-            Opdracht90();*/
 
             /*Opdracht91(); // NEEDS CHECKING
             Opdracht92();

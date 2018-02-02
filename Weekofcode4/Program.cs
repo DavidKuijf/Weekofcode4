@@ -2266,6 +2266,7 @@ namespace Weekofcode4
                 Console.WriteLine();
             }
 
+            
         }
 
         static void Opdracht196()
@@ -2276,7 +2277,7 @@ namespace Weekofcode4
 
             foreach (KeyValuePair<string, string> entry in names)
             {
-                if (entry.Value.Equals(checkName) {
+                if (entry.Value.Equals(checkName)) {
                     nameCounter++;
                 }
             }

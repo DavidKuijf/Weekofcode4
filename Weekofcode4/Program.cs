@@ -2360,7 +2360,7 @@ namespace Weekofcode4
 
             for (int j = 0; j < 5; j++)
             {
-                Console.WriteLine("voor klas " j);
+                Console.WriteLine("voor klas "+ j);
                 for (int i = 0; i < 20; i++)
                 {
                     cijfer = rnd.Next(1, 10);
@@ -2414,7 +2414,6 @@ namespace Weekofcode4
             Console.WriteLine(afstand);
         }
 
-        static void Opdracht166()
         static void Opdracht166(int[,] numbers, char seperator)
         {
             int rowLength = numbers.GetLength(0);
@@ -2467,9 +2466,7 @@ namespace Weekofcode4
 
 
                     }
-                }
-            }
-        }
+          
 
         //"Maak een lijst met 10 dinosaurussen", "requirements" : "Sorteer alfabetisch op naam
         static void Opdracht181()
@@ -2526,9 +2523,7 @@ namespace Weekofcode4
         //Maak een lijst met 100 random getallen", "requirements" : "Sorteer op grootte
         static void Opdracht183()
         {
-            List<int> numbers = new List<int>()
-            {
-
+            
         }
 
         static void Opdracht196()
@@ -2539,7 +2534,7 @@ namespace Weekofcode4
 
             foreach (KeyValuePair<string, string> entry in names)
             {
-                if (entry.Value.Equals(checkName) {
+                if (entry.Value.Equals(checkName)) {
                     nameCounter++;
                 }
             }
@@ -2548,7 +2543,10 @@ namespace Weekofcode4
 
         }
 
+        static void Opdracht198()
+        {
 
+        }
 
 
         static void Main(string[] args)

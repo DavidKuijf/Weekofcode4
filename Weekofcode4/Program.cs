@@ -2548,6 +2548,136 @@ namespace Weekofcode4
 
         }
 
+        static void Opdracht200()
+        {
+            Dictionary<string, int> gamePoints = new Dictionary<string, int>();
+            gamePoints.Add("Super Mario World", 500);
+            gamePoints.Add("Call of Duty", 250);
+            gamePoints.Add("Fallout 4", 300);
+            gamePoints.Add("World of Warcraft", 900); // Yeah boi
+            Console.WriteLine(gamePoints);
+        }
+
+        static void Opdracht201()
+        {
+            //         nr.  name
+            Dictionary<int, string> students = new Dictionary<int, string>();
+        }
+
+        static void Opdracht202()
+        {
+            //         name    amount
+            Dictionary<string, int> inventory = new Dictionary<string, int>();
+
+            // adding items
+            inventory.Add("Arrow", 200);
+            inventory.Add("Broadsword", 1);
+            inventory.Add("Mana Potion", 23);
+
+            // changing amount
+            inventory["Arrow"] -= 33;
+            inventory["Mana Potion"] += 2;
+
+            // removing items
+            inventory.Remove("Broadsword");
+        }
+
+        static void Opdracht203()
+        {
+            Dictionary<string, int> testDic = new Dictionary<string, int>();
+
+            try
+            {
+                testDic.Add("test", 2);
+                Console.WriteLine(testDic);
+                testDic.Add("test", 5);
+                Console.WriteLine(testDic);
+            }
+            catch (System.ArgumentException e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+
+        static void Opdracht204()
+        {
+            Dictionary<string, string> enemies = new Dictionary<string, string>();
+            enemies.Add("Voldemort", "Mage");
+            enemies.Add("Henk", "Warrior");
+            enemies.Add("Hulfdan Blackbeard", "Rogue");
+            enemies.Add("Elminster", "Mage");
+            enemies.Add("Conan", "Warrior");
+
+            foreach (KeyValuePair<string, string> k in enemies)
+            {
+                Console.WriteLine($"Name: {k.Key}; Class: {k.Value}");
+            }
+        }
+
+        static void Opdracht205()
+        {
+            Dictionary<string, int> abstractObject = new Dictionary<string, int>();
+            abstractObject.Add("cirkel", 2);
+            abstractObject.Add("auto", 3);
+            abstractObject.Add("vliegtuig", 9);
+            abstractObject.Add("paard", 3);
+            abstractObject.Add("kerstboom", 1);
+
+            foreach (KeyValuePair<string, int> k in abstractObject)
+            {
+                if (k.Value == 3)
+                {
+                    Console.WriteLine(k.Key);
+                }
+            }
+        }
+
+        static void Opdracht206()
+        {
+            string input = "Goldshire is the second human town that most human characters visit during their adventures";
+            Dictionary<int, char> count = new Dictionary<int, char>();
+            int counter = 1;
+
+            foreach (char c in input)
+            {
+                if (!c.Equals(' '))
+                {
+                    count.Add(counter + 1, c);
+                    counter++;
+                }
+            }
+        }
+
+        static void Opdracht207()
+        {
+            /* 
+             * "Maak een dictionary waarin dictionaries worden bijgehouden. 
+             * De eerste dictionary houdt enemies (string) en hun klasse bij 
+             * (string) De tweede dictionary waar die enemies in zitten telt 
+             * het aantal sets van spawning enemy groups by (value daarin is            <--- wat is deze zin?
+             * dus een int) Je creeert dus een set van enemies (eerste 
+             * dictionary) met een percentage kans dat die groep spawnt (tweede 
+             * dictionary)"
+             */
+
+            Dictionary<string, string> enemies = new Dictionary<string, string>();
+            Dictionary<string, int> spawnrate = new Dictionary<string, int>();
+
+
+        }
+
+        static void Opdracht208()
+        {
+            Dictionary<string, int> initialValues = new Dictionary<string, int>();
+            initialValues.Add("Warrior", 500);
+            initialValues.Add("Mage", 125);
+            initialValues.Add("Rogue", 250);
+            initialValues.Add("Paladin", 450);
+            initialValues.Add("Huntart", 385);
+            initialValues.Add("Priest", 50);
+            
+
+        }
 
         static void Main(string[] args)
         {
@@ -2704,6 +2834,8 @@ namespace Weekofcode4
 
 
             //Opdracht166();
+
+            Opdracht204();
 
             Console.ReadKey();
         }

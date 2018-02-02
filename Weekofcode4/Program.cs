@@ -1121,7 +1121,7 @@ namespace Weekofcode4
 
         static void Opdracht98()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[20, 20]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1145,7 +1145,7 @@ namespace Weekofcode4
 
         static void Opdracht99()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[30, 30]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1169,7 +1169,7 @@ namespace Weekofcode4
 
         static void Opdracht100()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[40, 40]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1469,10 +1469,11 @@ namespace Weekofcode4
             {
                 x = 1;
             }
-            else
+            else if(x <1001 | x> -1001)
             {
                 x = 0;
             }
+            
         }
         static void Opdracht107()
         {
@@ -1480,6 +1481,7 @@ namespace Weekofcode4
             //"Controleer bij de zelfscan in de AH ahv. leeftijd of iemand alcohol mee mag nemen uit de supermarkt. "
             int age = 0;
             bool allowed_to_drink = false;
+
             if (age > 17)
             {
                 allowed_to_drink = true;
@@ -1501,6 +1503,7 @@ namespace Weekofcode4
             //"Controleer of er wel genoeg benzine in de auto zit. Zo niet dan moet het rode lampje gaan branden. "
             double gas = 0.0;
             bool light = false;
+
             if (gas < 100)
             {
                 light = true;
@@ -1562,15 +1565,15 @@ namespace Weekofcode4
             switch (month)
             {
                 case "jan":
-                    number = 0;
+                    number = 31;
                     break;
                 case "feb":
-                    number = 1;
+                    number = 28;
                     break;
                 case "mrt":
                     number = 2;
                     break;
-                case "aprili":
+                case "april":
                     number = 3;
                     break;
                 case "mei":
@@ -1604,7 +1607,7 @@ namespace Weekofcode4
             //Karel Appel is weer eens lekker aan het verfen. Selecteer de kleur die hij gebruikt ahv. het uur in een etmaal. "
             int uur = 0;
             string[] kleur = { "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", };
-            string currentKluer = kleur[uur];
+            string currentKleur = kleur[uur];
         }
         static void Opdracht114()
         {
@@ -1680,7 +1683,7 @@ namespace Weekofcode4
                     //dostuff
                 }
             }
-            if (mod == 3)
+            if (mod == 0)
             {
                 if (pannekoek.Equals("appel"))
                 {
@@ -1754,11 +1757,11 @@ namespace Weekofcode4
             string best = "";
 
             if (nummer < 4) {
-                best = "java";
+                best = "java#";
             }
             if (nummer > 4 && nummer < 7)
             {
-                best = "C";
+                best = "C#";
             }
             else {
                 best = "C#";

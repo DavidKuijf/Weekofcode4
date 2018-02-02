@@ -148,32 +148,48 @@ namespace Weekofcode4
         //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n1\ntrue\n3,678"
         static void Nummer16()
         {
-            int op16 = 678;
+            int a = 1;
+            bool b = true;
+            double c = 3.678;
         }
 
         //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\nfalse\n6,54\n\"Apenbal\""
         static void Nummer17()
         {
+            bool a = false;
+            float b = 6.54f;
             string op17 = "Apenbal";
         }
 
         //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n\"1,43\"
         static void Nummer18()
         {
-            double op18 = 1.43;
+            string op18 = "1.43";
         }
 
         //Sla de wortel van 8 op in een variabele. Je mag de waarde opzoeken.
         static void Nummer19()
         {
-            double op19 = 2.82842712475;
+            double op19 = Math.Sqrt(8); // 2.82842712475
         }
 
         //Maak een variabele die bijhoudt hoe oud iemand is, of zijn / haar ouders mee zijn en of hij /zij het zwembad in mag."
         static void Nummer20()
         {
             Console.WriteLine("Hoe oud ben je?");
-            int op20 = Console.Read();
+            int leeftijd = int.Parse(Console.ReadLine());
+            Console.WriteLine("Zijn jouw ouders mee?");
+            string ouders = Console.ReadLine();
+
+            if(leeftijd >= 12 && ouders.Equals("ja"))
+            {
+                Console.WriteLine("Je mag naar binnen!");
+                bool toegangZwembad = true;
+            } else
+            {
+                Console.WriteLine("Sorry, je mag niet naar binnen");
+                bool toegangZwembad = false;
+            }
         }
 
         //Je hebt twee variabelen met een geheel getal (bijvoorbeeld 3 en 10). Wissel waarden van deze variabelen om. wat je programmeert moet werken bij elke inhoud van de variabelen."
@@ -196,7 +212,8 @@ namespace Weekofcode4
             int var1 = 10;
             double var2 = 9.99;
             double var3 = 0.11;
-            Console.WriteLine("Totale waarde is " + (var1 + var2 + var3));
+            double totaal = var1 + var2 + var3;
+            Console.WriteLine("Totale waarde is " + totaal);
         }
 
         //Maak 3 variabelen (x,y,z) voor gehele getallen. Sla op in a:\nx-(y+z)", "requirements" : "Gebruik geen haakjes"
@@ -216,6 +233,13 @@ namespace Weekofcode4
             Console.WriteLine("Wat is uw leeftijd?");
             int leeftijd = int.Parse(Console.ReadLine());
             Console.WriteLine("Uw leeftijd is " + leeftijd);
+            if(leeftijd <= 18)
+            {
+                Console.WriteLine("Je mag niet drinken.");
+            } else
+            {
+                Console.WriteLine("Je mag drinken!");
+            }
         }
 
 
@@ -248,9 +272,9 @@ namespace Weekofcode4
 
             Console.WriteLine("varA is " + varA);
             Console.WriteLine("varB is " + varB);
-            int temp = varA;
-            varA = varB;
-            varB = temp;
+            varA = varA + varB;
+            varB = varA - varB;
+            varA = varA - varB;
             Console.WriteLine("varA is " + varA);
             Console.WriteLine("varB is " + varB);
         }
@@ -292,17 +316,9 @@ namespace Weekofcode4
         //Druk een variabele af op het scherm. In die variabele zit:\n\n\n\n\n\n"
         static void Nummer29()
         {
-            string var1 = "        ik";
-            string var2 = "    ben";
-            string var3 = "        helemaal";
-            string var4 = "gek";
-            string var5 = "        geworden";
+            string var1 = "        ik\n    ben\n        helemaal\ngek\n        geworden";
 
             Console.WriteLine(var1);
-            Console.WriteLine(var2);
-            Console.WriteLine(var3);
-            Console.WriteLine(var4);
-            Console.WriteLine(var5);
         }
 
         /*Bekijk de volgende bekende puzzel:
@@ -1410,49 +1426,20 @@ namespace Weekofcode4
             int[,] chessboard = new int[8, 8];
             int rowLength = chessboard.GetLength(0);
             int colLength = chessboard.GetLength(1);
-            int x = 2;
-            int y = 1;
+
+            int knightX = 3;
+            int knightY = 3;
+            int x2 = 4;
+            int y2 = 5;
+            int row;
+            int col;
 
             bool isAllowed = false;
-            bool isOne = false;
 
-            for (int i = 0; i < rowLength; i++)
-            {
-                Console.WriteLine();
-                for (int j = 0; j < colLength; j++)
-                {
-                    if (i % 2 == 0)
-                    {
-                        if (isOne)
-                        {
-                            chessboard[i, j] = 0;
-                            isOne = false;
-                        }
-                        else
-                        {
-                            chessboard[i, j] = 1;
-                            isOne = true;
-                        }
-                    }
-                    else
-                    {
-                        if (isOne)
-                        {
-                            chessboard[i, j] = 1;
-                            isOne = false;
-                        }
-                        else
-                        {
-                            chessboard[i, j] = 0;
-                            isOne = true;
-                        }
-                    }
+            row = Math.Abs(x2 - knightX);
+            col = Math.Abs(y2 - knightY);
 
-                    Console.Write(chessboard[i, j] + " ");
-                }
-            }
-
-            if (chessboard[x, y] == 1)
+            if ((row == 2 && col == 1) || (row == 1 && col == 2))
             {
                 isAllowed = true;
             }
@@ -2203,7 +2190,48 @@ namespace Weekofcode4
             }
         }
 
+        static void Opdracht166()
+        {
+            int[,] numbers = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+            int rowLength = numbers.GetLength(0);
+            int colLength = numbers.GetLength(1);
 
+            for (int i = 0; i < rowLength; i++) {
+                for (int j = 0; j < colLength; j++)
+                {
+                    Console.Write(numbers[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+
+
+        static void Opdracht167()
+        {
+            /*
+             * In de puzzel 'Flats' stelt de inhoud van elke array vakje een flat voor. 
+             * Het getal geeft aan hoeveel verdiepingen de flat heeft. Hogere flats 
+             * zorgen ervoor dat lagere flats die erachter staan niet zichtbaar zijn. 
+             * Schrijf een methode die voor kolom x vaststelt hoeveel flats je kan zien 
+             * als je vanaf boven kijkt. Schrijf ook een methode die voor rijen hetzelfde 
+             * doet vanaf links."
+             */
+
+            int[,] numbers = { {1, 2, 3, 4}, {4, 3, 2, 1}, {2, 4, 1, 3}, {3, 1, 4, 2} };
+            int rowLength = numbers.GetLength(0);
+            int colLength = numbers.GetLength(1);
+            int column = 0; //0-3
+
+            for (int i = 0; i < rowLength; i++)
+            {
+                for (int j = 0; j < colLength; j++)
+                {
+
+                }
+            }
+
+        }
 
         static void Main(string[] args)
         {
@@ -2231,6 +2259,8 @@ namespace Weekofcode4
             Nummer20();
             Nummer21();
             Nummer22();*/
+            //Nummer26();
+            //Nummer29();
 
             /*Opdracht31(); CHECKED
             Opdracht32();
@@ -2244,7 +2274,7 @@ namespace Weekofcode4
             Opdracht39();
             Opdracht40();*/
 
-            /*Opdracht41();// CHECKED
+            /*Opdracht41(); //NEEDS CHECKING
             Opdracht42();
             Opdracht43();
             Opdracht44();
@@ -2320,8 +2350,8 @@ namespace Weekofcode4
             //Opdracht101(); // NEEDS CHECKING
             //Opdracht102();
             //Opdracht103();
-            /*Opdracht104();
-            Opdracht105();*/
+            //Opdracht104();
+            Opdracht105();
 
             /*Opdracht121();
             Opdracht122();
@@ -2345,6 +2375,8 @@ namespace Weekofcode4
             //Opdracht138();
             //Opdracht139();
             //Opdracht140();
+
+            //Opdracht166();
 
             Console.ReadKey();
         }

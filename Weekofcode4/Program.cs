@@ -1138,7 +1138,7 @@ namespace Weekofcode4
 
         static void Opdracht98()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[20, 20]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1162,7 +1162,7 @@ namespace Weekofcode4
 
         static void Opdracht99()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[30, 30]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1186,7 +1186,7 @@ namespace Weekofcode4
 
         static void Opdracht100()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[40, 40]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1430,8 +1430,10 @@ namespace Weekofcode4
 
             int knightX = 3;
             int knightY = 3;
+
             int x2 = 4;
             int y2 = 5;
+
             int row;
             int col;
 
@@ -1457,10 +1459,11 @@ namespace Weekofcode4
             {
                 x = 1;
             }
-            else
+            else if(x <1001 | x> -1001)
             {
                 x = 0;
             }
+            
         }
         static void Opdracht107()
         {
@@ -1468,6 +1471,7 @@ namespace Weekofcode4
             //"Controleer bij de zelfscan in de AH ahv. leeftijd of iemand alcohol mee mag nemen uit de supermarkt. "
             int age = 0;
             bool allowed_to_drink = false;
+
             if (age > 17)
             {
                 allowed_to_drink = true;
@@ -1489,6 +1493,7 @@ namespace Weekofcode4
             //"Controleer of er wel genoeg benzine in de auto zit. Zo niet dan moet het rode lampje gaan branden. "
             double gas = 0.0;
             bool light = false;
+
             if (gas < 100)
             {
                 light = true;
@@ -1550,15 +1555,15 @@ namespace Weekofcode4
             switch (month)
             {
                 case "jan":
-                    number = 0;
+                    number = 31;
                     break;
                 case "feb":
-                    number = 1;
+                    number = 28;
                     break;
                 case "mrt":
                     number = 2;
                     break;
-                case "aprili":
+                case "april":
                     number = 3;
                     break;
                 case "mei":
@@ -1592,7 +1597,7 @@ namespace Weekofcode4
             //Karel Appel is weer eens lekker aan het verfen. Selecteer de kleur die hij gebruikt ahv. het uur in een etmaal. "
             int uur = 0;
             string[] kleur = { "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", };
-            string currentKluer = kleur[uur];
+            string currentKleur = kleur[uur];
         }
         static void Opdracht114()
         {
@@ -1668,7 +1673,7 @@ namespace Weekofcode4
                     //dostuff
                 }
             }
-            if (mod == 3)
+            if (mod == 0)
             {
                 if (pannekoek.Equals("appel"))
                 {
@@ -1742,11 +1747,11 @@ namespace Weekofcode4
             string best = "";
 
             if (nummer < 4) {
-                best = "java";
+                best = "java#";
             }
             if (nummer > 4 && nummer < 7)
             {
-                best = "C";
+                best = "C#";
             }
             else {
                 best = "C#";
@@ -1812,23 +1817,40 @@ namespace Weekofcode4
         {
             // "Maak een simpel programmaatje dat voor de NS voorspelt of wissels gaan bevriezen. Gebruik als indicator de random dagtemperatuur. Zolang het drie dagen niet vriest gaat het goed. "
             Random rnd = new Random();
-            int rand1 = rnd.Next(-10, 30);
-            int rand2 = rnd.Next(-10, 30);
-            int rand3 = rnd.Next(-10, 30);
-            bool bevriezen = false;
+            int random = 0;
+            int counter = 0;
+            int aantaldagen = 3;
 
-            if (rand1 < 1 | rand2 < 1 | rand3 < 1)
+            bool notfrozen = true;
+
+            while (notfrozen)
             {
-                bevriezen = true;
+                for(int i = 0; i <= aantaldagen; i++)
+                {
+                    random = rnd.Next(-10, 30);
+                    if (random < 1)
+                    {
+                        counter++;
+                        if (counter >= 3)
+                        {
+                            notfrozen = false;
+                        }
+                    }
+                }
             }
+            Console.WriteLine("DAnGER CLOSE");
+            
 
         }
 
         static void Opdracht126()
         {
-            // "Voor een voor studenten niet geheel onbekend spelletje moet er bepaald worden hoe vaak er op een knop wordt gedrukt. Ga door met tellen totdat de speler van het spel 2s niet op de knop drukt. Druk het aantal keer drukken af. "
+            // "Voor een voor studenten niet geheel onbekend spelletje moet er bepaald worden hoe vaak er op een knop wordt gedrukt.
+            //Ga door met tellen totdat de speler van het spel 2s niet op de knop drukt. Druk het aantal keer drukken af. "
             System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+
             bool timeleft = true;
+
             Console.WriteLine("Hit some buttons");
             Console.ReadKey();
             int count = 0;
@@ -1858,13 +1880,15 @@ namespace Weekofcode4
             //"Hoeveel punaises passen er in een kuub als elke punaise wordt gerepresenteerd door 7±1 kubieke millimeter? Druk het antwoord af voor drie runs. Bepaal de grootte van elke punaise random uit 6, 7 en 8. Neem aan dat de punaises perfect op elkaar aansluiten bij het stapelen."
             int count = 0;
             Random rnd = new Random();
+
             for (int j = 0; j < 3; j++) {
 
-                for (int i = 0; i < 1000000; i++)
+                while (count < 1000000)
                 {
                     count = count + rnd.Next(6, 8);
 
                 }
+
                 Console.WriteLine(count);
                 count = 0;
             }
@@ -1944,6 +1968,7 @@ namespace Weekofcode4
             int pinners = 0;
 
             int reserve = 100000;
+
             while (reserve > 0)
             {
                 int random = rnd.Next(1, 500);
@@ -1971,7 +1996,7 @@ namespace Weekofcode4
             //"Dagobert Duck wil van zijn geld af. Hoeveel dagen heeft hij hier voor nodig als hij elke dag 100 mensen blij maakt met een willekeurig briefje? Totaal in pakhuis is 17,4 triljoen euro."
             Random rnd = new Random();
             ulong[] biljetten = { 5, 10, 20, 50, 100, 200, 500 };
-            ulong money = 17400000000000000000;
+            ulong money = 1740000000;
             uint dagen = 0;
 
             while (money > 0)
@@ -1981,6 +2006,10 @@ namespace Weekofcode4
                     if (money > 0)
                     {
                         int random = rnd.Next(0, 6);
+                        if (biljetten[random] > money)
+                        {
+                            break;
+                        }
                         money = (money - biljetten[random]);
                     }
 
@@ -2360,36 +2389,36 @@ namespace Weekofcode4
             Opdracht89();
             Opdracht90();*/
 
-            /*Opdracht91(); // NEEDS CHECKING
+            /*Opdracht91(); //CHECKED
             Opdracht92();
             Opdracht93();
             Opdracht94();
             Opdracht95();*/
 
-            /*Opdracht96(); // NEEDS CHECKING
+            /*Opdracht96(); // CHECKED
             Opdracht97();*/
             //Opdracht98();
             //Opdracht99();
             //Opdracht100();
 
-            //Opdracht101(); // NEEDS CHECKING
+            //Opdracht101(); //CHECKED
             //Opdracht102();
             //Opdracht103();
             //Opdracht104();
             //Opdracht105();
 
-            /*Opdracht121();
+            /*Opdracht121(); CHECKED
             Opdracht122();
             Opdracht123();
             Opdracht124();*/
 
-            //Opdracht126();
+            //Opdracht126(); Checkked
             //Opdracht127();
             //Opdracht128();
             //Opdracht129();
             //Opdracht130();
 
-            //Opdracht131();
+            //Opdracht131(); Checked
             //Opdracht132();
             //Opdracht133();
             //Opdracht134();

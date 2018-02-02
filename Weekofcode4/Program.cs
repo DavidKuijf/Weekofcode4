@@ -157,14 +157,16 @@ namespace Weekofcode4
         static void Nummer17()
         {
             bool a = false;
-            float b = 6.54f;
+            double b = 6.54;
             string op17 = "Apenbal";
         }
 
-        //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n\"1,43\"
+        //Ken de waarden volgende waarden toe aan de het juiste type variabele. De naam mag je zelf kiezen.\n\"1,43\"10010100 38981928"
         static void Nummer18()
         {
             string op18 = "1.43";
+            int fghj = 10010100;
+            
         }
 
         //Sla de wortel van 8 op in een variabele. Je mag de waarde opzoeken.
@@ -223,7 +225,9 @@ namespace Weekofcode4
             int y = 20;
             int z = 30;
 
-            int a = y + z - x;
+            int a = y + z;
+            a = x - a;
+            
             Console.WriteLine("value of A = " + a);
         }
 
@@ -258,6 +262,7 @@ namespace Weekofcode4
             twee = drie;
             drie = vier;
             vier = temp;
+
             Console.WriteLine("Een is " + een + " twee is " + twee + " Drie is " + drie + " vier is " + vier);
         }
 
@@ -741,7 +746,7 @@ namespace Weekofcode4
         static void Opdracht62()
         {
             int hp = 100;
-            Console.WriteLine("the enemy has " + hp + "hp left");
+            Console.WriteLine(String.Format("the enemy has {0} hp left",hp));
         }
 
         static void Opdracht63()
@@ -2168,8 +2173,9 @@ namespace Weekofcode4
 
             for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < 8;)
+                for (int j = 0; j < 8; j++)
                 {
+                    for (int k = 0; k<10;k++)
 
                     time = time + 20 * (int)Math.Pow(2.0, j);
                 }
@@ -2179,7 +2185,7 @@ namespace Weekofcode4
 
         static void Opdracht140()
         {
-            //"Druk de dagen van de week af voor iedere week van het jaar 2016. "
+            //"Druk de dagen van de week af voor iedere week van het jaar 2017. "
             for (int i = 0; i < 52; i++)
             {
                 for (int j = 0; j < 7; j++)
@@ -2214,6 +2220,188 @@ namespace Weekofcode4
                     }
                 }
             }
+        }
+
+        static void Opdracht141()
+        {
+            //"Tel 100x een random getal van 1 t/m 10 bij elkaar op en druk het resultaat af. "
+            Random rnd = new Random();
+            int number = 0;
+
+            for (int i = 0; i < 100; i++)
+            {
+                number += rnd.Next();
+            }
+            Console.WriteLine(number);
+        }
+
+        static void Opdracht142()
+        {
+            //"Reken de rente uit voor 25 jaar 10,000 euro op de bank zetten. Rentetarief: 3,25%."
+
+            double money = 10000;
+            int years = 25;
+
+            for(int i = 0; i<years; i++)
+            {
+                money += money * 0.0325;
+            }
+
+        }
+
+        static void Opdracht143()
+        {
+            // "De toetsen van klas Z1A zijn nagekeken maar de HHS gaat over naar het Amerikaanse systeem. 
+            //Zet alle cijfers om, om de docent een handje te helpen. Amerikaanse toetscijfers zijn A, B, C, D, E, F voor resp. 9, 10; 8; 7; 6; 5; en 1, 2, 3, 4. Gebruik 20 random cijfers."
+            Random rnd = new Random();
+            int cijfer;
+            char[] letters = { 'F', 'F', 'E', 'E', 'D', 'D', 'C', 'C', 'B', 'B', 'A', 'A' };
+
+            for(int i = 0; i < 20; i++)
+            {
+                cijfer = rnd.Next(1,10);
+                Console.WriteLine(letters[cijfer]);
+
+            }
+
+        }
+
+        static void Opdracht144()
+        {
+            //"Reken uit hoe lang je computer erover doet om de cijfers van 1 t/m 1 miljoen bij elkaar op te tellen. "
+            System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+            timer.Start();
+            int number = 0;
+            for(int i = 1; i <= 1000000; i++)
+            {
+                number += i;
+            }
+            Console.WriteLine(timer.ElapsedMilliseconds);
+
+        }
+
+        static void Opdracht145()
+        {
+            //"Reken uit hoe lang je computer erover doet om de cijfers van 1 t/m 1 miljoen met elkaar te vermenigvuldigen. "
+            System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+            timer.Start();
+            int number = 0;
+            for (int i = 1; i <= 1000000; i++)
+            {
+                number *= i;
+            }
+            Console.WriteLine(timer.ElapsedMilliseconds);
+        }
+
+        static void Opdracht146()
+        {
+            //"Een Godheid is de wereld weer eens aan het scheppen. Bereken een random landschap door 80,000 
+            //steentjes naar beneden te laten vallen op een grid van 40x40. Geef aan hoeveel steentjes er gevallen zijn op vakje (25,25)."
+            Random rnd = new Random();
+            int[,] world = new int[40, 40];
+
+            for (int i = 0; i < 80000; i++)
+            {
+                world[rnd.Next(1, 41), rnd.Next(1, 41)] += 1;
+            }
+
+            Console.WriteLine(world[25,25]);
+
+        }
+        static void Opdracht147()
+        {
+            // "Dafne Schippers rent best vaak wereldrecords 100m op de training. Neem aan dat ze per stap 7±1.5m 
+            //aflegt en dat ze in aanloop van de OS 2016 in Rio 1000x de 100m traint. Hoeveel wereldrecords rent ze volgens jou berekening? Neem aan dat 
+            //Dafne een wereldrecord loopt als het aantal benodigde stappen kleiner dan of gelijk aan 14 is. Veronderstel voor iedere stap randomness. "
+
+            Random rnd = new Random();
+            double distance = 0;
+            int steps = 0;
+            int records = 0;
+
+            for (int i = 0; i < 1000; i++)
+            {
+                while (distance < 100)
+                {
+                    distance += ((rnd.NextDouble()/2) + rnd.Next(6, 8));
+                    steps++;
+                }
+
+                if (steps <= 14)
+                {
+                    records++;
+                }
+                Console.WriteLine(steps);
+                steps = 0;
+                distance = 0;
+            }
+            Console.WriteLine( "Aantal records = "+ records);
+           
+
+
+        }
+
+        static void Opdracht148()
+        {
+            //"Werk opgave 143 uit voor alle vijf klassen HBO-ICT.Neem weer aan dat een klas 20 studenten heeft."
+            Random rnd = new Random();
+            int cijfer;
+            char[] letters = { 'F', 'F', 'E', 'E', 'D', 'D', 'C', 'C', 'B', 'B', 'A', 'A' };
+
+            for (int j = 0; j < 5; j++)
+            {
+                Console.WriteLine("voor klas " j);
+                for (int i = 0; i < 20; i++)
+                {
+                    cijfer = rnd.Next(1, 10);
+                    Console.WriteLine(letters[cijfer]);
+
+                }
+            }
+            
+
+
+        }
+
+        static void Opdracht149()
+        {
+            //"Hetzelfde als opgave 146 maar neem voor de 1e helft lavablokken. Een lavablok valt behalve op het geselecteerde vakje, ook op alle vakjes er horizontaal of verticaal naast."
+            Random rnd = new Random();
+            int[,] world = new int[40, 40];
+
+            for (int j = 0; j < 40000; j++)
+            {
+                int x = rnd.Next(1, 40);
+                int y = rnd.Next(1, 40);
+
+                world[x ,y] += 1;
+                world[x+1, y] += 1;
+                world[x, y+1] += 1;
+                world[x-1, y] += 1;
+                world[x, y-1] += 1;
+
+                for (int i = 0; i < 40000; i++)
+                {
+                    world[rnd.Next(1, 41), rnd.Next(1, 41)] += 1;
+                }
+
+               
+            }
+            Console.WriteLine(world[25, 25]);
+
+        }
+
+        static void Opdracht150()
+        {
+            //"Hoelang wordt een rij van 100,000 punaises als elke punaise wordt gerepresenteerd door 7±1 millimeter? Bepaal de grootte van de punaises random uit 6, 7 en 8."
+            int afstand = 0;
+            Random rnd = new Random();
+            for (int i = 0; i < 100000; i++)
+            {
+                afstand += rnd.Next(6, 9);
+            }
+
+            Console.WriteLine(afstand);
         }
 
         static void Opdracht166()
@@ -2285,6 +2473,7 @@ namespace Weekofcode4
             Nummer20();
             Nummer21();
             Nummer22();*/
+            //Nummer25();
             //Nummer26();
             //Nummer29();
 
@@ -2401,6 +2590,16 @@ namespace Weekofcode4
             //Opdracht138();
             //Opdracht139();
             //Opdracht140();
+
+            //Opdracht141();
+            //Opdracht142();
+            //Opdracht143();
+            //Opdracht144();
+            //Opdracht145();
+
+            //Opdracht146();
+            //Opdracht147();
+
 
             //Opdracht166();
 

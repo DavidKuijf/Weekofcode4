@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Weekofcode4
 {
@@ -183,11 +185,12 @@ namespace Weekofcode4
             Console.WriteLine("Zijn jouw ouders mee?");
             string ouders = Console.ReadLine();
 
-            if(leeftijd >= 12 && ouders.Equals("ja"))
+            if (leeftijd >= 12 && ouders.Equals("ja"))
             {
                 Console.WriteLine("Je mag naar binnen!");
                 bool toegangZwembad = true;
-            } else
+            }
+            else
             {
                 Console.WriteLine("Sorry, je mag niet naar binnen");
                 bool toegangZwembad = false;
@@ -237,10 +240,11 @@ namespace Weekofcode4
             Console.WriteLine("Wat is uw leeftijd?");
             int leeftijd = int.Parse(Console.ReadLine());
             Console.WriteLine("Uw leeftijd is " + leeftijd);
-            if(leeftijd <= 18)
+            if (leeftijd <= 18)
             {
                 Console.WriteLine("Je mag niet drinken.");
-            } else
+            }
+            else
             {
                 Console.WriteLine("Je mag drinken!");
             }
@@ -311,7 +315,8 @@ namespace Weekofcode4
             {
                 bool toegang = false;
                 Console.WriteLine("Sorry, mate.");
-            } else
+            }
+            else
             {
                 bool toegang = true;
                 Console.WriteLine("go ahead, mate");
@@ -345,13 +350,16 @@ namespace Weekofcode4
             if (result.Equals(goat))
             {
                 Console.WriteLine("Aight, ya good.");
-            } else if (result.Equals(cabbage))
+            }
+            else if (result.Equals(cabbage))
             {
                 Console.WriteLine("RIP Goat");
-            } else if (result.Equals(wolf))
+            }
+            else if (result.Equals(wolf))
             {
                 Console.WriteLine("MY CABBAGES");
-            } else
+            }
+            else
             {
                 Console.WriteLine("You just alroundly messed up, boi");
             }
@@ -696,7 +704,8 @@ namespace Weekofcode4
         static void Opdracht56()
         {
             Warrior Henk = new Warrior();
-            if (Henk is Entity) {
+            if (Henk is Entity)
+            {
                 //FIXME: Do smart stuff here
                 System.Console.WriteLine("Henk de Warrior is een entity");
             }
@@ -1757,7 +1766,8 @@ namespace Weekofcode4
             {
                 best = "C#";
             }
-            else {
+            else
+            {
                 best = "C#";
             }
 
@@ -2047,9 +2057,9 @@ namespace Weekofcode4
                     palindrome = false;
                 }
             }
-        
 
-            if(palindrome)
+
+            if (palindrome)
             {
                 System.Console.WriteLine("This is a palindrome");
             }
@@ -2058,7 +2068,7 @@ namespace Weekofcode4
                 Console.WriteLine("this is not a palindrome");
             }
         }
-        
+
         static void Opdracht132()
         {
             //"Via elk mens dat je kent sta je in 2egraads verbinding met andere mensen die je nog nooit hebt gezien. 
@@ -2067,7 +2077,7 @@ namespace Weekofcode4
             ulong circlejerk = 50;
             double layers = 1;
 
-            while(circlejerk < 7599044103)
+            while (circlejerk < 7599044103)
             {
                 circlejerk = (ulong)Math.Pow(50, layers);
                 layers++;
@@ -2100,9 +2110,9 @@ namespace Weekofcode4
             double current = 0;
             int currentloop = 0;
 
-            while (current<300)
-            {            
-                current = current + 0.15 * (int)Math.Pow(2.0 ,currentloop);
+            while (current < 300)
+            {
+                current = current + 0.15 * (int)Math.Pow(2.0, currentloop);
                 currentloop++;
                 Console.WriteLine(current);
             }
@@ -2142,7 +2152,7 @@ namespace Weekofcode4
 
             for (int i = 0; i < 88; i++)
             {
-                money = money*2;
+                money = money * 2;
             }
             Console.WriteLine(money);
         }
@@ -2169,7 +2179,7 @@ namespace Weekofcode4
             //Neem aan dat in het 1e uur van een dag elk antwoord 20s duurt, 
             //dat in elk volgend uur een antwoord 2x zo lang duurt en dat er 8 uur per dag zijn. "
             int time = 0;
-            
+
 
             for (int i = 0; i < 5; i++)
             {
@@ -2180,7 +2190,7 @@ namespace Weekofcode4
                     time = time + 20 * (int)Math.Pow(2.0, j);
                 }
             }
-            Console.WriteLine(time/60);
+            Console.WriteLine(time / 60);
         }
 
         static void Opdracht140()
@@ -2190,10 +2200,10 @@ namespace Weekofcode4
             {
                 for (int j = 0; j < 7; j++)
                 {
-                    
+
                     switch (j)
                     {
-                        case 0 :
+                        case 0:
                             Console.WriteLine("Monday");
                             break;
                         case 1:
@@ -2405,15 +2415,15 @@ namespace Weekofcode4
         }
 
         static void Opdracht166()
+        static void Opdracht166(int[,] numbers, char seperator)
         {
-            int[,] numbers = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
             int rowLength = numbers.GetLength(0);
             int colLength = numbers.GetLength(1);
 
             for (int i = 0; i < rowLength; i++) {
                 for (int j = 0; j < colLength; j++)
                 {
-                    Console.Write(numbers[i,j] + " ");
+                    Console.Write(numbers[i,j] + seperator);
                 }
                 Console.WriteLine();
             }
@@ -2432,20 +2442,114 @@ namespace Weekofcode4
              * doet vanaf links."
              */
 
-            int[,] numbers = { {1, 2, 3, 4}, {4, 3, 2, 1}, {2, 4, 1, 3}, {3, 1, 4, 2} };
+            int?[,] numbers = { {1, 2, 3, 4}, {4, 3, 2, 1}, {2, 4, 1, 3}, {3, 1, 4, 2} };
             int rowLength = numbers.GetLength(0);
             int colLength = numbers.GetLength(1);
             int column = 0; //0-3
 
-            for (int i = 0; i < rowLength; i++)
+            for (int x = 0; x < rowLength; x++)
             {
-                for (int j = 0; j < colLength; j++)
+                for (int y = 0; y < colLength; y++)
                 {
+                    if (x == 0 || (y > 0 && (numbers[x, y] > numbers[x, y - 1])))
+                    {
+                        Console.Write(numbers[x, y] + " ");
+                    }
+                    else
+                    {
+                        Console.Write("0 ");
+                    }
+                    
+                }
+                Console.WriteLine();
+            }
 
+
+
+                    }
+                }
+            }
+        }
+
+        //"Maak een lijst met 10 dinosaurussen", "requirements" : "Sorteer alfabetisch op naam
+        static void Opdracht181()
+        {
+            List<string> Dinosaur = new List<string>();
+            Dinosaur.Add("T-rex");
+            Dinosaur.Add("Aardonyx");
+            Dinosaur.Add("Brontomerus");
+            Dinosaur.Add("Caihong");
+            Dinosaur.Add("Daanosaurus");
+            Dinosaur.Add("Microceratus");
+            Dinosaur.Add("Oviraptor");
+            Dinosaur.Add("Padillasaurus");
+            Dinosaur.Add("Zalmoxes");
+            Dinosaur.Add("Yutuyarusaur");
+
+            Dinosaur.Sort();
+            Console.WriteLine("List sorted in alphabetic order.");
+            foreach (var name in Dinosaur)
+                Console.Write("   {0}\n", name);
+        }
+
+        //"Maak een lijst met 10 dinosaurussen", "requirements" : "Sorteer op gewicht. De naamlengte van een dinosaurus geeft daarbij het gewicht weer.
+        static void Opdracht182()
+        {
+            List<string> Dinosaur = new List<string>();
+            Dinosaur.Add("T-rex");
+            Dinosaur.Add("Aardonyx");
+            Dinosaur.Add("Brontomerus");
+            Dinosaur.Add("Caihong");
+            Dinosaur.Add("Daanosaurus");
+            Dinosaur.Add("Microceratus");
+            Dinosaur.Add("Oviraptor");
+            Dinosaur.Add("Padillasaurus");
+            Dinosaur.Add("Zalmoxes");
+            Dinosaur.Add("Yutuyarusaur");
+
+            Console.WriteLine("List sorted in name.Length order.");
+            foreach (string s in SortByLength(Dinosaur))
+            {
+                Console.WriteLine(s);
+            }
+
+            IEnumerable<string> SortByLength(IEnumerable<string> e)
+            {
+                // Use LINQ to sort the array received and return a copy.
+                var sorted = from s in e
+                             orderby s.Length ascending
+                             select s;
+                return sorted;
+            }
+        }
+
+        //Maak een lijst met 100 random getallen", "requirements" : "Sorteer op grootte
+        static void Opdracht183()
+        {
+            List<int> numbers = new List<int>()
+            {
+
+        }
+
+        static void Opdracht196()
+        {
+            Dictionary<string, string> names = new Dictionary<string, string>();
+            string checkName = "test";
+            int nameCounter = 0;
+
+            foreach (KeyValuePair<string, string> entry in names)
+            {
+                if (entry.Value.Equals(checkName) {
+                    nameCounter++;
                 }
             }
 
+            Console.WriteLine($"Found name, {checkName}, {nameCounter} times.");
+
         }
+
+
+
 
         static void Main(string[] args)
         {
@@ -2466,7 +2570,7 @@ namespace Weekofcode4
             Opdracht14();
             Opdracht15();*/
 
-            /*Nummer16(); NEEDS CHECKING
+            /*Nummer16(); CHECKED
             Nummer17();
             Nummer18();
             Nummer19();
@@ -2607,3 +2711,4 @@ namespace Weekofcode4
         }
     }
 }
+

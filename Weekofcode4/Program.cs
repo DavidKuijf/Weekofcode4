@@ -1146,7 +1146,7 @@ namespace Weekofcode4
 
         static void Opdracht98()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[20, 20]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1170,7 +1170,7 @@ namespace Weekofcode4
 
         static void Opdracht99()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[30, 30]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1194,7 +1194,7 @@ namespace Weekofcode4
 
         static void Opdracht100()
         {
-            int[,] screen = new int[256, 256]; // x, y
+            int[,] screen = new int[40, 40]; // x, y
             int rowLength = screen.GetLength(0);
             int colLength = screen.GetLength(1);
 
@@ -1435,49 +1435,22 @@ namespace Weekofcode4
             int[,] chessboard = new int[8, 8];
             int rowLength = chessboard.GetLength(0);
             int colLength = chessboard.GetLength(1);
-            int x = 2;
-            int y = 1;
+
+            int knightX = 3;
+            int knightY = 3;
+
+            int x2 = 4;
+            int y2 = 5;
+
+            int row;
+            int col;
 
             bool isAllowed = false;
-            bool isOne = false;
 
-            for (int i = 0; i < rowLength; i++)
-            {
-                Console.WriteLine();
-                for (int j = 0; j < colLength; j++)
-                {
-                    if (i % 2 == 0)
-                    {
-                        if (isOne)
-                        {
-                            chessboard[i, j] = 0;
-                            isOne = false;
-                        }
-                        else
-                        {
-                            chessboard[i, j] = 1;
-                            isOne = true;
-                        }
-                    }
-                    else
-                    {
-                        if (isOne)
-                        {
-                            chessboard[i, j] = 1;
-                            isOne = false;
-                        }
-                        else
-                        {
-                            chessboard[i, j] = 0;
-                            isOne = true;
-                        }
-                    }
+            row = Math.Abs(x2 - knightX);
+            col = Math.Abs(y2 - knightY);
 
-                    Console.Write(chessboard[i, j] + " ");
-                }
-            }
-
-            if (chessboard[x, y] == 1)
+            if ((row == 2 && col == 1) || (row == 1 && col == 2))
             {
                 isAllowed = true;
             }
@@ -1494,10 +1467,11 @@ namespace Weekofcode4
             {
                 x = 1;
             }
-            else
+            else if(x <1001 | x> -1001)
             {
                 x = 0;
             }
+            
         }
         static void Opdracht107()
         {
@@ -1505,6 +1479,7 @@ namespace Weekofcode4
             //"Controleer bij de zelfscan in de AH ahv. leeftijd of iemand alcohol mee mag nemen uit de supermarkt. "
             int age = 0;
             bool allowed_to_drink = false;
+
             if (age > 17)
             {
                 allowed_to_drink = true;
@@ -1526,6 +1501,7 @@ namespace Weekofcode4
             //"Controleer of er wel genoeg benzine in de auto zit. Zo niet dan moet het rode lampje gaan branden. "
             double gas = 0.0;
             bool light = false;
+
             if (gas < 100)
             {
                 light = true;
@@ -1587,15 +1563,15 @@ namespace Weekofcode4
             switch (month)
             {
                 case "jan":
-                    number = 0;
+                    number = 31;
                     break;
                 case "feb":
-                    number = 1;
+                    number = 28;
                     break;
                 case "mrt":
                     number = 2;
                     break;
-                case "aprili":
+                case "april":
                     number = 3;
                     break;
                 case "mei":
@@ -1629,7 +1605,7 @@ namespace Weekofcode4
             //Karel Appel is weer eens lekker aan het verfen. Selecteer de kleur die hij gebruikt ahv. het uur in een etmaal. "
             int uur = 0;
             string[] kleur = { "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", "groen", };
-            string currentKluer = kleur[uur];
+            string currentKleur = kleur[uur];
         }
         static void Opdracht114()
         {
@@ -1705,7 +1681,7 @@ namespace Weekofcode4
                     //dostuff
                 }
             }
-            if (mod == 3)
+            if (mod == 0)
             {
                 if (pannekoek.Equals("appel"))
                 {
@@ -1778,13 +1754,12 @@ namespace Weekofcode4
             int nummer = studentnummer % 10;
             string best = "";
 
-            if (nummer < 4)
-            {
-                best = "java";
+            if (nummer < 4) {
+                best = "java#";
             }
             if (nummer > 4 && nummer < 7)
             {
-                best = "C";
+                best = "C#";
             }
             else
             {
@@ -1851,23 +1826,40 @@ namespace Weekofcode4
         {
             // "Maak een simpel programmaatje dat voor de NS voorspelt of wissels gaan bevriezen. Gebruik als indicator de random dagtemperatuur. Zolang het drie dagen niet vriest gaat het goed. "
             Random rnd = new Random();
-            int rand1 = rnd.Next(-10, 30);
-            int rand2 = rnd.Next(-10, 30);
-            int rand3 = rnd.Next(-10, 30);
-            bool bevriezen = false;
+            int random = 0;
+            int counter = 0;
+            int aantaldagen = 3;
 
-            if (rand1 < 1 | rand2 < 1 | rand3 < 1)
+            bool notfrozen = true;
+
+            while (notfrozen)
             {
-                bevriezen = true;
+                for(int i = 0; i <= aantaldagen; i++)
+                {
+                    random = rnd.Next(-10, 30);
+                    if (random < 1)
+                    {
+                        counter++;
+                        if (counter >= 3)
+                        {
+                            notfrozen = false;
+                        }
+                    }
+                }
             }
+            Console.WriteLine("DAnGER CLOSE");
+            
 
         }
 
         static void Opdracht126()
         {
-            // "Voor een voor studenten niet geheel onbekend spelletje moet er bepaald worden hoe vaak er op een knop wordt gedrukt. Ga door met tellen totdat de speler van het spel 2s niet op de knop drukt. Druk het aantal keer drukken af. "
+            // "Voor een voor studenten niet geheel onbekend spelletje moet er bepaald worden hoe vaak er op een knop wordt gedrukt.
+            //Ga door met tellen totdat de speler van het spel 2s niet op de knop drukt. Druk het aantal keer drukken af. "
             System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+
             bool timeleft = true;
+
             Console.WriteLine("Hit some buttons");
             Console.ReadKey();
             int count = 0;
@@ -1897,14 +1889,15 @@ namespace Weekofcode4
             //"Hoeveel punaises passen er in een kuub als elke punaise wordt gerepresenteerd door 7±1 kubieke millimeter? Druk het antwoord af voor drie runs. Bepaal de grootte van elke punaise random uit 6, 7 en 8. Neem aan dat de punaises perfect op elkaar aansluiten bij het stapelen."
             int count = 0;
             Random rnd = new Random();
-            for (int j = 0; j < 3; j++)
-            {
 
-                for (int i = 0; i < 1000000; i++)
+            for (int j = 0; j < 3; j++) {
+
+                while (count < 1000000)
                 {
                     count = count + rnd.Next(6, 8);
 
                 }
+
                 Console.WriteLine(count);
                 count = 0;
             }
@@ -1984,6 +1977,7 @@ namespace Weekofcode4
             int pinners = 0;
 
             int reserve = 100000;
+
             while (reserve > 0)
             {
                 int random = rnd.Next(1, 500);
@@ -2011,7 +2005,7 @@ namespace Weekofcode4
             //"Dagobert Duck wil van zijn geld af. Hoeveel dagen heeft hij hier voor nodig als hij elke dag 100 mensen blij maakt met een willekeurig briefje? Totaal in pakhuis is 17,4 triljoen euro."
             Random rnd = new Random();
             ulong[] biljetten = { 5, 10, 20, 50, 100, 200, 500 };
-            ulong money = 17400000000000000000;
+            ulong money = 1740000000;
             uint dagen = 0;
 
             while (money > 0)
@@ -2021,6 +2015,10 @@ namespace Weekofcode4
                     if (money > 0)
                     {
                         int random = rnd.Next(0, 6);
+                        if (biljetten[random] > money)
+                        {
+                            break;
+                        }
                         money = (money - biljetten[random]);
                     }
 
@@ -2220,6 +2218,62 @@ namespace Weekofcode4
                         case 6:
                             Console.WriteLine("Sunday");
                             break;
+                    
+
+
+                    }
+                }
+            }
+        }
+
+        static void Opdracht166(int[,] numbers, char seperator)
+        {
+            int rowLength = numbers.GetLength(0);
+            int colLength = numbers.GetLength(1);
+
+            for (int i = 0; i < rowLength; i++) {
+                for (int j = 0; j < colLength; j++)
+                {
+                    Console.Write(numbers[i,j] + seperator);
+                }
+                Console.WriteLine();
+            }
+        }
+
+
+
+        static void Opdracht167()
+        {
+            /*
+             * In de puzzel 'Flats' stelt de inhoud van elke array vakje een flat voor. 
+             * Het getal geeft aan hoeveel verdiepingen de flat heeft. Hogere flats 
+             * zorgen ervoor dat lagere flats die erachter staan niet zichtbaar zijn. 
+             * Schrijf een methode die voor kolom x vaststelt hoeveel flats je kan zien 
+             * als je vanaf boven kijkt. Schrijf ook een methode die voor rijen hetzelfde 
+             * doet vanaf links."
+             */
+
+            int?[,] numbers = { {1, 2, 3, 4}, {4, 3, 2, 1}, {2, 4, 1, 3}, {3, 1, 4, 2} };
+            int rowLength = numbers.GetLength(0);
+            int colLength = numbers.GetLength(1);
+            int column = 0; //0-3
+
+            for (int x = 0; x < rowLength; x++)
+            {
+                for (int y = 0; y < colLength; y++)
+                {
+                    if (x == 0 || (y > 0 && (numbers[x, y] > numbers[x, y - 1])))
+                    {
+                        Console.Write(numbers[x, y] + " ");
+                    }
+                    else
+                    {
+                        Console.Write("0 ");
+                    }
+                    
+                }
+                Console.WriteLine();
+            }
 
 
 
@@ -2286,7 +2340,23 @@ namespace Weekofcode4
             List<int> numbers = new List<int>()
             {
 
+        }
+
+        static void Opdracht196()
+        {
+            Dictionary<string, string> names = new Dictionary<string, string>();
+            string checkName = "test";
+            int nameCounter = 0;
+
+            foreach (KeyValuePair<string, string> entry in names)
+            {
+                if (entry.Value.Equals(checkName) {
+                    nameCounter++;
+                }
             }
+
+            Console.WriteLine($"Found name, {checkName}, {nameCounter} times.");
+
         }
 
 
@@ -2333,7 +2403,7 @@ namespace Weekofcode4
             Opdracht39();
             Opdracht40();*/
 
-            /*Opdracht41();// CHECKED
+            /*Opdracht41(); //NEEDS CHECKING
             Opdracht42();
             Opdracht43();
             Opdracht44();
@@ -2394,36 +2464,36 @@ namespace Weekofcode4
             Opdracht89();
             Opdracht90();*/
 
-            /*Opdracht91(); // NEEDS CHECKING
+            /*Opdracht91(); //CHECKED
             Opdracht92();
             Opdracht93();
             Opdracht94();
             Opdracht95();*/
 
-            /*Opdracht96(); // NEEDS CHECKING
+            /*Opdracht96(); // CHECKED
             Opdracht97();*/
             //Opdracht98();
             //Opdracht99();
             //Opdracht100();
 
-            //Opdracht101(); // NEEDS CHECKING
+            //Opdracht101(); //CHECKED
             //Opdracht102();
             //Opdracht103();
-            /*Opdracht104();
-            Opdracht105();*/
+            //Opdracht104();
+            //Opdracht105();
 
-            /*Opdracht121();
+            /*Opdracht121(); CHECKED
             Opdracht122();
             Opdracht123();
             Opdracht124();*/
 
-            //Opdracht126();
+            //Opdracht126(); Checkked
             //Opdracht127();
             //Opdracht128();
             //Opdracht129();
             //Opdracht130();
 
-            //Opdracht131();
+            //Opdracht131(); Checked
             //Opdracht132();
             //Opdracht133();
             //Opdracht134();
@@ -2434,6 +2504,10 @@ namespace Weekofcode4
             //Opdracht138();
             //Opdracht139();
             //Opdracht140();
+
+            int[,] numbers = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+            Opdracht166(numbers, ';');
+            //Opdracht167();
 
             //Opdracht181();
             Opdracht182();

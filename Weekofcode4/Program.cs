@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Weekofcode4
 {
@@ -2187,16 +2188,15 @@ namespace Weekofcode4
             }
         }
 
-        static void Opdracht166()
+        static void Opdracht166(int[,] numbers, char seperator)
         {
-            int[,] numbers = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
             int rowLength = numbers.GetLength(0);
             int colLength = numbers.GetLength(1);
 
             for (int i = 0; i < rowLength; i++) {
                 for (int j = 0; j < colLength; j++)
                 {
-                    Console.Write(numbers[i,j] + " ");
+                    Console.Write(numbers[i,j] + seperator);
                 }
                 Console.WriteLine();
             }
@@ -2215,20 +2215,48 @@ namespace Weekofcode4
              * doet vanaf links."
              */
 
-            int[,] numbers = { {1, 2, 3, 4}, {4, 3, 2, 1}, {2, 4, 1, 3}, {3, 1, 4, 2} };
+            int?[,] numbers = { {1, 2, 3, 4}, {4, 3, 2, 1}, {2, 4, 1, 3}, {3, 1, 4, 2} };
             int rowLength = numbers.GetLength(0);
             int colLength = numbers.GetLength(1);
             int column = 0; //0-3
 
-            for (int i = 0; i < rowLength; i++)
+            for (int x = 0; x < rowLength; x++)
             {
-                for (int j = 0; j < colLength; j++)
+                for (int y = 0; y < colLength; y++)
                 {
-
+                    if (x == 0 || (y > 0 && (numbers[x, y] > numbers[x, y - 1])))
+                    {
+                        Console.Write(numbers[x, y] + " ");
+                    }
+                    else
+                    {
+                        Console.Write("0 ");
+                    }
+                    
                 }
+                Console.WriteLine();
             }
 
         }
+
+        static void Opdracht196()
+        {
+            Dictionary<string, string> names = new Dictionary<string, string>();
+            string checkName = "test";
+            int nameCounter = 0;
+
+            foreach (KeyValuePair<string, string> entry in names)
+            {
+                if (entry.Value.Equals(checkName) {
+                    nameCounter++;
+                }
+            }
+
+            Console.WriteLine($"Found name, {checkName}, {nameCounter} times.");
+
+        }
+
+
 
         static void Main(string[] args)
         {
@@ -2348,7 +2376,7 @@ namespace Weekofcode4
             //Opdracht102();
             //Opdracht103();
             //Opdracht104();
-            Opdracht105();
+            //Opdracht105();
 
             /*Opdracht121();
             Opdracht122();
@@ -2373,7 +2401,9 @@ namespace Weekofcode4
             //Opdracht139();
             //Opdracht140();
 
-            //Opdracht166();
+            int[,] numbers = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+            Opdracht166(numbers, ';');
+            //Opdracht167();
 
             Console.ReadKey();
         }
